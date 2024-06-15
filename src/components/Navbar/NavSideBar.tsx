@@ -39,7 +39,7 @@ const NavSidebar = ({ openSidebar = false, closeNavSidebar, navSetup, changeThem
 
             <aside className={combineClasses(classes.nav_sidebar_wrapper, openSidebar && classes.open, 'dark:bg-slate-900 dark:text-white bg-white text-black')}>
                 <div className='flex items-center justify-between pb-3' onClick={closeNavSidebar}>
-                    <p className=''>menu</p>
+                    <p className=''>Menu</p>
                     <div><MdOutlineClose className='text-slate-800 dark:text-white text-[25px]' /></div>
                 </div>
                 <hr />

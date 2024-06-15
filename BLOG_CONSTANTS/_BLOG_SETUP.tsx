@@ -23,6 +23,23 @@ import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin, AiFillInstagram, AiFill
 }
  */
 
+export const NOEL: IAuthor = {
+    name: "Noel",
+    designation: "Software Engineer",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    profilePic: "",
+    social: [
+        {
+            icon: <AiFillGithub />,
+            link: 'https://github.com/nmayur'
+        },
+        {
+            icon: <AiFillLinkedin />,
+            link: 'https://www.linkedin.com/in/mayur-nalwala/'
+        },
+    ]
+}
+
 export const MAYUR: IAuthor = {
     name: "Mayur Nalwala",
     designation: "Software Engineer",
@@ -59,7 +76,7 @@ export const RUPALI: IAuthor = {
 
 
 // This can your company name / your name etc for SEO purposes
-export const WEBSITE_NAME: string = 'Next Js Blog Template';
+export const WEBSITE_NAME: string = 'Noel';
 export const WEBSITE_URL: string = 'https://nextjs-simple-blog-template.web.app/';
 
 /**
@@ -77,7 +94,7 @@ export const PRIMARY_NAV: iNavSetup = {
     // },
     logo: {
         type: LogoType.TEXT,
-        logo: 'Next Blog',
+        logo: "Noels Nonsense",
     },
     // navLinks are the main navbar links that apper on top of every page
     navLinks: [
@@ -159,11 +176,11 @@ export const PRIMARY_NAV: iNavSetup = {
 }
 
 export const DEFAULT_SEO: iSEO = {
-    title: "Nextjs simple blog template",
-    description: "A simple blog template using NextJS and Typescript.",
+    title: "Nonsense",
+    description: "Noel's Blog",
     keywords: "Blog, next js, template, next js blog, blog setup, typescript, nextjs typescript, react js blog template, responsive blog template",
     url: WEBSITE_URL,
-    author: `${MAYUR.name}, ${RUPALI.name}`,
+    author: `${NOEL.name}`,
     twitterHandle: '@WebExpe',
     ogImage: '/public/images/og-image.jpg'
 }
