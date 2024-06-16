@@ -64,3 +64,8 @@ Created by **[Rupali Yadav](https://www.linkedin.com/in/rupali-yadav-087bb4112/)
 ## Licence
 
 [MIT](https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss/blob/main/LICENSE) © [Web Expe](https://www.webexpe.com)
+
+# To do
+
+- Add comments
+- Add logo
