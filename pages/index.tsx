@@ -33,20 +33,23 @@ const Home = () => {
             <LinkTo href="/pages/about-me.tsx" passHref className='flex items-center justify-center rounded-md bg-blue-600 px-4 pb-2 text-white hover:text-white shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2'>
               <span className='text-xl pt-2 block'>About</span>
             </LinkTo>
-            <LinkTo href="/pages/tutorial/all-components.tsx" passHref className='flex items-center justify-center rounded-md bg-blue-600 px-4 pb-2 text-white hover:text-white shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2'>
+            <LinkTo href="/blog/" passHref className='flex items-center justify-center rounded-md bg-blue-600 px-4 pb-2 text-white hover:text-white shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2'>
               <span className='text-xl pt-2 block'>Stories</span>
             </LinkTo>
-
-            <a href="https://www.buymeacoffee.com/webexpe13z" target="_blank" rel="noopener noreferrer" className='flex items-center justify-center rounded-md bg-blue-600 px-4 pb-2 text-white hover:text-white shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2'>
+            <LinkTo href="/blog/" passHref className='flex items-center justify-center rounded-md bg-blue-600 px-4 pb-2 text-white hover:text-white shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2'>
               <span className='text-xl pt-2 block'>Experiments</span>
-            </a>
+            </LinkTo>
+            {/* External link example */}
+            {/* <a href="/blog/" target="_blank" rel="noopener noreferrer" className='flex items-center justify-center rounded-md bg-blue-600 px-4 pb-2 text-white hover:text-white shadow-lg hover:shadow-none transition-all mb-3 md:mx-5 mx-2'>
+              <span className='text-xl pt-2 block'>Experiments</span>
+            </a> */}
           </div>
         </div>
       </section>
       <div className="container mx-auto lg:px-[15px] px-0">
         <div className={'flex flex-wrap'}>
           <FeaturedArticleSection />
-          <h1 className='px-3 w-full mb-5 text-xl md:text-3xl font-medium'>Checkout the below articles on how to use different layouts and components</h1>
+          <h1 className='px-3 w-full mb-5 text-xl md:text-3xl font-medium'>Blog Posts and Experiments</h1>
           <hr className='border-1 mb-5 w-[98%] mx-auto' />
           <HomeNonFeatureArticles />
         </div>

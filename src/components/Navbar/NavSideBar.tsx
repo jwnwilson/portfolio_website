@@ -57,7 +57,7 @@ const NavSidebar = ({ openSidebar = false, closeNavSidebar, navSetup, changeThem
                                 <NavCatergoryDD label={each.label} openDD={openDD} setOpenDD={() => setOpenDD(!openDD)} />
                         ))
                     }
-                    {
+                    {/* {
                         env === 'development' ?
                             <>
                                 <hr />
@@ -91,7 +91,7 @@ const NavSidebar = ({ openSidebar = false, closeNavSidebar, navSetup, changeThem
                                 </LinkTo>
                             </>
                             : null
-                    }
+                    } */}
 
                 </div>
                 <hr />

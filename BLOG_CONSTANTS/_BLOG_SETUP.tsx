@@ -26,17 +26,17 @@ import { AiFillGithub, AiFillMail, AiFillLinkedin, AiFillInstagram } from "react
 export const NOEL: IAuthor = {
     name: "Noel",
     designation: "Software Engineer",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    profilePic: "",
+    bio: "I'm full stack, an engineering lead and mentor.",
+    profilePic: "/images/headshot_500.png",
     social: [
         {
-            icon: <AiFillGithub />,
-            link: 'https://github.com/nmayur'
+            link: 'https://www.linkedin.com/in/noel-wilson-0a194225/',
+            icon: <AiFillLinkedin />
         },
         {
-            icon: <AiFillLinkedin />,
-            link: 'https://www.linkedin.com/in/mayur-nalwala/'
-        },
+            link: 'https://www.instagram.com/noelwilsonlon/',
+            icon: <AiFillInstagram />
+        }
     ]
 }
 
@@ -170,6 +170,6 @@ export const DEFAULT_SEO: iSEO = {
     keywords: "Blog, next js, template, next js blog, blog setup, typescript, nextjs typescript, react js blog template, responsive blog template",
     url: WEBSITE_URL,
     author: `${NOEL.name}`,
-    twitterHandle: '@WebExpe',
+    twitterHandle: '',
     ogImage: '/public/images/og-image.jpg'
 }
