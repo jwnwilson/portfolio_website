@@ -1,6 +1,6 @@
 import { LogoType, NavbarType } from "../src/shared/enums";
 import { IAuthor, iNavSetup, iSEO } from "../src/shared/interfaces";
-import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin, AiFillInstagram, AiFillFacebook } from "react-icons/ai";
+import { AiFillGithub, AiFillMail, AiFillLinkedin, AiFillInstagram } from "react-icons/ai";
 
 /**
  * EXAMPLE AUTHOR
@@ -150,16 +150,16 @@ export const PRIMARY_NAV: iNavSetup = {
     ],
     socials: [
         {
-            link: 'https://www.facebook.com/',
-            icon: <AiFillFacebook />
+            link: 'https://www.linkedin.com/in/noel-wilson-0a194225/',
+            icon: <AiFillLinkedin />
         },
         {
-            link: 'https://www.instagram.com/',
+            link: 'https://www.instagram.com/noelwilsonlon/',
             icon: <AiFillInstagram />
         },
         {
-            link: 'https://twitter.com/WebExpe',
-            icon: <AiOutlineTwitter />
+            link: 'mailto:jwnwilson@hotmail.co.uk',
+            icon: <AiFillMail />
         },
     ]
 }
