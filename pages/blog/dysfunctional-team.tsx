@@ -23,14 +23,14 @@ const Article = () => {
                 </div> */}
                 <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" caption="Look Better by making everyone else worse" size={ImageSize.SMALL} />
                 <Text p>
-                    You could work hard, be a team player, build good products... <b>but is there an easier way?</b> What if I told you there was a way to make yourself look better by making everyone else worse? What if you actually put the 5 dysfunctions of a team in reverse to come out ahead? 
+                    You could work hard, be a team player, build good products... <b>but is there an easier way?</b> What if I told you there was a way to make yourself look better by making everyone else worse? What if you actually put the 5 dysfunctions of a team in reverse to come out ahead?
                 </Text>
                 <Text p>
-                    I'll be providing a step by step approach to systematically destroy your team while making yourself look like a hero.
+                    So in this blog I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals to come out ahead.
                 </Text>
-                <div className="md:flex">
-                    <div className="sm:w-100 md:w-1/2">
-                        <Image 
+                <div className="md:flex items-center">
+                    <div className="sm:w-100 md:w-1/2 ">
+                        <Image
                             src="/public/imp_assets/posts/dysfunctional_team/5_dysfunctions_pyramid.jpg"
                             alt="The five dysfunctions pyramid"
                             caption="How to use this system against your team"
@@ -39,110 +39,141 @@ const Article = () => {
                     </div>
                     <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
                         <Text p>
-                            This is the 5 dysfunctions pyramid. The idea is to start from the bottom and work your way up. 
+                            First we have to lower the bar so it's easier to jump over, this is the 5 dysfunctions pyramid. The idea is to start from the bottom and work your way up.
                         </Text>
-                        <ol className="list-decimal ml-5">
-                            <li>Trust</li>
-                            <li>Conflict Resolution</li>
-                            <li>Commitment</li>
-                            <li>Accountability</li>
-                            <li>Measuring Results</li>
-                        </ol>
-                        <br></br>
+                        <List type={ListType.number} className="mt-5">
+                            <li><b>Trust</b></li>
+                            <li><b>Conflict Resolution</b></li>
+                            <li><b>Commitment</b></li>
+                            <li><b>Accountability</b></li>
+                            <li><b>Measuring Results</b></li>
+                        </List>
                         <Text p>
                             We'll start with the first dysfunction <b>Trust</b>.
-                        </Text>   
+                        </Text>
                     </div>
                 </div>
                 <Seperator />
                 <Text subtitle className="mt-10">
                     1. Destroy Trust
                 </Text>
-                <Image 
+                <Image
                     src="/public/imp_assets/posts/dysfunctional_team/lion_king.webp"
-                    alt="The five dysfunctions of a team book cover"
+                    alt="Scar and Mufassa from the Lion King"
                     caption="Scar from the Lion King managed to become king by building a dysfyunctional team"
-                    size={ImageSize.MEDIUM}
-                />                
+                    size={ImageSize.SMALL}
+                />
                 <Text p>
-                    In our article details we have 4 important properties <b>path, featureArticle, preview, and seo</b>.
+                    Vulnerability is a building block for Trust, <b>sharing your mistakes shows vulnerablility and risks giving the teams oppurtinities to learn from them.</b> They might be encouraged to also do
+                    the same, building a culture of shared learning and growth. Shut down honest reflection, don't ask others what they could do better, they should already know. Vulnernability is weakness, you need to be the alpha. You need to be the one that everyone fears.
                 </Text>
-
+                <Text p>
+                    <b>Be an enigma, transparency can build trust</b>, hide discussions and decisions you're in from the team. If it's bad news you can pretend you're helping them by not telling anyone.
+                    People like to know what's going on and what's expected of them, they have to earn that right.
+                </Text>
+                <Text p>
+                    Say one thing, do another. This will keep your team mates on their toes and they'll never know what to expect. Don't worry about overcommitting, say yes to everything and maximise the chances of letting the team down. 
+                    Be aware! <b>Showing your words and actions carry weight can make others feel like they can rely on you.</b> If the sitatutation changes don't update the team, they should be able to read your mind.
+                </Text>
+                <Text p>
+                    Don't humanise your teammates, they are a means to an end. <b>Don't get to know them, don't ask about their lives, don't ask about their families.</b> You might start to care about them and waste energy helping them instead of yourself.
+                </Text>
+                <Seperator />
+                <Text subtitle className="mt-10">
+                    2. Crush Ideological Debate
+                </Text>
+                <Image
+                    src="/public/imp_assets/posts/dysfunctional_team/liz_truss.png"
+                    alt="Liz Truss"
+                    caption="Liz Truss became one of the UKs most successful Prime Ministers by not engaging in ideological debate."
+                    size={ImageSize.SMALL}
+                />
+                <Text p>
+                    If trust is still growing dispite your best efforts, discourage people from engaging directly in debate over different opinions. This usually results in a better outcome for the team and builds conflict resolution skills, here are some tips to avoid this.
+                </Text>
                 <List type={ListType.disc} className="mt-5">
-                    <li>
-                        <Text p className="mt-2">
-                            <b>path</b><br />
-                            As show in the above image, path contains the file path of our article.<br /> If you have <a href="https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense" target="_blank" rel="noopener noreferrer">Path Intellisense</a> installed in your VS Code, it will be ease to add path, just hit <b>"/"</b> and then auto suggestions will come up, just follow the auto suggestions and set the path of the article file.
-                        </Text>
-                    </li>
-                    <li>
-                        <Text p className="mt-2">
-                            <b>featureArticle</b><br />
-                            You can set it <b>true or false</b> as shown in the above image. If true the article card will be of full width as shown in the image below. <br />
-                            <i><b>*note : </b> adding featureArticle property is optional</i>
-                        </Text>
-                        <Image className="my-5" src="/public/imp_assets/tutorials/feature-article-example.png" alt="feature article example | webexpe.com" caption="feature article exmaple" size={ImageSize.DEFAULT} />
-                    </li>
-                    <li>
-                        <b>preview</b><br />
-                        <Text p className="mt-2">
-                            This will display the details of the article in the article cards on main home page and article's header on the article page
-                        </Text>
-                        <List type={ListType.disc} className="mt-3">
-                            <li>
-                                <b>author : </b>
-                                Paste the author variable imported from _BLOG_SETUP as shown in the image.
-                            </li>
-                            <li>
-                                <b>date : </b>
-                                Write the article date in quotes i.e. as a string.
-                            </li>
-                            <li>
-                                <b>articleTitle : </b>
-                                Write the article title in quotes i.e. as a string.
-                            </li>
-                            <li>
-                                <b>tags : </b>
-                                Write tags and seperate with commas.
-                            </li>
-                            <li>
-                                <b>thumbnail : </b>
-                                Save the image file in public-images folder and paste the image path. This will be displayed in article cards on home page. For thumpbails the recommended size is <b>540x300px</b>.
-                            </li>
-                            <li>
-                                <b>shortIntro : </b>
-                                A short intro for your article that will be shown on article cards.
-                            </li>
-                            <li>
-                                <b>category : </b>
-                                If the article in under some category, write the category name.
-                            </li>
-                        </List>
-
-                        Check the above image for example of check <b>/BLOG_CONSTANTS/_ARTICLES_LIST.tsx</b> file.
-                    </li>
-                    <li>
-                        <b>seo</b><br />
-                        <Text p className="mt-2">
-                            SEO details for your article page. As shown in the above image seo contains 5 important properties <b>title, description, keywords, ogImage, twitterHandle, author</b>. <br /> <br />
-
-                            <b>*note : </b> <b>seo</b> is optional as we have already passed <b>preview</b> we will create default seo with that but if you want to pass any extra keywords or different page title, description etc we can write that in <b>seo : {'{}'}</b> object.
-                        </Text>
-                    </li>
+                    <li><b>Build "us vs them" mentality to stunt discussion</b></li>
+                    <li><b>Back channels over discussing directly can help make a siutation worse</b></li>
+                    <li><b>Don't try to understand the other person's perspective and objectives</b></li>
+                    <li><b>Don't empathise with other people's challanges, you'll be tempted to compromise</b></li>
+                    <li><b>Prioritising being nice over having uncomfortable discussions</b></li>
+                    <li><b>Shut down uncomfortable discussion before resolution</b></li>
                 </List>
                 <Seperator />
                 <Text subtitle className="mt-10">
-                    3. Writing the article.
+                    3. Stunt Conflict Resolution Skills
+                </Text>
+                <div className="md:flex items-center">
+                    <div className="sm:w-100 md:w-1/2">
+                        <Image
+                            src="/public/imp_assets/posts/dysfunctional_team/radical_candor.jpg"
+                            alt="Radical Candor"
+                            caption="Do not let people on your team read this book"
+                            size={ImageSize.SMALL}
+                        />
+                    </div>
+                    <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
+                        <Text p>
+                            <b>Conflict resolution is the biggest risk for us now, if a team develops this skill it can be hard to stop them.</b> Teams can then find ideal approaches to challenging siutations. Recommendations when debating:
+                        </Text>
+                        <List type={ListType.disc} className="mt-5">
+                            <li>Don't invite challenges from others, they might get into the habit of constructive conversation</li>
+                            <li>Get defensive when challenged to discourage others challenging you again</li>
+                            <li><b>The goal is to win the argument</b>, not influence the other person or have a positive effect on the business</li>
+                            <li>Don't acknowledge the other person's feelings, <b>empathy increase chances of someone being receptive to your points</b></li>
+                            <li>Get emotional and personal, <b>don't wait for emotions to pass for maximum damage</b> when challenging</li>
+                        </List>
+                    </div>
+                </div>
+                <Text p>
+                    Avoid objective models like <LinkTo href="https://untools.co/situation-behavior-impact/" external className="underline">Situation Behaviour Impact</LinkTo> as they can remove the personal element from feedback.
+                </Text>
+                <Seperator />
+                <Text subtitle className="mt-10">
+                    4. Avoid Commitment
+                </Text>
+                <Image
+                    src="/public/imp_assets/posts/dysfunctional_team/runaway_groom.jpg"
+                    alt="Run away groom"
+                    caption="With creativity it's always possible to avoid commitment"
+                    size={ImageSize.SMALL}
+                />
+                <Text p>
+                    Now is time to decide and focus on your personal goals, if you're lucky they are not aligned with the team's so you can push in the wrong direction. 
+                    If the team attempted to set a single goal that could unify them, you need to disrupt this. <b>A single, clear unifying goal risks the team committing 100% to it.</b> If a team does this it might be too late to out perform them.
                 </Text>
                 <Text p>
-                    Now we can go to our created file <b>your-first-article.tsx</b> and write our article. To write our article we will use different components as shown in
-                    <b><LinkTo href='/pages/tutorial/blog-with-sidebar-layout.tsx' passHref> Blog with sidebar layout</LinkTo></b> or <b><LinkTo href='/pages/tutorial/blog-with-centered-layout.tsx' passHref> Blog with centered layout</LinkTo></b>  example. You can also checkout all the available components to write your article in <b><LinkTo href="/pages/tutorial/all-components.tsx" passHref>All Components Demo</LinkTo></b> page.
+                    Refuse to disagree and commit, don't sacrifice personal success for collective success. If you are out numbered then agree but do the bare minimum, if you didn't engage in ideological debate this is easy.
                 </Text>
-
-                <div className="px-4 py-3 dark:bg-slate-800 bg-blue-200 rounded mt-10 !text-lg leading-relaxed ">
-                    For any any queries related to this project / template feel free to connect with us at <u>webexpe13@gmail.com</u>.
-                    You can also post any comments on our <a href="https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss/discussions" target="_blank" rel="noopener noreferrer"><u><i>github discussions</i></u></a>.
-                </div>
+                <Seperator />
+                <Text subtitle className="mt-10">
+                    5. Encourage unaccountability
+                </Text>
+                <Image
+                    src="/public/imp_assets/posts/dysfunctional_team/shaggy-it-wasnt-me.webp"
+                    alt="Shaggy it wasn't me image"
+                    size={ImageSize.SMALL}
+                />
+                <Text p>
+                    If the team has a clear goal, the best you can do is encourage others to not hold themselves accountable. <b>Don't challenge others if you disagree, don't engage in difficult conversations.</b> Hide mistakes, make exceptions for yourself and avoid chances for the team to learn and improve. <b>Lack of Vulnerability will help here.</b>
+                </Text>
+                <Seperator />
+                <Text subtitle className="mt-10">
+                    6. Personal Success
+                </Text>
+                <Image
+                    src="/public/imp_assets/posts/dysfunctional_team/wolf_wall_street.webp"
+                    alt="Wolf on Wall Street"
+                    caption="Now Chaos has taken hold, time to prioritise yourself."
+                    size={ImageSize.SMALL}
+                />
+                <Text p>
+                    <b>If the team is working to a collective goal it's probably too late.</b> So don't make collective results visible, deny learnings. Distract from the collective goal with you personal goals.
+                    Collect personal metrics, if you've focused on yourself they should be higher than your colleagues, only talk about these.
+                </Text>
+                <Text p>
+                    If you've followed this guide, Congrats! The team should now be dysfunctional and you should be the big fish in a small pond!
+                </Text>
             </div>
         </PageLayout>
     )
