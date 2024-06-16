@@ -19,14 +19,14 @@ const AboutUs = () => {
                 </a>
                 <div className="text">
                     <Text title className='mb-5 mt-10 dark:text-sky-400 text-sky-600'>
-                        Hello! I'm Noel Wilson!
+                        Hello, I'm Noel!
                     </Text>
                     <Text subtitle className='text-xl mb-5'>
                         I'm full stack, an engineering lead and mentor.
                     </Text>
 
                     <Text p className='text-lg'>
-                        I have been working in the tech industry for over 10 years, working end to end on various projects, building web applications, APIs, event driven systems also data pipelines. I am an expert with various technologies like Python, TypeScript, React, Terraform and multiple CI/CD platforms.
+                        I have been working in the tech industry for over 10 years, worked end to end on various projects. I've built web applications, APIs, event driven systems and data pipelines. I am an expert with technologies like Python, TypeScript, Terraform, Cloud Services and CI/CD platforms.
                     </Text>
                 </div>
 
@@ -38,9 +38,9 @@ const AboutUs = () => {
                         <List type={ListType.disc}>
                             <li>Team building and Mentoring</li>
                             <li>Proficent with AWS, GCP and Azure</li>
-                            <li>Cloud Architecture Experience</li>
+                            <li>Cloud Architecture Specialist</li>
                             <li>APIs and event driven Architecture Specialist</li>
-                            <li>Simple Responsive UIs</li>
+                            <li>Responsive UI Experience</li>
                         </List>
                     </div>
 
