@@ -235,15 +235,9 @@ export const NavbarSetup_NAVLINKS = `
                 type: 'dropdown'
             },
             {
-                label: 'About Us',
-                path: '/about-us'
-            },
-            {
-                // to open a link in new tab pass newTab: true
-                label: 'Support Us',
-                path: 'https://www.buymeacoffee.com/webexpe13z',
-                newTab: true
-            },
+                label: 'About Me',
+                path: '/about-me'
+            }
         ]
     }
 `;

@@ -5,16 +5,16 @@ import { iSEO } from "../src/shared/interfaces";
 
 const ContactUs = () => {
     const PAGE_SEO: iSEO = {
-        title: 'Contact Us',
+        title: 'Contact Me',
         description: 'For any any queries related to this project / template feel free to connect with us on webexpe13@gmail.com',
-        keywords: 'webexpx, contact us, webexpe13@gmail.com, next js blog template',
+        keywords: 'webexpx, contact me, webexpe13@gmail.com, next js blog template',
         author: 'Mayur Nalwala, Rupali Yadav'
     } 
     return (
         <PageLayout PAGE_SEO={PAGE_SEO} home>
             <section className='container px-3 pb-10 md:pt-20 pt-[80px]'>
                 <Text title className="!text-5xl !font-light">
-                    Contact Us
+                    Contact Me
                 </Text>
 
                 <div className="flex flex-wrap mt-8 justify-between">
@@ -41,7 +41,7 @@ const ContactUs = () => {
                     Work with us . . .
                 </Text>
                 <Text p className="!text-lg leading-relaxed mt-5 px-1">
-                    We are a group of developers and designers with more than 5 years of industry experience. If you have any requirements like Website Development, Website / App Design feel free to contact us on the given email.
+                    We are a group of developers and designers with more than 5 years of industry experience. If you have any requirements like Website Development, Website / App Design feel free to contact me on the given email.
                 </Text>
             </section>
         </PageLayout>

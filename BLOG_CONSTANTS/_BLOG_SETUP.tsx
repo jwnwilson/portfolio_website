@@ -109,24 +109,13 @@ export const PRIMARY_NAV: iNavSetup = {
             path: ''
         },
         {
-            label: 'About Us',
-            path: '/about-us'
-        },
-        {
-            // to open a link in new tab pass newTab: true
-            label: 'Support Us',
-            path: 'https://www.buymeacoffee.com/webexpe13z',
-            newTab: true
-        },
-        {
-            label: 'Github Repo',
-            path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
-            newTab: true
-        },
-        {
-            label: 'Contact Us',
-            path: '/contact-us'
+            label: 'About Me',
+            path: '/about-me'
         }
+        // {
+        //     label: 'Contact Me',
+        //     path: '/contact-me'
+        // }
     ],
     // sideNavLinks are the links which appear when you open the side menu after clicking the burger menu icon.
     sideNavLinks: [
@@ -141,23 +130,23 @@ export const PRIMARY_NAV: iNavSetup = {
             path: ''
         },
         {
-            label: 'About Us',
-            path: '/about-us'
+            label: 'About Me',
+            path: '/about-me'
         },
-        {
-            label: 'Support Us',
-            path: 'https://www.buymeacoffee.com/webexpe13z',
-            newTab: true
-        },
-        {
-            label: 'Github Repo',
-            path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
-            newTab: true
-        },
-        {
-            label: 'Contact Us',
-            path: '/contact-us'
-        }
+        // {
+        //     label: 'Support Us',
+        //     path: 'https://www.buymeacoffee.com/webexpe13z',
+        //     newTab: true
+        // },
+        // {
+        //     label: 'Github Repo',
+        //     path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
+        //     newTab: true
+        // },
+        // {
+        //     label: 'Contact Me',
+        //     path: '/contact-me'
+        // }
     ],
     socials: [
         {

@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
     const PAGE_SEO: iSEO = {
         title: 'Privacy Policy',
         description: `This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in website`,
-        keywords: 'webexpx, contact us, webexpe13@gmail.com, next js blog template',
+        keywords: 'webexpx, contact me, webexpe13@gmail.com, next js blog template',
         author: 'Mayur Nalwala, Rupali Yadav'
     }
     return (
@@ -18,7 +18,7 @@ const TermsAndConditions = () => {
                 </Text>
                 <Text p>
                     At [Website_Name], accessible from [Website_URL], one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by [Website_Name] and how we use it. <br />
-                    If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. <br />
+                    If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact me. <br />
                     This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in [Website_Name]. This policy is not applicable to any information collected offline or via channels other than this website. Our Privacy Policy was created with the help of the Privacy Policy Generator.
                 </Text>
                 <Seperator line />
@@ -34,7 +34,7 @@ const TermsAndConditions = () => {
                 </Text>
                 <Text p> 
                     The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information. <br />
-                    If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide. <br />
+                    If you contact me directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide. <br />
                     When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.
                 </Text>
                 <Seperator line />
@@ -109,7 +109,7 @@ const TermsAndConditions = () => {
                     CCPA Privacy Rights (Do Not Sell My Personal Information)
                 </Text>
                 <Text p >
-                    Under the CCPA, among other rights, California consumers have the right to: <br /> Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers. <br />Request that a business delete any personal data about the consumer that a business has collected. <br />Request that a business that sells a consumer's personal data, not sell the consumer's personal data. <br />If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
+                    Under the CCPA, among other rights, California consumers have the right to: <br /> Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers. <br />Request that a business delete any personal data about the consumer that a business has collected. <br />Request that a business that sells a consumer's personal data, not sell the consumer's personal data. <br />If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact me.
                 </Text>
                 <Seperator line />
                 <Text subtitle className="text-xl">
@@ -133,7 +133,7 @@ const TermsAndConditions = () => {
                             The right to data portability: You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.
                         </li>
                     </ul><br />
-                    If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.
+                    If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact me.
                 </Text>
                 <Seperator line />
                 <Text subtitle className="text-xl">
@@ -141,7 +141,7 @@ const TermsAndConditions = () => {
                 </Text>
                 <Text p >
                     Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity. <br />
-                    [Website_Name] does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+                    [Website_Name] does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact me immediately and we will do our best efforts to promptly remove such information from our records.
                 </Text>
             </div>
         </PageLayout>

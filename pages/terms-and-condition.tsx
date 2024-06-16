@@ -8,7 +8,7 @@ const TermsAndConditions = () => {
     const PAGE_SEO: iSEO = {
         title: 'Terms and conditions',
         description: `These terms and conditions outline the rules and regulations for the use of Website, located at ${WEBSITE_URL}.`,
-        keywords: 'webexpx, contact us, webexpe13@gmail.com, next js blog template',
+        keywords: 'webexpx, contact me, webexpe13@gmail.com, next js blog template',
         author: 'Mayur Nalwala, Rupali Yadav'
     }    
     return (
