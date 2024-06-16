@@ -22,11 +22,11 @@ const AboutUs = () => {
                         Hello, I'm Noel!
                     </Text>
                     <Text subtitle className='text-xl mb-5'>
-                        I'm full stack, an engineering lead and mentor.
+                        I'm a full stack engineering lead and mentor.
                     </Text>
 
                     <Text p className='text-lg'>
-                        I have been working in the tech industry for over 10 years, worked end to end on various projects. I've built web applications, APIs, event driven systems and data pipelines. I am an expert with technologies like Python, TypeScript, Terraform, Cloud Services and CI/CD platforms.
+                        I have been working in the tech industry for over 10 years, worked end to end on various projects. I've built teams, web applications, APIs, event driven systems and data pipelines. I am an expert with technologies like Python, TypeScript, Terraform, Cloud Services and CI/CD platforms.
                     </Text>
                 </div>
 
