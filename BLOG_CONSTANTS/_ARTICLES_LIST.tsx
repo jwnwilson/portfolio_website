@@ -34,7 +34,6 @@ import { MAYUR, NOEL, RUPALI } from "./_BLOG_SETUP";
 const ARTICLES_LIST: iArticle[] = [
   {
     path: "/pages/tutorial/how-to-setup-blog.tsx",
-    featureArticle: true,
     preview: {
       author: MAYUR,
       date: "August 08 2022",
@@ -55,7 +54,6 @@ const ARTICLES_LIST: iArticle[] = [
   },
   {
     path: "/pages/tutorial/how-to-write-your-first-article.tsx",
-    featureArticle: true,
     preview: {
       author: RUPALI,
       date: "August 08 2022",

@@ -23,7 +23,7 @@ const Article = () => {
                 </div> */}
                 <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" caption="Look Better by making everyone else worse" size={ImageSize.SMALL} />
                 <Text p>
-                    You could work hard, be a team player, build good products... <b>but is there an easier way?</b> What if I told you there was a way to make yourself look better by making everyone else worse? What if you actually put the 5 dysfunctions in reverse to come out ahead? 
+                    You could work hard, be a team player, build good products... <b>but is there an easier way?</b> What if I told you there was a way to make yourself look better by making everyone else worse? What if you actually put the 5 dysfunctions of a team in reverse to come out ahead? 
                 </Text>
                 <Text p>
                     I'll be providing a step by step approach to systematically destroy your team while making yourself look like a hero.
@@ -41,11 +41,13 @@ const Article = () => {
                         <Text p>
                             This is the 5 dysfunctions pyramid. The idea is to start from the bottom and work your way up. 
                         </Text>
-                        <li>Trust</li>
-                        <li>Conflict Resolution</li>
-                        <li>Commitment</li>
-                        <li>Accountability</li>
-                        <li>Measuring Results</li>
+                        <ol className="list-decimal ml-5">
+                            <li>Trust</li>
+                            <li>Conflict Resolution</li>
+                            <li>Commitment</li>
+                            <li>Accountability</li>
+                            <li>Measuring Results</li>
+                        </ol>
                         <br></br>
                         <Text p>
                             We'll start with the first dysfunction <b>Trust</b>.
