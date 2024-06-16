@@ -32,46 +32,46 @@ import { MAYUR, NOEL, RUPALI } from "./_BLOG_SETUP";
 
 // clear this article list and add your own
 const ARTICLES_LIST: iArticle[] = [
-  // {
-  //   path: "/pages/tutorial/how-to-setup-blog.tsx",
-  //   featureArticle: true,
-  //   preview: {
-  //     author: MAYUR,
-  //     date: "August 08 2022",
-  //     articleTitle: "How to setup this blog template",
-  //     tags: "demo, blog setup",
-  //     thumbnail: "/public/imp_assets/tutorials/how-to-setup-blog.svg",
-  //     shortIntro: "These are the steps to setup your blog",
-  //     category: "tutorial",
-  //   },
-  //   seo: {
-  //     title: "How to setup this blog template",
-  //     description: "These are the steps to setup your blog",
-  //     keywords: "demo, blog setup",
-  //     ogImage: "/public/imp_assets/tutorials/how-to-setup-blog.svg",
-  //     twitterHandle: "@mayur_nalwala",
-  //     author: MAYUR.name,
-  //   },
-  // },
-  // {
-  //   path: "/pages/tutorial/how-to-write-your-first-article.tsx",
-  //   featureArticle: true,
-  //   preview: {
-  //     author: RUPALI,
-  //     date: "August 08 2022",
-  //     articleTitle: "How to write your first article",
-  //     tags: "demo, first article",
-  //     thumbnail: "/public/imp_assets/tutorials/how-to-write-first-article.svg",
-  //     shortIntro:
-  //       "This a step by step guide on how to write your first article.",
-  //     category: "tutorial",
-  //   },
-  //   seo: {
-  //     keywords:
-  //       "demo, centered, centered layout, blog page layout, blog page design with centered layout, writing first article, webexpe, webexpe.com",
-  //     ogImage: "/public/imp_assets/tutorials/how-to-write-first-article.svg",
-  //   },
-  // },
+  {
+    path: "/pages/tutorial/how-to-setup-blog.tsx",
+    featureArticle: true,
+    preview: {
+      author: MAYUR,
+      date: "August 08 2022",
+      articleTitle: "How to setup this blog template",
+      tags: "demo, blog setup",
+      thumbnail: "/public/imp_assets/tutorials/how-to-setup-blog.svg",
+      shortIntro: "These are the steps to setup your blog",
+      category: "tutorial",
+    },
+    seo: {
+      title: "How to setup this blog template",
+      description: "These are the steps to setup your blog",
+      keywords: "demo, blog setup",
+      ogImage: "/public/imp_assets/tutorials/how-to-setup-blog.svg",
+      twitterHandle: "@mayur_nalwala",
+      author: MAYUR.name,
+    },
+  },
+  {
+    path: "/pages/tutorial/how-to-write-your-first-article.tsx",
+    featureArticle: true,
+    preview: {
+      author: RUPALI,
+      date: "August 08 2022",
+      articleTitle: "How to write your first article",
+      tags: "demo, first article",
+      thumbnail: "/public/imp_assets/tutorials/how-to-write-first-article.svg",
+      shortIntro:
+        "This a step by step guide on how to write your first article.",
+      category: "tutorial",
+    },
+    seo: {
+      keywords:
+        "demo, centered, centered layout, blog page layout, blog page design with centered layout, writing first article, webexpe, webexpe.com",
+      ogImage: "/public/imp_assets/tutorials/how-to-write-first-article.svg",
+    },
+  },
   // {
   //   path: "/pages/tutorial/how-to-deploy-blog.tsx",
   //   featureArticle: true,
@@ -197,6 +197,7 @@ const ARTICLES_LIST: iArticle[] = [
   // },
   {
     path: "/pages/blog/dysfunctional-team.tsx",
+    featureArticle: true,
     preview: {
       author: NOEL,
       date: "June 16 2024",
@@ -204,13 +205,13 @@ const ARTICLES_LIST: iArticle[] = [
       shortIntro:
         "A guide to making yourself look better by making everyone else worse.",
       tags: "team building dysfunctional",
-      thumbnail: "/public/imp_assets/posts/this_is_fine.webp",
+      thumbnail: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
       category: "Team Building",
     },
     seo: {
       keywords:
         "demo, all components, style guide, styling, css, tailwind css, tailwind, webexpe, webexpe.com, styling tutorial, icons, how to use icons in website",
-      ogImage: "/public/imp_assets/posts/this_is_fine.webp",
+      ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
     },
   },
 ];
