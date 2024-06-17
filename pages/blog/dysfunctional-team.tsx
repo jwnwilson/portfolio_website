@@ -1,8 +1,8 @@
 /**These are necessary imports / components for the page */
-import { ImageSize, TextAlign, ListType } from "../../src/shared/enums";
+import { ImageSize, ListType } from "../../src/shared/enums";
 import { PageLayout, Text, List, Image, LinkTo, Seperator, Slider } from "../../src/components";
-import CodeBlock from "../../src/components/CodeBlock";
-import { Article_Entry_inList } from "../../src/constants/codeBlocks";
+import { DiscussionEmbed } from 'disqus-react';
+
 
 const Article = () => {
     return (
@@ -206,6 +206,14 @@ const Article = () => {
                     So hope you got as much out of this as I did and would love to hear your thoughts!
                 </Text>
                 <Text p><b> - Noel</b></Text>
+                <DiscussionEmbed shortname="noel-wilson-co-uk-1" config={
+                    {
+                        url: "https://noel-wilson.co.uk/blog/dysfunctional-team",
+                        identifier: "dysfunctional-team",
+                        title: "How To Make Your Team Dysfunctional"
+                    }
+                
+                }></DiscussionEmbed>
             </div>
         </PageLayout>
     )
