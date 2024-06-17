@@ -49,11 +49,11 @@ const AboutUs = () => {
                             Philosophy
                         </Text>
                         <List type={ListType.disc}>
-                            <li>Attitude > Aptitude</li>
-                            <li>Flexibility > Correctness</li>
-                            <li>Product > Technology</li>
-                            <li>Automation > Manual Process</li>
-                            <li>Strategic > Tactical</li>
+                            <li>Attitude &gt; Aptitude</li>
+                            <li>Flexibility &gt; Correctness</li>
+                            <li>Product &gt; Technology</li>
+                            <li>Automation &gt; Manual Process</li>
+                            <li>Strategic &gt; Tactical</li>
                         </List>
                     </div>
 
