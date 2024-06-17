@@ -77,7 +77,7 @@ export const RUPALI: IAuthor = {
 
 // This can your company name / your name etc for SEO purposes
 export const WEBSITE_NAME: string = 'Noels Nonsense';
-export const WEBSITE_URL: string = 'https://https://noel-wilson.co.uk//';
+export const WEBSITE_URL: string = 'https://noel-wilson.co.uk';
 
 /**
  * This is the main navigation setup.
