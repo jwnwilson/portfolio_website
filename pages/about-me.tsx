@@ -53,7 +53,7 @@ const AboutUs = () => {
                             <li>Flexibility > Correctness</li>
                             <li>Product > Technology</li>
                             <li>Automation > Manual Process</li>
-                            <li>Strategic > Tacical</li>
+                            <li>Strategic > Tactical</li>
                         </List>
                     </div>
 
