@@ -29,4 +29,4 @@ jobs:
           aws s3 sync out s3://jwnwilson.co.uk --delete
       - name: Invalidate CloudFront cache
         run: |
-          aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths '/*'
+          aws cloudfront create-invalidation --distribution-id ${{ vars.$DISTRIBUTION_ID }} --paths '/*'
