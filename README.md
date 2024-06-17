@@ -67,7 +67,6 @@ Created by **[Rupali Yadav](https://www.linkedin.com/in/rupali-yadav-087bb4112/)
 
 # To do
 
-- Update link image
 - Add comments
 - Add share widget to large post layout
 - Add subscription?

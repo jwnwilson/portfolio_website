@@ -76,8 +76,8 @@ export const RUPALI: IAuthor = {
 
 
 // This can your company name / your name etc for SEO purposes
-export const WEBSITE_NAME: string = 'Noel';
-export const WEBSITE_URL: string = 'https://nextjs-simple-blog-template.web.app/';
+export const WEBSITE_NAME: string = 'Noels Nonsense';
+export const WEBSITE_URL: string = 'https://https://noel-wilson.co.uk//';
 
 /**
  * This is the main navigation setup.
@@ -132,21 +132,7 @@ export const PRIMARY_NAV: iNavSetup = {
         {
             label: 'About Me',
             path: '/about-me'
-        },
-        // {
-        //     label: 'Support Us',
-        //     path: 'https://www.buymeacoffee.com/webexpe13z',
-        //     newTab: true
-        // },
-        // {
-        //     label: 'Github Repo',
-        //     path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
-        //     newTab: true
-        // },
-        // {
-        //     label: 'Contact Me',
-        //     path: '/contact-me'
-        // }
+        }
     ],
     socials: [
         {

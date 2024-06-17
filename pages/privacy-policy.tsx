@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
     const PAGE_SEO: iSEO = {
         title: 'Privacy Policy',
         description: `This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in website`,
-        keywords: 'webexpx, contact me, webexpe13@gmail.com, next js blog template',
+        keywords: 'noels nonsense, contact me',
         author: 'Mayur Nalwala, Rupali Yadav'
     }
     return (
