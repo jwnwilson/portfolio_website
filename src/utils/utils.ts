@@ -192,12 +192,12 @@ export const CREATE_SEO_CONFIG = (PAGE_SEO: iSEO) => {
           ARTICLE_DETAILS
             ? ARTICLE_DETAILS?.preview?.articleTitle
             : PAGE_SEO?.title
-        } ${author ? "| " + author : null}`
+        }`
       : `${
           ARTICLE_DETAILS
             ? ARTICLE_DETAILS?.preview?.articleTitle
             : PAGE_SEO?.title
-        } | ${WEBSITE_NAME} ${author ? "| " + author : null}`;
+        } | ${WEBSITE_NAME}`;
 
   let seo_config = {
     title: title,
