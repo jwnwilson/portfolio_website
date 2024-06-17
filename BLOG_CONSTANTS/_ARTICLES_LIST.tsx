@@ -208,7 +208,7 @@ const ARTICLES_LIST: iArticle[] = [
     },
     seo: {
       keywords:
-        "team building, dysfunctional",
+        "team building, dysfunctional, noel wilson, noel, software, development, engineer, software engineering, team",
       ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
     },
   },

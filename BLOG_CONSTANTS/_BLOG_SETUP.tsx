@@ -165,11 +165,11 @@ export const PRIMARY_NAV: iNavSetup = {
 }
 
 export const DEFAULT_SEO: iSEO = {
-    title: "Nonsense",
-    description: "Noel's Blog",
-    keywords: "Blog, next js, template, next js blog, blog setup, typescript, nextjs typescript, react js blog template, responsive blog template",
+    title: "Noels Nonsense",
+    description: "Noel's Ramblings on Software Engineering, Leadership and Life.",
+    keywords: "leadership, management, team, software, development, python, typescript, react, ",
     url: WEBSITE_URL,
     author: `${NOEL.name}`,
     twitterHandle: '',
-    ogImage: '/public/images/og-image.jpg'
+    ogImage: '/public/images/headshot_500.png'
 }
