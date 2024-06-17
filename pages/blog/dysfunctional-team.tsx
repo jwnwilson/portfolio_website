@@ -23,10 +23,10 @@ const Article = () => {
                 </div> */}
                 <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" caption="Look Better by making everyone else worse" size={ImageSize.SMALL} />
                 <Text p>
-                    You could work hard, be a team player, build good products... <b>but is there an easier way?</b> What if I told you there was a way to make yourself look better by making everyone else worse? What if you actually put the 5 dysfunctions of a team in reverse to come out ahead?
+                    You could work hard, be a team player, build good products... <b>but is there an easier way?</b> What if I told you there was a way to make yourself look better by making everyone else worse? What if you actually apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> in reverse to come out ahead?
                 </Text>
                 <Text p>
-                    So in this blog I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals to come out ahead.
+                    So in this blog I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals to make yourself look great in comparison.
                 </Text>
                 <div className="md:flex items-center">
                     <div className="sm:w-100 md:w-1/2 ">
@@ -64,11 +64,10 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    Vulnerability is a building block for Trust, <b>sharing your mistakes shows vulnerablility and risks giving the teams oppurtinities to learn from them.</b> They might be encouraged to also do
-                    the same, building a culture of shared learning and growth. Shut down honest reflection, don't ask others what they could do better, they should already know. Vulnernability is weakness, you need to be the alpha. You need to be the one that everyone fears.
+                    <b>Vulnerability is a building block for Trust</b>, it's also weakness. Sharing your mistakes shows vulnerablility and this can spreading across the team. This shared weakness can build a culture of shared learning and growth. Shut. that. down. Don't offer learnings and don't ask others what they could do better, they should already know. You need to be the alpha. You need to be the one that everyone fears.
                 </Text>
                 <Text p>
-                    <b>Be an enigma, transparency can build trust</b>, hide discussions and decisions you're in from the team. If it's bad news you can pretend you're helping them by not telling anyone.
+                    Be an enigma, <b>transparency can build trust</b>, hide discussions and decisions you're in from the team. If it's bad news you can pretend you're helping them by not telling anyone.
                     People like to know what's going on and what's expected of them, they have to earn that right.
                 </Text>
                 <Text p>
@@ -92,13 +91,20 @@ const Article = () => {
                     If trust is still growing dispite your best efforts, discourage people from engaging directly in debate over different opinions. This usually results in a better outcome for the team and builds conflict resolution skills, here are some tips to avoid this.
                 </Text>
                 <List type={ListType.disc} className="mt-5">
-                    <li><b>Build "us vs them" mentality to stunt discussion</b></li>
-                    <li><b>Back channels over discussing directly can help make a siutation worse</b></li>
-                    <li><b>Don't try to understand the other person's perspective and objectives</b></li>
-                    <li><b>Don't empathise with other people's challanges, you'll be tempted to compromise</b></li>
-                    <li><b>Prioritising being nice over having uncomfortable discussions</b></li>
-                    <li><b>Shut down uncomfortable discussion before resolution</b></li>
+                    <li>Build "us vs them" mentality to stunt discussion</li>
+                    <li>Back channels over discussing directly can help make a siutation worse</li>
+                    <li>Don't try to understand the other person's perspective and objectives</li>
+                    <li><b>Don't empathise with other people's challanges</b></li>
+                    
+                    <li>Shut down uncomfortable constructive discussion before resolution</li>
+                    <li>Allow unproductive negative discussion to continue</li>
                 </List>
+                <Text p>
+                    <b>The biggest risk for constructive debate is empathy as it can tempt you to compromise. Being empathetic to others also increases chances of them being receptive to your points.</b>
+                </Text>
+                <Text p>
+                    Practice not listening to others, your spouse / partner, close friends or family are good targets, the less you feel, the better!
+                </Text>
                 <Seperator />
                 <Text subtitle className="mt-10">
                     3. Stunt Conflict Resolution Skills
@@ -114,14 +120,16 @@ const Article = () => {
                     </div>
                     <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
                         <Text p>
-                            <b>Conflict resolution is the biggest risk for us now, if a team develops this skill it can be hard to stop them.</b> Teams can then find ideal approaches to challenging siutations. Recommendations when debating:
+                            Debate comes with conflict, <b>conflict resolution is the biggest risk for us now, if a team develops this skill it can be hard to stop them.</b> Teams
+                            can then find ideal approaches to challenging siutations. Recommendations for simmering conflict:
                         </Text>
                         <List type={ListType.disc} className="mt-5">
                             <li>Don't invite challenges from others, they might get into the habit of constructive conversation</li>
                             <li>Get defensive when challenged to discourage others challenging you again</li>
-                            <li><b>The goal is to win the argument</b>, not influence the other person or have a positive effect on the business</li>
-                            <li>Don't acknowledge the other person's feelings, <b>empathy increase chances of someone being receptive to your points</b></li>
+                            <li>Prioritising being "nice", avoid uncomfortable discussions instead of having them</li>
+                            <li><b>The goal is to win the argument</b>, not solve a common problem or have a positive effect on the business</li>
                             <li>Get emotional and personal, <b>don't wait for emotions to pass for maximum damage</b> when challenging</li>
+                            <li>If emotions get the better of you <b>never appologise</b></li>
                         </List>
                     </div>
                 </div>
@@ -139,11 +147,14 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    Now is time to decide and focus on your personal goals, if you're lucky they are not aligned with the team's so you can push in the wrong direction. 
-                    If the team attempted to set a single goal that could unify them, you need to disrupt this. <b>A single, clear unifying goal risks the team committing 100% to it.</b> If a team does this it might be too late to out perform them.
+                    Now is time to decide and focus on your personal goals, if you're lucky they are not aligned with the team's so you can push in 
+                    the wrong direction. If the team attempted to set a single goal that could unify them, you need to disrupt this. <b>A single, 
+                    clear unifying goal risks the team committing 100% to it.</b> If a team does this it might be too late to out perform them.
                 </Text>
                 <Text p>
-                    Refuse to disagree and commit, don't sacrifice personal success for collective success. If you are out numbered then agree but do the bare minimum, if you didn't engage in ideological debate this is easy.
+                    If the collective goal is not aligned with your personal goals, an idiot might <b>disagree and commit. Sacrificing progress towards a personal goal for collective success.</b> This makes everyone
+                    look good and will mean others will be more likely to help you in the future. You don't need this however as you're not weak.
+                    If you are out numbered then agree but do the bare minimum, if you didn't engage in ideological debate this is easy.
                 </Text>
                 <Seperator />
                 <Text subtitle className="mt-10">
@@ -155,7 +166,12 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    If the team has a clear goal, the best you can do is encourage others to not hold themselves accountable. <b>Don't challenge others if you disagree, don't engage in difficult conversations.</b> Hide mistakes, make exceptions for yourself and avoid chances for the team to learn and improve. <b>Lack of Vulnerability will help here.</b>
+                    If the team has a clear goal, in order to be successful they need to be held accountable. This is our chance to encourage others to not 
+                    do this. Don't <b>track and show the results of the goal you are committing to.</b> Don't 
+                    <b> challenge others if you disagree and ask to see the results of their actions.</b> Massage numbers to looks good, hide mistakes, make
+                    exceptions for yourself and avoid chances for the team to learn and improve. Lack of Vulnerability will help encourage the team to
+                    not speak up about their mistakes and challenge others here.
+                    
                 </Text>
                 <Seperator />
                 <Text subtitle className="mt-10">
@@ -168,12 +184,26 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    <b>If the team is working to a collective goal it's probably too late.</b> So don't make collective results visible, deny learnings. Distract from the collective goal with you personal goals.
-                    Collect personal metrics, if you've focused on yourself they should be higher than your colleagues, only talk about these.
+                    <b>If the team is working to a collective goal and tracking it, it's probably too late.</b> So don't make collective results visible, deny 
+                    learnings. Distract from the collective goal with your personal goals. Collect personal metrics, if you've focused on yourself they
+                    should be higher than your colleagues, only talk about these.
                 </Text>
                 <Text p>
-                    If you've followed this guide, Congrats! The team should now be dysfunctional and you should be the big fish in a small pond!
+                    If you've followed this guide, <b>Congrats! The team should now be dysfunctional</b> and you should be the big fish in a small pond!
                 </Text>
+                <Seperator />
+                <Text subtitle className="mt-10">
+                   Conclusion
+                </Text>
+                <Text p>
+                    I hope you enjoyed my anti-post on how to make your team dysfunctional. If you want to learn how to build a high performing team, I recommend reading <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> by Patrick Lencioni.
+                </Text>
+                <Text p>    
+                    I like writing like this for a few reasons, 1. it's fun to write, 2. it's fun to read and 3. it's more thought provoking. 
+                    While writing this, I was giggling to myself then found myself thinking, "Oh, I've done that.."
+                    So hope you got as much out of this as I did and would love to hear your thoughts!
+                </Text>
+                <Text p><b> - Noel</b></Text>
             </div>
         </PageLayout>
     )

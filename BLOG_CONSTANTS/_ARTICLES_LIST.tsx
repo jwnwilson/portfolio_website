@@ -199,7 +199,7 @@ const ARTICLES_LIST: iArticle[] = [
     preview: {
       author: NOEL,
       date: "June 16 2024",
-      articleTitle: "How To Build A Dysfunctional Team",
+      articleTitle: "How To Make Your Team Dysfunctional",
       shortIntro:
         "A guide to making yourself look better by making everyone else worse.",
       tags: "team building dysfunctional",
