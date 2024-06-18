@@ -76,7 +76,7 @@ export const RUPALI: IAuthor = {
 
 
 // This can your company name / your name etc for SEO purposes
-export const WEBSITE_NAME: string = 'Noels Nonsense';
+export const WEBSITE_NAME: string = "Noel's Nonsense";
 export const WEBSITE_URL: string = 'https://noel-wilson.co.uk';
 
 /**
@@ -94,7 +94,7 @@ export const PRIMARY_NAV: iNavSetup = {
     // },
     logo: {
         type: LogoType.TEXT,
-        logo: "Noels Nonsense",
+        logo: "Noel's Nonsense",
     },
     // navLinks are the main navbar links that apper on top of every page
     navLinks: [
@@ -151,7 +151,7 @@ export const PRIMARY_NAV: iNavSetup = {
 }
 
 export const DEFAULT_SEO: iSEO = {
-    title: "Noels Nonsense",
+    title: "Noel's Nonsense",
     description: "Noel's Ramblings on Software Engineering, Leadership and Life.",
     keywords: "leadership, management, team, software, development, python, typescript, react, ",
     url: WEBSITE_URL,

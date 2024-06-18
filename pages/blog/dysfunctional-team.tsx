@@ -4,7 +4,6 @@ import { PageLayout, Text, List, Image, LinkTo, Seperator, Slider } from "../../
 import { DiscussionEmbed } from 'disqus-react';
 import { useTheme } from "next-themes";
 
-
 const Article = () => {
     const { theme }  = useTheme();
     return (
@@ -41,7 +40,7 @@ const Article = () => {
                     </div>
                     <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
                         <Text p>
-                            First we have to lower the bar so it's easier to jump over, this is the 5 dysfunctions pyramid. The idea is to start from the bottom and work your way up.
+                            First, we have to lower the bar so it's easier to jump over, this is the 5 dysfunctions pyramid. The idea is to start from the bottom and work your way up.
                         </Text>
                         <List type={ListType.number} className="mt-5">
                             <li><b>Trust</b></li>
@@ -61,12 +60,12 @@ const Article = () => {
                 </Text>
                 <Image
                     src="/public/imp_assets/posts/dysfunctional_team/lion_king.webp"
-                    alt="Scar and Mufassa from the Lion King"
-                    caption="Scar from the Lion King managed to become king by building a dysfyunctional team"
+                    alt="Scar and Mufasa from the Lion King"
+                    caption="Scar from the Lion King managed to become king by building a dysfunctional team"
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    <b>Vulnerability is a building block for Trust</b>, it's also weakness. Sharing your mistakes shows vulnerablility and this can spreading across the team. 
+                    <b>Vulnerability is a building block for Trust</b>, it's also weakness. Sharing your mistakes shows vulnerability and this can spreading across the team. 
                     This shared weakness can build a culture of shared learning and growth. Shut. That. down. Don't offer learnings and don't ask others what they could 
                     do better, they should already know. You need to be the alpha. You need to be the one that everyone fears.
                 </Text>
@@ -76,7 +75,7 @@ const Article = () => {
                 </Text>
                 <Text p>
                     Say one thing, do another. This will keep your team mates on their toes and they'll never know what to expect. Don't worry about overcommitting, say yes to everything and maximise the chances of letting the team down. 
-                    Be aware! <b>Showing your words and actions carry weight can make others feel like they can rely on you.</b> If the sitatutation changes don't update the team, they should be able to read your mind.
+                    Be aware! <b>Showing your words and actions carry weight can make others feel like they can rely on you.</b> If the situation changes don't update the team, they should be able to read your mind.
                 </Text>
                 <Text p>
                     Don't humanise your teammates, they are a means to an end. <b>Don't get to know them, don't ask about their lives, don't ask about their families.</b> You might start to care about them and waste energy helping them instead of yourself.
@@ -96,9 +95,9 @@ const Article = () => {
                 </Text>
                 <List type={ListType.disc} className="mt-5">
                     <li>Build "us vs them" mentality to stunt discussion</li>
-                    <li>Back channels over discussing directly can help make a siutation worse</li>
+                    <li>Back channels over discussing directly can help make a situation worse</li>
                     <li>Don't try to understand the other person's perspective and objectives</li>
-                    <li><b>Don't empathise with other people's challanges</b></li>
+                    <li><b>Don't empathise with other people's challenges</b></li>
                     
                     <li>Shut down uncomfortable constructive discussion before resolution</li>
                     <li>Allow unproductive negative discussion to continue</li>
@@ -125,7 +124,7 @@ const Article = () => {
                     <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
                         <Text p>
                             Debate comes with conflict, <b>conflict resolution is the biggest risk for us now, if a team develops this skill it can be hard to stop them.</b> Teams
-                            can then find ideal approaches to challenging siutations. Recommendations for simmering conflict:
+                            can then find ideal approaches to challenging situations. Recommendations for simmering conflict:
                         </Text>
                         <List type={ListType.disc} className="mt-5">
                             <li>Don't invite challenges from others, they might get into the habit of constructive conversation</li>
@@ -133,7 +132,7 @@ const Article = () => {
                             <li>Prioritising being "nice", avoid uncomfortable discussions instead of having them</li>
                             <li><b>The goal is to win the argument</b>, not solve a common problem or have a positive effect on the business</li>
                             <li>Get emotional and personal, <b>don't wait for emotions to pass for maximum damage</b> when challenging</li>
-                            <li>If emotions get the better of you <b>never appologise</b></li>
+                            <li>If emotions get the better of you <b>never apologise</b></li>
                         </List>
                     </div>
                 </div>
@@ -170,7 +169,7 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    If the team has a clear goal, in order to be successful they need to be held accountable. This is our chance to encourage others to not 
+                    If the team has a clear goal, in order to be successful, they need to be held accountable. This is our chance to encourage others to not 
                     do this. Don't <b>track and show the results of the goal you are committing to.</b> Don't 
                     <b> challenge others if you disagree and ask to see the results of their actions.</b> Massage numbers to looks good, hide mistakes, make
                     exceptions for yourself and avoid chances for the team to learn and improve. Lack of Vulnerability will help encourage the team to
@@ -224,3 +223,4 @@ const Article = () => {
 }
 
 export default Article;
+
