@@ -7,4 +7,3 @@ https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss
 # To do
 
 - Update blog layout add comments to all posts and add share widget
-- Tip template creators
