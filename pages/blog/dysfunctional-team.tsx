@@ -2,9 +2,11 @@
 import { ImageSize, ListType } from "../../src/shared/enums";
 import { PageLayout, Text, List, Image, LinkTo, Seperator, Slider } from "../../src/components";
 import { DiscussionEmbed } from 'disqus-react';
+import { useTheme } from "next-themes";
 
 
 const Article = () => {
+    const { theme }  = useTheme();
     return (
         <PageLayout home>
             <div className='container px-3 pb-[20px] md:mt-[50px] pt-20 md:pt-0'>
@@ -206,14 +208,16 @@ const Article = () => {
                     So hope you got as much out of this as I did and would love to hear your thoughts!
                 </Text>
                 <Text p><b> - Noel</b></Text>
-                <DiscussionEmbed shortname="noel-wilson-co-uk-1" config={
+                <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
                     {
                         url: "https://noel-wilson.co.uk/blog/dysfunctional-team",
                         identifier: "dysfunctional-team",
-                        title: "How To Make Your Team Dysfunctional"
+                        title: "How To Make Your Team Dysfunctional",
+                        
                     }
                 
                 }></DiscussionEmbed>
+                
             </div>
         </PageLayout>
     )
