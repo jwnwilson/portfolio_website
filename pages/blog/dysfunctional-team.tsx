@@ -8,7 +8,7 @@ const Article = () => {
     const { theme }  = useTheme();
     return (
         <PageLayout home>
-            <div className='container px-3 pb-[20px] pt-10'>
+            <div className='container px-3 pb-[20px] pt-20 md:pt-10'>
                 <Text title className="text-3xl">
                     Building a Dysfunctional Team.
                 </Text>

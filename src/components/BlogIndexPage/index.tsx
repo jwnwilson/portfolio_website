@@ -49,8 +49,8 @@ const BlogIndexPage = ({ articlesPerPage = 6 }: { articlesPerPage?: number }) =>
     <PageLayout home>
       <div
         className={combineClasses(
-          "container mt-10 md:pt-0 px-0 md:px-3",
-          category ? "pt-10" : "pt-14"
+          "container md:pt-0 px-0 md:px-3 pt-20 md:pt-10",
+          category ? "pt-20" : "pt-14"
         )}
       >
         {category || author ? (
