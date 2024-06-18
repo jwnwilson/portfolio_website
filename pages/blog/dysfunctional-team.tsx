@@ -65,7 +65,7 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    <b>Vulnerability is a building block for Trust</b>, it's also weakness. Sharing your mistakes shows vulnerability and this can spreading across the team. 
+                    <b>Vulnerability is a building block for Trust</b>, it's also weakness. Sharing your mistakes shows vulnerability and this can spread across the team. 
                     This shared weakness can build a culture of shared learning and growth. Shut. That. down. Don't offer learnings and don't ask others what they could 
                     do better, they should already know. You need to be the alpha. You need to be the one that everyone fears.
                 </Text>
@@ -131,7 +131,7 @@ const Article = () => {
                             <li>Get defensive when challenged to discourage others challenging you again</li>
                             <li>Prioritising being "nice", avoid uncomfortable discussions instead of having them</li>
                             <li><b>The goal is to win the argument</b>, not solve a common problem or have a positive effect on the business</li>
-                            <li>Get emotional and personal, <b>don't wait for emotions to pass for maximum damage</b> when challenging</li>
+                            <li>Get emotional and personal, <b>don't wait for emotions to pass for maximum damage</b></li>
                             <li>If emotions get the better of you <b>never apologise</b></li>
                         </List>
                     </div>
