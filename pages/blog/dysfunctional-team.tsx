@@ -74,11 +74,13 @@ const Article = () => {
                     helping them by not telling anyone. People like to know what's going on and what's expected of them, they have to earn that right.
                 </Text>
                 <Text p>
-                    Say one thing, do another. This will keep your team mates on their toes and they'll never know what to expect. Don't worry about overcommitting, say yes to everything and maximise the chances of letting the team down. 
-                    Be aware! <b>Showing your words and actions carry weight can make others feel like they can rely on you.</b> If the situation changes don't update the team, they should be able to read your mind.
+                    <b>Showing your words and actions carry weight can make others feel like they can rely on you.</b> Say one thing, do another. This will keep your team
+                    mates on their toes and they'll never know what to expect. Don't worry about overcommitting, say yes to everything and maximise the chances of letting
+                    the team down. Be aware!  If the situation changes don't update the team, they should be able to read your mind.
                 </Text>
                 <Text p>
-                    Don't humanise your teammates, they are a means to an end. <b>Don't get to know them, don't ask about their lives, don't ask about their families.</b> You might start to care about them and waste energy helping them instead of yourself.
+                    <b>Don't get to know your team,</b> you might start to care about them and waste energy
+                    helping them instead of yourself. Don't ask about their lives, don't ask about their families. Don't humanise your teammates, they are a means to an end. 
                 </Text>
                 <Seperator />
                 <Text subtitle className="mt-10">
