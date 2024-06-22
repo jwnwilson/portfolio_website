@@ -66,8 +66,8 @@ const Article = () => {
                 />
                 <Text p>
                     <b>Vulnerability is a building block for Trust</b>, it's also weakness. Sharing your mistakes shows vulnerability and this can spread across the team. 
-                    This shared weakness can build a culture of shared learning and growth. Shut that down, by making people who show vulnerability uncomfortable, if 
-                    you can use what they share against them even better. Don't offer learnings and don't ask others what they could do better, they should already know. 
+                    This can build a culture of shared learning and growth. Stamp out weakness by making people who show vulnerability uncomfortable, if 
+                    you can use what they share against them even better. Don't offer your learnings and don't ask others what they could do better, they should already know. 
                 </Text>
                 <Text p>
                     <b>Transparency can build trust</b>, be an enigma, hide discussions and decisions you're in from the team. If it's bad news you can pretend you're 
