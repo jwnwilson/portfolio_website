@@ -66,8 +66,8 @@ const Article = () => {
                 />
                 <Text p>
                     <b>Vulnerability is a building block for Trust</b>, it's also weakness. Sharing your mistakes shows vulnerability and this can spread across the team. 
-                    This shared weakness can build a culture of shared learning and growth. Shut. That. down. Don't offer learnings and don't ask others what they could 
-                    do better, they should already know. You need to be the alpha. You need to be the one that everyone fears.
+                    This shared weakness can build a culture of shared learning and growth. Shut. That. Down. Don't offer learnings and don't ask others what they could 
+                    do better, they should already know. 
                 </Text>
                 <Text p>
                     Be an enigma, <b>transparency can build trust</b>, hide discussions and decisions you're in from the team. If it's bad news you can pretend you're 
@@ -202,16 +202,15 @@ const Article = () => {
                     I hope you enjoyed my anti-post on how to make your team dysfunctional. If you want to learn how to build a high performing team, I recommend reading <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> by Patrick Lencioni.
                 </Text>
                 <Text p>    
-                    I like writing like this for a few reasons, 1. it's fun to write, 2. it's fun to read and 3. it's more thought provoking. 
-                    While writing this, I was giggling to myself then found myself thinking, "Oh, I've done that.."
-                    So hope you got as much out of this as I did and would love to hear your thoughts!
+                    While writing this, I was giggling to myself then found myself occasionally thinking, "Oh, I've done that.."
+                    The goal was to make you smile and maybe cause some reflection as it did for me and would love to hear your thoughts!
                 </Text>
                 <Text p><b> - Noel</b></Text>
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
                     {
                         url: "https://noel-wilson.co.uk/blog/dysfunctional-team",
                         identifier: "dysfunctional-team",
-                        title: "How To Make Your Team Dysfunctional",
+                        title: "Building a Dysfunctional Team",
                         
                     }
                 
