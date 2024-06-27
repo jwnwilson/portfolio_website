@@ -191,7 +191,8 @@ const Article = () => {
                    Conclusion
                 </Text>
                 <Text p>
-                    I hope you enjoyed my post on how to make your team dysfunctional. If you want to learn how to build a high performing team, I recommend reading <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> by Patrick Lencioni 
+                    I hope you enjoyed my post on how to make your team dysfunctional, it was inspired by this post <LinkTo href="https://taylor.town/-10x.external" className="underline">How to be a -10x Engineer</LinkTo>. If
+                    you want to learn how to build a high performing team, I recommend reading <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> by Patrick Lencioni 
                     and <LinkTo href="https://www.radicalcandor.com/" external className="underline">Radical Candor</LinkTo> by Kim Scott.
                 </Text>
                 <Text p>    
