@@ -12,22 +12,12 @@ const Article = () => {
                 <Text title className="text-3xl">
                     Building a Dysfunctional Team.
                 </Text>
-                {/* <div className="dark:bg-slate-800 bg-blue-200 m t-5 rounded px-3 py-2">
-                    <i>
-                        *note: All the files you will create or interact with are in
-                    </i>
-                    <List type={ListType.disc} className="mt-5">
-                        <li><b>BLOG_CONSTANTS folder : </b> inside this we have our _BLOG_SETUP.tsx file where we set our authors, navbar and other details and we have _ARTICLES_LIST.tsx file where we maintain our article list.</li>
-                        <li><b>blog folder : </b> Inside this we will create out blog files or sub folders for your article files like this current file is in {'pages -> blog -> tutorial'}</li>
-                        <li><b>images folder : </b> In this we will save all our images to use in the articles, like the og-image.jpg file is stored in {'public -> images'} folder.</li>
-                    </List>
-                </div> */}
                 <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" caption="Look Better by making everyone else worse" size={ImageSize.SMALL} />
                 <Text p>
                     You could work hard, be a team player, build good products... <b>but is there an easier way?</b> What if I told you there was a way to make yourself look better by making everyone else worse? What if you actually apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> in reverse to come out ahead?
                 </Text>
                 <Text p>
-                    So in this blog I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals to make yourself look great in comparison.
+                    So in this post I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals to make yourself look great in comparison.
                 </Text>
                 <div className="md:flex items-center">
                     <div className="sm:w-100 md:w-1/2 ">
@@ -65,18 +55,18 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    <b>Vulnerability is a building block for Trust</b>, it's also weakness. Sharing your mistakes shows vulnerability and this can spread across the team. 
-                    This can build a culture of shared learning and growth. Stamp out weakness by making people who show vulnerability uncomfortable, if 
-                    you can use what they share against them even better. Don't offer your learnings and don't ask others what they could do better, they should already know. 
+                    <b>Vulnerability is a building block for Trust</b>, it's also weakness. This can spread across the team
+                    and build a culture of shared learning and growth. Stamp out weakness by making people who show vulnerability uncomfortable, if 
+                    you can use what they share against them even better. Don't offer your learnings and don't ask others what they could do better. 
                 </Text>
                 <Text p>
                     <b>Transparency can build trust</b>, be an enigma, hide discussions and decisions you're in from the team. If it's bad news you can pretend you're 
                     helping them by not telling anyone. People like to know what's going on and what's expected of them, they have to earn that right.
                 </Text>
                 <Text p>
-                    <b>Showing your words and actions carry weight can make others feel like they can rely on you.</b> Say one thing, do another. This will keep your team
+                    <b>Following through on what you say can encourage others to rely on you.</b> Say one thing, do another. This will keep your team
                     mates on their toes and they'll never know what to expect. Don't worry about overcommitting, say yes to everything and maximise the chances of letting
-                    the team down. Be aware!  If the situation changes don't update the team, they should be able to read your mind.
+                    the team down. If the situation changes keep that as a fun surprise for the team.
                 </Text>
                 <Text p>
                     <b>Don't get to know your team,</b> you might start to care about them and waste energy
@@ -201,12 +191,11 @@ const Article = () => {
                    Conclusion
                 </Text>
                 <Text p>
-                    I hope you enjoyed my anti-post on how to make your team dysfunctional. If you want to learn how to build a high performing team, I recommend reading <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> by Patrick Lencioni 
+                    I hope you enjoyed my post on how to make your team dysfunctional. If you want to learn how to build a high performing team, I recommend reading <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> by Patrick Lencioni 
                     and <LinkTo href="https://www.radicalcandor.com/" external className="underline">Radical Candor</LinkTo> by Kim Scott.
                 </Text>
                 <Text p>    
-                    While writing this, I was giggling to myself then found myself occasionally thinking, "Oh, I've done that.."
-                    The goal was to make you smile and maybe cause some reflection as it did for me and would love to hear your thoughts!
+                    I'd like to hear your thoughts, questions and feedback on this post, please leave a comment below.
                 </Text>
                 <Text p><b> - Noel</b></Text>
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
