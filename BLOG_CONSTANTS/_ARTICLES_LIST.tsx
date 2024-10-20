@@ -212,6 +212,25 @@ const ARTICLES_LIST: iArticle[] = [
       ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
     },
   },
+  {
+    path: "/pages/blog/hiring-the-worst-candidate.tsx",
+    featureArticle: true,
+    preview: {
+      author: NOEL,
+      date: "October 20 2024",
+      articleTitle: "Hiring the worst candidate",
+      shortIntro:
+        "Ensuring the competition is weak",
+      tags: "team building, hiring, satire",
+      thumbnail: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
+      category: "Team Building",
+    },
+    seo: {
+      keywords:
+        "team building, dysfunctional, noel wilson, noel, software, development, engineer, software engineering, team",
+      ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
+    },
+  },
 ];
 
 export const SORTED_ARTICLES_BY_DATE = ARTICLES_LIST.sort((a, b) =>
