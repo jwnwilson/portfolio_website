@@ -1,7 +1,7 @@
 import { iArticle } from "../src/shared/interfaces";
 
 // Import author profiles, just type the name you have set in _BLOG_SETUP inside the curly brackets
-import { MAYUR, NOEL, RUPALI } from "./_BLOG_SETUP";
+import { NOEL } from "./_BLOG_SETUP";
 
 // main article list to display all atricles
 /**
@@ -202,7 +202,7 @@ const ARTICLES_LIST: iArticle[] = [
       articleTitle: "Building a Dysfunctional Team",
       shortIntro:
         "A guide to making yourself look better by making everyone else worse.",
-      tags: "team building dysfunctional",
+      tags: "team building, dysfunctional, satire",
       thumbnail: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
       category: "Team Building",
     },

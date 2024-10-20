@@ -14,10 +14,8 @@ const Article = () => {
                 </Text>
                 <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" caption="Look Better by making everyone else worse" size={ImageSize.SMALL} />
                 <Text p>
-                    You could work hard, be a team player, build good products... <b>but is there an easier way?</b> What if I told you there was a way to make yourself look better by making everyone else worse? What if you actually apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> in reverse to come out ahead?
-                </Text>
-                <Text p>
-                    So in this post I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals to make yourself look great in comparison.
+                    Work hard, be a team player, build good products... <b>or</b> make yourself look better by making everyone else worse? What if we apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> in reverse to sabotage the competition?
+                    So in this post I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals and make yourself look great in comparison.
                 </Text>
                 <div className="md:flex items-center">
                     <div className="sm:w-100 md:w-1/2 ">
@@ -30,7 +28,7 @@ const Article = () => {
                     </div>
                     <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
                         <Text p>
-                            First, we have to lower the bar so it's easier to jump over, this is the 5 dysfunctions pyramid. The idea is to start from the bottom and work your way up.
+                            This is the 5 dysfunctions pyramid, we will start from the bottom and work our way up, erroding the foundations of an effective team.
                         </Text>
                         <List type={ListType.number} className="mt-5">
                             <li><b>Trust</b></li>
@@ -55,18 +53,21 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    <b>Vulnerability is a building block for Trust</b>, it's also weakness. This can spread across the team
+                    The foundations of a good team is trust, if teams trust their leaders and one another they can easily fix problems that could over time,
+                    compond and become bigger issues. 
+                </Text>
+                <Text p>  
+                    <b>Vulnerability is a building block for Trust</b>, if shown and nurtured it can spread across the team
                     and build a culture of shared learning and growth. Stamp out weakness by making people who show vulnerability uncomfortable, if 
                     you can use what they share against them even better. Don't offer your learnings and don't ask others what they could do better. 
                 </Text>
                 <Text p>
-                    <b>Transparency can build trust</b>, be an enigma, hide discussions and decisions you're in from the team. If it's bad news you can pretend you're 
-                    helping them by not telling anyone. People like to know what's going on and what's expected of them, they have to earn that right.
+                    <b>Transparency can build trust</b>, don't show data behind decisions, if decisions are made without data that's ideal. 
+                    If it's bad news you can pretend you're helping them by hiding it. People need to know what's going on and what's expected of them, keep them guessing. 
                 </Text>
                 <Text p>
-                    <b>Following through on what you say can encourage others to rely on you.</b> Say one thing, do another. This will keep your team
-                    mates on their toes and they'll never know what to expect. Don't worry about overcommitting, say yes to everything and maximise the chances of letting
-                    the team down. If the situation changes keep that as a fun surprise for the team.
+                    <b>Following through on commitments</b> can encourage others to rely on you. Make sure to overcommit to problems so you don't have capcity to follow through, 
+                    say yes to everything. Don't ask for help or pull others in if needed, you don't want to be seen as weak.
                 </Text>
                 <Text p>
                     <b>Don't get to know your team,</b> you might start to care about them and waste energy
@@ -144,11 +145,11 @@ const Article = () => {
                 <Text p>
                     Now is time to decide and focus on your personal goals, if you're lucky they are not aligned with the team's so you can push in 
                     the wrong direction. If the team attempted to set a single goal that could unify them, you need to disrupt this. <b>A single, 
-                    clear unifying goal risks the team committing 100% to it.</b> If a team does this it might be too late to out perform them.
+                    clear unifying goal risks uniting the team.</b> If a team does this it might be too late to out perform them.
                 </Text>
                 <Text p>
-                    If the collective goal is not aligned with your personal goals, an idiot might <b>disagree and commit. Sacrificing progress towards a personal goal for collective success.</b> This makes everyone
-                    look good and will mean others will be more likely to help you in the future. You don't need this however as you're not weak.
+                    If the collective goal is not aligned with your personal goals, an lesser person might <b>disagree and commit. Sacrificing progress towards a personal goal for collective success.</b> This makes everyone
+                    look good and will mean others will be more likely to help you in the future. 
                     If you are out numbered then agree but do the bare minimum, if you didn't engage in ideological debate this is easy.
                 </Text>
                 <Seperator />
