@@ -21,11 +21,11 @@ const Article = () => {
 
                     Having interviewed dozens and hiring for multiple teams of engineers I'd like to share my experience on how to hire the worst candidate.
 
-                    Attitude > Aptitude
-                    Flexibility > Correctness
-                    Product > Technology
-                    Automation > Manual Process
-                    Strategic > Tactical
+                    Attitude &gt; Aptitude
+                    Flexibility &gt; Correctness
+                    Product &gt; Technology
+                    Automation &gt; Manual Process
+                    Strategic &gt; Tactical
 
                     Talent attracts talent.
 
