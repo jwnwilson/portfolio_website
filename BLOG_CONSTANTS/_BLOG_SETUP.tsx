@@ -40,6 +40,41 @@ export const NOEL: IAuthor = {
     ]
 }
 
+export const MAYUR: IAuthor = {
+    name: "Mayur Nalwala",
+    designation: "Software Engineer",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    profilePic: "",
+    social: [
+        {
+            icon: <AiFillGithub />,
+            link: 'https://github.com/nmayur'
+        },
+        {
+            icon: <AiFillLinkedin />,
+            link: 'https://www.linkedin.com/in/mayur-nalwala/'
+        },
+    ]
+}
+
+export const RUPALI: IAuthor = {
+    name: "Rupali Yadav",
+    designation: "IT Analyst",
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    profilePic: "",
+    social: [
+        {
+            icon: <AiFillGithub />,
+            link: 'https://github.com/rupali-yadav'
+        },
+        {
+            icon: <AiFillLinkedin />,
+            link: 'https://www.linkedin.com/in/rupali-yadav-087bb4112/'
+        },
+    ]
+}
+
+
 // This can your company name / your name etc for SEO purposes
 export const WEBSITE_NAME: string = "Noel's Nonsense";
 export const WEBSITE_URL: string = 'https://noel-wilson.co.uk';
