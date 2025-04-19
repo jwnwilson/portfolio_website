@@ -13,7 +13,7 @@ const Article = () => {
                     Building a Dysfunctional Team
                 </Text>
                 <Text subtitle>
-                    Make yourself look Better by making everything else worse
+                    Make yourself look better by making everything else worse
                 </Text>
                 <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" size={ImageSize.SMALL} />
                 <Text p>
@@ -72,7 +72,7 @@ const Article = () => {
                     If it's bad news you can pretend you're helping them by hiding it. People need to know what's going on and what's expected of them, keep them guessing. 
                 </Text>
                 <Text p>
-                    <b>Following through on commitments</b> can encourage others to rely on you. Make sure to overcommit to problems so you don't have capcity to follow through, 
+                    <b>Following through on commitments</b> can encourage others to rely on you. Make sure to overcommit to problems so you don't have capacity to follow through, 
                     say yes to everything. Don't ask for help or pull others in if needed, you don't want to be seen as weak.
                 </Text>
                 <Text p>
@@ -148,32 +148,39 @@ const Article = () => {
                     caption="With creativity it's always possible to avoid commitment"
                     size={ImageSize.SMALL}
                 />
-                <Text p>
-                    Now is time to decide and focus on your personal goals, if you're lucky they are not aligned with the team's so you can push in 
-                    the wrong direction. If the team attempts to set a single goal that could unify them, you need to disrupt this. <b>A single, 
-                    clear unifying goal risks uniting the team.</b> If a team does this it might be too late to out perform them.
+                <Text p>    
+                    <b>A single, clear unifying goal risks uniting the team,</b> having everyone working to help the business or product achieve a specific outcome and committing to it
+                    risks the entire team being successful.
                 </Text>
                 <Text p>
-                    If the collective goal is not aligned with your personal goals, an lesser person might <b>disagree and commit. Sacrificing progress towards a personal goal for collective success.</b> This makes everyone
-                    look good and will mean others will be more likely to help you in the future. 
+                    So instead, now is time to decide and focus on your personal goals, prioritise what's best for you! A good model is CDD (CV driven development). 
+                    Prioritise technologies you're interested in that will help you on your next role, if you're not sure what to pick then it's always a good time to implement kubernetes!
+                </Text>
+                
+                <Text p>
+                    A common way successful teams unite is for some people to <b>disagree and commit to a solution. Alignment doesn't mean agreement</b> but this
+                    means sacrificing progress towards a personal goal for collective success, so how we do avoid this?
                     If you are out numbered then agree but do the bare minimum, if you didn't engage in ideological debate this is easy.
                 </Text>
                 <Seperator />
                 <Text subtitle className="mt-10">
                     5. Encourage unaccountability
                 </Text>
-                <Image
-                    src="/public/imp_assets/posts/dysfunctional_team/shaggy-it-wasnt-me.webp"
-                    alt="Shaggy it wasn't me image"
-                    size={ImageSize.SMALL}
-                />
                 <Text p>
-                    If the team has a clear goal, in order to be successful, they need to be held accountable. This is our chance to encourage others to not 
-                    do this. Don't <b>track and show the results of the goal you are committing to.</b> Don't 
-                    <b> challenge others if you disagree and ask to see the results of their actions.</b> Massage numbers to looks good, hide mistakes, make
-                    exceptions for yourself and avoid chances for the team to learn and improve. Lack of Vulnerability will help encourage the team to
-                    not speak up about their mistakes and challenge others here.
-                    
+                    If the team has a clear goal, in order to be successful, they need to be held accountable.
+                </Text>
+                <Text> 
+                    Teams usually do this by tracking projects with data, herer's some tips to interfere. 
+                </Text>
+                <List type={ListType.disc} className="mt-5">
+                    <li>Make the data hard to access, dev ops and sec ops are useful if you can argue it's sensitive data</li>
+                    <li>If someone tracks the data manually which is effective, then don't look at it</li>
+                    <li>Don't <b> challenge others if you disagree and ask to see the results of their actions.</b></li>
+                    <li><b> Massage numbers to looks good, hide mistakes, make exceptions for yourself</b></li>
+                </List>
+                <Text p>
+                    Finally <b>don't hold yourself accountable</b>, if you do this then others will too. If you make a mistake, don't own up to it, blame others.
+                    If made a decision, don't take responsibility for it, blame the team.
                 </Text>
                 <Seperator />
                 <Text subtitle className="mt-10">
@@ -186,9 +193,13 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    <b>If the team is working to a collective goal and tracking it, it's probably too late.</b> So don't make collective results visible, deny 
-                    learnings. Distract from the collective goal with your personal goals. Collect personal metrics, if you've focused on yourself they
-                    should be higher than your colleagues, only talk about these.
+                    If you've followed this guide, you should have a sweet kubernetes cluster up by now to wow your next employer and your team mates should 
+                    be busy chasing their trails.
+                </Text>
+                <Text p>
+                    This isn't specific to this guide but keep a brag list with all your personal acomplishments, feel free to exaggerate your personal contributions to 
+                    teams. Focus on your personal achievements though just incase an employer asks for specifics on what you contributed to the team, this happens and it's 
+                    embarrassing to be caught out!
                 </Text>
                 <Text p>
                     If you've followed this guide, <b>Congrats! The team should now be dysfunctional</b> and you should be the big fish in a small pond!
@@ -198,7 +209,7 @@ const Article = () => {
                    Conclusion
                 </Text>
                 <Text p>
-                    I hope you enjoyed my post on how to make your team dysfunctional, it was inspired by this post <LinkTo href="https://taylor.town/-10x.external" className="underline">How to be a -10x Engineer</LinkTo>. If
+                    I hope you enjoyed my post on how to make your team dysfunctional, it was inspired by this post <LinkTo href="https://taylor.town/-10x" className="underline">How to be a -10x Engineer</LinkTo>. If
                     you want to learn how to build a high performing team, I recommend reading <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> by Patrick Lencioni 
                     and <LinkTo href="https://www.radicalcandor.com/" external className="underline">Radical Candor</LinkTo> by Kim Scott.
                 </Text>
