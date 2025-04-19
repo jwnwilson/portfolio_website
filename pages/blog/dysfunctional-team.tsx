@@ -10,12 +10,18 @@ const Article = () => {
         <PageLayout home>
             <div className='container px-3 pb-[20px] pt-20 md:pt-10'>
                 <Text title className="text-3xl">
-                    Building a Dysfunctional Team.
+                    Building a Dysfunctional Team
                 </Text>
-                <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" caption="Look Better by making everyone else worse" size={ImageSize.SMALL} />
+                <Text subtitle>
+                    Make yourself look Better by making everything else worse
+                </Text>
+                <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" size={ImageSize.SMALL} />
                 <Text p>
-                    Work hard, be a team player, build good products... <b>or</b> make yourself look better by making everyone else worse? What if we apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> in reverse to sabotage the competition?
-                    So in this post I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals and make yourself look great in comparison.
+                    You could work hard, be a team player, build good products... <b>or</b> what if it's easier to make everyone around you worse instead? 
+                </Text>
+                <Text p>
+                    What if we apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> to sabotage the competition?
+                    With this post I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals, so you look great in comparison.
                 </Text>
                 <div className="md:flex items-center">
                     <div className="sm:w-100 md:w-1/2 ">
@@ -57,9 +63,9 @@ const Article = () => {
                     compond and become bigger issues. 
                 </Text>
                 <Text p>  
-                    <b>Vulnerability is a building block for Trust</b>, if shown and nurtured it can spread across the team
-                    and build a culture of shared learning and growth. Stamp out weakness by making people who show vulnerability uncomfortable, if 
-                    you can use what they share against them even better. Don't offer your learnings and don't ask others what they could do better. 
+                    <b>Vulnerability is a building block for Trust</b>, if people can share their failures then others can learn from them,
+                    this can encourage a culture of shared learning and growth. Stamp out weakness by making people who show vulnerability uncomfortable, 
+                    berating mistakes is an excellent way to do this.
                 </Text>
                 <Text p>
                     <b>Transparency can build trust</b>, don't show data behind decisions, if decisions are made without data that's ideal. 
@@ -144,7 +150,7 @@ const Article = () => {
                 />
                 <Text p>
                     Now is time to decide and focus on your personal goals, if you're lucky they are not aligned with the team's so you can push in 
-                    the wrong direction. If the team attempted to set a single goal that could unify them, you need to disrupt this. <b>A single, 
+                    the wrong direction. If the team attempts to set a single goal that could unify them, you need to disrupt this. <b>A single, 
                     clear unifying goal risks uniting the team.</b> If a team does this it might be too late to out perform them.
                 </Text>
                 <Text p>
