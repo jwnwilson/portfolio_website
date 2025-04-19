@@ -212,25 +212,25 @@ const ARTICLES_LIST: iArticle[] = [
       ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
     },
   },
-  {
-    path: "/pages/blog/first-year-as-vp-eng.tsx",
-    featureArticle: true,
-    preview: {
-      author: NOEL,
-      date: "April 2025",
-      articleTitle: "First Year As VP of Engineering",
-      shortIntro:
-        "What I learned in my first year as a manager of managers",
-      tags: "team building, engineering, management, leadership",
-      thumbnail: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
-      category: "Team Building",
-    },
-    seo: {
-      keywords:
-        "team building, dysfunctional, noel wilson, noel, software, development, engineer, software engineering, team",
-      ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
-    },
-  },
+  // {
+  //   path: "/pages/blog/first-year-as-vp-eng.tsx",
+  //   featureArticle: true,
+  //   preview: {
+  //     author: NOEL,
+  //     date: "April 2025",
+  //     articleTitle: "First Year As VP of Engineering",
+  //     shortIntro:
+  //       "What I learned in my first year as a manager of managers",
+  //     tags: "team building, engineering, management, leadership",
+  //     thumbnail: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
+  //     category: "Team Building",
+  //   },
+  //   seo: {
+  //     keywords:
+  //       "team building, dysfunctional, noel wilson, noel, software, development, engineer, software engineering, team",
+  //     ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
+  //   },
+  // },
   // {
   //   path: "/pages/blog/hiring-the-worst-candidate.tsx",
   //   featureArticle: true,
