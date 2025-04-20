@@ -83,7 +83,7 @@ const Article = () => {
                     One of my key responsibilities is to align technology with business needs, even when those needs shift fast. This means resisting the urge to build “perfect” systems—instead, we build adaptable ones.
                 </Text>
                 <Text p>
-                    We adopted <LinkTo href="https://en.wikipedia.org/wiki/Domain-driven_design" className="underline">domain-driven design</LinkTo> to map business problems to teams, giving them autonomy and driving productivity. We embraced <LinkTo href="https://martinfowler.com/bliki/HexagonalArchitecture.html" className="underline">hexagonal architecture</LinkTo> to maximise reversable decisions. Every team is using the same core tools and similar project structure and design patterns. Making it easy for people to help another team, re-use another teams work and share knowledge.
+                    We adopted <LinkTo href="https://en.wikipedia.org/wiki/Domain-driven_design" className="underline">domain-driven design</LinkTo> to map business problems to teams, giving them autonomy and driving productivity. We embraced <LinkTo href="https://martinfowler.com/bliki/HexagonalArchitecture.html" className="underline">hexagonal architecture</LinkTo> to maximise reversable decisions. Every team is using the same core tools, similar project structure and the same design patterns. Making it easy for teams to help each other, re-use another each others work and share knowledge.
                 </Text>
                 <Text p>
                     Perfect is the enemy of good. In our world, it’s better to be pragmatic and aim for good enough and prioritise reducing the number of changes needed to react to new information quickly.
