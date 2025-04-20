@@ -13,7 +13,7 @@ const Article = () => {
                 <Text title className="text-3xl">
                     Reflections from a year as VP of Engineering
                 </Text>
-                <Image className="my-5" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading through the terbulent environment of AI in a startup" size={ImageSize.SMALL} />
+                <Image className="my-5" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading in the terbulent environment of an AI startup" size={ImageSize.SMALL} />
                 <Text p>
                     Reaching my first year working as a VP of engineering, I’ve been reflecting on an intense, rewarding year leading engineering at a startup. It’s been a year marked by breakthroughs, resilience, and some tough but rewarding lessons.
                 </Text>
