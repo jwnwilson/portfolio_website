@@ -117,7 +117,7 @@ const Article = () => {
                             src="/public/imp_assets/posts/dysfunctional_team/radical_candor.jpg"
                             alt="Radical Candor"
                             caption="Do not let people on your team read this book"
-                            size={ImageSize.SMALL}
+                            size={ImageSize.XS}
                         />
                     </div>
                     <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
@@ -176,10 +176,10 @@ const Article = () => {
                     <li>Make the data hard to access, dev ops and sec ops are useful if you can argue it's sensitive data</li>
                     <li>If someone tracks the data manually which is effective, then don't look at it</li>
                     <li>Don't <b> challenge others if you disagree and ask to see the results of their actions.</b></li>
-                    <li><b> Massage numbers to looks good, hide mistakes, make exceptions for yourself</b></li>
+                    <li>Massage numbers to looks good, hide mistakes, make exceptions for yourself</li>
                 </List>
                 <Text p>
-                    Finally <b>don't hold yourself accountable</b>, if you do this then others will too. If you make a mistake, don't own up to it, blame others.
+                    Finally don't <b>hold yourself accountable</b>, if you do this then others will too. If you make a mistake, don't own up to it, blame others.
                     If made a decision, don't take responsibility for it, blame the team.
                 </Text>
                 <Seperator />
@@ -193,7 +193,7 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    If you've followed this guide, you should have a sweet kubernetes cluster up by now to wow your next employer and your team mates should 
+                    If you've followed this guide, you should your own project (a.k.a. a sweet kubernetes cluster) up by now to wow your next employer and your team mates should 
                     be busy chasing their trails.
                 </Text>
                 <Text p>
