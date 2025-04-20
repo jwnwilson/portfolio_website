@@ -11,9 +11,9 @@ const Article = () => {
         <PageLayout home>
             <div className='container px-3 pb-[20px] pt-20 md:pt-10'>
                 <Text title className="text-3xl">
-                    Reflections from 2025: A year leading a startup in Engineering
+                    Reflections from a year as VP of Engineering
                 </Text>
-                <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" caption="Look Better by making everyone else worse" size={ImageSize.SMALL} />
+                <Image className="my-5" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading through the terbulent environment of AI in a startup" size={ImageSize.SMALL} />
                 <Text p>
                     Reaching my first year working as a VP of engineering, I’ve been reflecting on an intense, rewarding year leading engineering at a startup. It’s been a year marked by breakthroughs, resilience, and some tough but rewarding lessons.
                 </Text>
@@ -23,11 +23,24 @@ const Article = () => {
                 <List type={ListType.number} className="mt-5">
                     <li><b>Reduced data generation time by 95</b>%</li>
                     <li><b>Scaled to support 10x more customers</b></li>
-                    <li><b>Launched cutting-edge AI products that stand out in a crowded market</b></li>
+                    <li><b>Launched cutting-edge AI products that stand out in a competitive market</b></li>
                     <li><b>Built a high-performing, deeply collaborative engineering culture</b></li>
                 </List>
                 <Text p>
-                    Looking back, here are a few principles and lessons that defined our year—and my growth.
+                    Looking back, here are a few principles and lessons that defined our year—and our growth.
+                </Text>
+
+                <Text subtitle>
+                    Stay the course
+                </Text>
+                <Text p>
+                    In a world obsessed with speed and AI-powered pivots, it’s tempting to chase the next shiny insight. But we learned that sometimes, sticking with a solid-but-not-perfect plan is smarter than constantly shifting gears.
+                </Text>
+                <Text p>
+                    One failed pivot taught us this the hard way. We moved too fast, ended up with a half-baked solution, and had to roll it all back. Now, we absorb customer learnings, update plans thoughtfully, and protect team momentum while staying agile.
+                </Text>
+                <Text p>
+                    It’s about discipline, not rigidity. We adapt and iterate, but we also need to commit to a plan long enough to see the benefits. This balance has been key to our success.
                 </Text>
 
                 <Text subtitle className="mt-10">Prioritise Strategic Work</Text>
@@ -51,14 +64,14 @@ const Article = () => {
                     We achieved this by enacting the "kaizen initative", inspired by the Toyota term for "continuous improvement". This involved proactively identifying our largest bottlenecks and making plans to address them, then looking for the next bottleneck.
                 </Text>
                 <Text p>
-                  We also simplified ruthlessly. <b>Startups don’t starve—they drown.</b> By trimming back non-essential projects, clarifying priorities, and choosing simple, durable plans, we preserved our most valuable resource: time. Time to achieve our strategic goals.
+                  We also simplified ruthlessly. <b>Startups don’t starve—they drown.</b> By trimming back non-essential projects, clarifying priorities, and choosing simple, durable plans, we preserved our most valuable resource: <b>Time</b>. Time to achieve our strategic goals.
                 </Text>
                 <Text subtitle className="mt-10">Invest in the team</Text>
                 <Text p>
-                I believe teams of people with <b>good attitude beat teams with good aptitude and a bad attitude every time</b>. Passionate, humble engineers who communicate well can learn any skill and teams of them become greater than the sum of their parts. That belief guided our hiring and mentoring practices all year.
+                I believe <b>teams of people with good attitude beat teams with more experience and a bad attitude every time</b>. Passionate, humble engineers who communicate well can learn any skill and teams of them become greater than the sum of their parts. That belief guided our hiring and mentoring practices all year.
                 </Text>
                 <Text p>
-                    In our 1:1s, we put mentorship before status updates. We grew leaders from within, encouraged radical candor, and practiced healthy conflict resolution <i>even around minor topics</i> so we’d be ready when the stakes were high.
+                    In our 1:1s, we put mentorship before status updates. We grew leaders from within, encouraged radical candor, and practiced healthy conflict resolution, <i>even around minor topics</i> so we’d be ready when the stakes were high.
                 </Text>
                 <Text p>
                     We embraced a <b>“leader-leader” model</b>: everyone gets ownership, everyone is trusted to lead and held accountable. The result? Autonomous teams that move faster and make better decisions. The accountability ripple effect is real — and powerful.
@@ -70,37 +83,24 @@ const Article = () => {
                     One of my key responsibilities is to align technology with business needs, even when those needs shift fast. This means resisting the urge to build “perfect” systems—instead, we build adaptable ones.
                 </Text>
                 <Text p>
-                    We adopted domain-driven design to map business problems to teams, giving them autonomy and driving productivity. We embraced hexagonal architecture to maximise reversable decisions, with every team using the same core tools and patterns, making it easy to shift people, scale teams, and share knowledge.
+                    We adopted <LinkTo href="https://en.wikipedia.org/wiki/Domain-driven_design" target="_blank" className="underline">domain-driven design</LinkTo> to map business problems to teams, giving them autonomy and driving productivity. We embraced <LinkTo href="https://martinfowler.com/bliki/HexagonalArchitecture.html" target="_blank" className="underline">hexagonal architecture</LinkTo> to maximise reversable decisions. Every team is using the same core tools and similar project structure and design patterns. Making it easy for people to help another team, re-use another teams work and share knowledge.
                 </Text>
                 <Text p>
                     Perfect is the enemy of good. In our world, it’s better to be pragmatic and aim for good enough and prioritise reducing the number of changes needed to react to new information quickly.
                 </Text>
+                
                 <Text subtitle>
-                    Stay the course
-                </Text>
-                <Text p>
-                    This is simple rule to help with the above.
-                    In an AI driven agile world it's tempting to change priorities quickly and often but commiting 100% to the 2nd or 3rd best options will often
-                    yield better results than putting 50% effort into the best option. We learned this the hard way when we tried to pivot too quickly and ended up with a half baked solution that didn't meet our needs.
-                    We ended up having to roll back changes and would have been better to stick with the original plan.
-
-                    Now when we get new learnings from customers we give teams time to work that into current work and then we review the plan. This results in teams
-                    not losing momentum and being agile enough to adapt when necessary. It also gives time for us to solidify the new approach and find edge cases that
-                    might invalidate it before the team starts working on it.
-                </Text>
-                <Text subtitle>
-                    Overall
+                    Challenge with empathy
                 </Text>
                 <Text p>   
-                    
-                    Challenge with empathy
+                    I’ve always been outcome-focused—but this year reminded me to lead with empathy, especially in moments of tension.
+                    The strongest teams challenge each other with respect and with care.
+                </Text>
+                <Seperator/>
+                <Text p>
+                    I feel incredibly fortunate to be at Ocula, working with such a talented, driven team. I’ve grown more this year than any before—technically, strategically, and personally.
 
-                    - I've never been afraid to challenge but when focusing on a outcome I've failed to respect other people's point of view.
-
-                    
-
-                    - I am lucky to be working at Ocula and to be working with such a talented team. I am excited to see what the next year brings and to continue to grow and develop as a leader.
-
+                    2025 is already shaping up to be a wild ride, and I’m excited to keep building, keep learning, and keep leading.
                 </Text>
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
                     {

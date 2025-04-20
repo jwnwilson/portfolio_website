@@ -218,17 +218,17 @@ const ARTICLES_LIST: iArticle[] = [
     preview: {
       author: NOEL,
       date: "April 2025",
-      articleTitle: "First Year As VP of Engineering",
+      articleTitle: "Reflections from a year as VP of Engineering",
       shortIntro:
-        "What I learned in my first year as a manager of managers",
+        "What I learned in my first year leading engineering at a startup",
       tags: "team building, engineering, management, leadership",
-      thumbnail: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
+      thumbnail: "/public/imp_assets/posts/first_year/ship_stormy_sea.jpg",
       category: "Team Building",
     },
     seo: {
       keywords:
-        "team building, dysfunctional, noel wilson, noel, software, development, engineer, software engineering, team",
-      ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
+        "team building, leadership, noel wilson, noel, software, development, engineer, software engineering, team",
+      ogImage: "/public/imp_assets/posts/first_year/ship_stormy_sea.jpg",
     },
   },
   // {
