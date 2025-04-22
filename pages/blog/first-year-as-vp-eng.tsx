@@ -15,10 +15,10 @@ const Article = () => {
                 </Text>
                 <Image className="my-5" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading in the terbulent environment of an AI startup" size={ImageSize.SMALL} />
                 <Text p>
-                    Reaching my first year working as a VP of engineering, I’ve been reflecting on an intense, rewarding year leading engineering at a startup. It’s been a year marked by breakthroughs, resilience, and some tough but rewarding lessons.
+                    I spent the last 12 months navigating the chaos of AI startup life, scaling technical teams. It’s been a year marked by breakthroughs, resilience, and some tough but rewarding lessons.
                 </Text>
                 <Text p>
-                    we tackled massive technical challenges and hit ambitious goals that moved the company forward in a big way:
+                    We tackled massive technical challenges and hit ambitious goals that moved the company forward in a big way:
                 </Text>
                 <List type={ListType.number} className="mt-5">
                     <li><b>Reduced data generation time by 95</b>%</li>
@@ -37,7 +37,7 @@ const Article = () => {
                     One of my key responsibilities is to align technology with business needs, even when those needs shift fast. This means resisting the urge to build “perfect” systems—instead, we build adaptable ones.
                 </Text>
                 <Text p>
-                    We adopted <LinkTo href="https://en.wikipedia.org/wiki/Domain-driven_design" className="underline">domain-driven design</LinkTo> to map business problems to teams, giving them autonomy and driving productivity. We embraced <LinkTo href="https://martinfowler.com/bliki/HexagonalArchitecture.html" className="underline">hexagonal architecture</LinkTo> to maximise reversable decisions. Every team is using the same core tools, similar project structure and the same design patterns. Making it easy for teams to help each other, re-use another each other's work and share knowledge.
+                    We adopted <LinkTo href="https://en.wikipedia.org/wiki/Domain-driven_design" className="underline">domain-driven design</LinkTo> to map business problems to teams, giving them autonomy and driving productivity. We embraced <LinkTo href="https://martinfowler.com/bliki/HexagonalArchitecture.html" className="underline">hexagonal architecture</LinkTo> to maximise reversable decisions. Every team is using the same core tools, similar project structure and the same design patterns. Making it easy for teams to help each other, re-use work and share knowledge.
                 </Text>
                 <Text p>
                     Perfect is the enemy of good. In our world, it’s better to be pragmatic and aim for good enough and prioritise reducing the number of changes needed to react to new information quickly.
