@@ -69,7 +69,7 @@ const Article = () => {
                 </Text>
                 <Text p>
                     <b>Transparency can build trust</b>, don't show data behind decisions, if decisions are made without data that's ideal. 
-                    If it's bad news you can pretend you're helping them by hiding it. People need to know what's going on and what's expected of them, keep them guessing. 
+                    If it's bad news, hide it until the situation gets worse. People need to know what's going on and what's expected of them, keep them guessing. 
                 </Text>
                 <Text p>
                     <b>Following through on commitments</b> can encourage others to rely on you. Make sure to overcommit to problems so you don't have capacity to follow through, 
@@ -174,7 +174,7 @@ const Article = () => {
                 </Text>
                 <List type={ListType.disc} className="mt-5">
                     <li>Make the data hard to access, dev ops and sec ops are useful if you can argue it's sensitive data</li>
-                    <li>Data tracked try to ensure it's not related to team goals</li>
+                    <li>If data is tracked try to ensure it's not related to team goals</li>
                     <li>Don't challenge others if you disagree and ask to see the results of their actions.</li>
                     <li>Massage numbers to look good, hide mistakes, make exceptions for yourself</li>
                 </List>
