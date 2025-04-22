@@ -60,7 +60,7 @@ const Article = () => {
                 />
                 <Text p>
                     The foundations of a good team is trust, if teams trust their leaders and one another they can easily fix problems that could over time,
-                    compond and become bigger issues. 
+                    compound and become bigger issues. 
                 </Text>
                 <Text p>  
                     <b>Vulnerability is a building block for Trust</b>, if people can share their failures then others can learn from them,
@@ -90,13 +90,13 @@ const Article = () => {
                     size={ImageSize.SMALL}
                 />
                 <Text p>
-                    If trust is still growing dispite your best efforts, discourage people from engaging directly in debate over different opinions. This usually results in a better outcome for the team and builds conflict resolution skills, here are some tips to avoid this.
+                    If trust is still growing despite your best efforts, discourage people from engaging directly in debate over different opinions. This usually results in a better outcome for the team and builds conflict resolution skills, here are some tips to avoid this.
                 </Text>
                 <List type={ListType.disc} className="mt-5">
                     <li>Build "us vs them" mentality to stunt discussion</li>
                     <li>Back channels over discussing directly can help make a situation worse</li>
                     <li>Don't try to understand the other person's perspective and objectives</li>
-                    <li><b>Don't empathise with other people's challenges</b></li>
+                    <li>Don't empathise with other people's challenges</li>
                     
                     <li>Shut down uncomfortable constructive discussion before resolution</li>
                     <li>Allow unproductive negative discussion to continue</li>
@@ -128,7 +128,7 @@ const Article = () => {
                         <List type={ListType.disc} className="mt-5">
                             <li>Don't invite challenges from others, they might get into the habit of constructive conversation</li>
                             <li>Get defensive when challenged to discourage others challenging you again</li>
-                            <li>Prioritising being "nice", avoid uncomfortable discussions instead of having them</li>
+                            <li>Avoid uncomfortable discussions that need to be had, instead of having them</li>
                             <li><b>The goal is to win the argument</b>, not solve a common problem or have a positive effect on the business</li>
                             <li>Get emotional and personal, <b>don't wait for emotions to pass for maximum damage</b></li>
                             <li>If emotions get the better of you <b>never apologise</b></li>
@@ -160,7 +160,7 @@ const Article = () => {
                 <Text p>
                     A common way successful teams unite is for some people to <b>disagree and commit to a solution. Alignment doesn't mean agreement</b> but this
                     means sacrificing progress towards a personal goal for collective success, so how we do avoid this?
-                    If you are out numbered then agree but do the bare minimum, if you didn't engage in ideological debate this is easy.
+                    If you are outnumbered then agree but do the bare minimum, if you didn't engage in ideological debate this is easy.
                 </Text>
                 <Seperator />
                 <Text subtitle className="mt-10">
@@ -170,17 +170,17 @@ const Article = () => {
                     If the team has a clear goal, in order to be successful, they need to be held accountable.
                 </Text>
                 <Text> 
-                    Teams usually do this by tracking projects with data, herer's some tips to interfere. 
+                    Teams usually do this by tracking projects with data, here's some tips to interfere. 
                 </Text>
                 <List type={ListType.disc} className="mt-5">
                     <li>Make the data hard to access, dev ops and sec ops are useful if you can argue it's sensitive data</li>
-                    <li>If someone tracks the data manually which is effective, then don't look at it</li>
-                    <li>Don't <b> challenge others if you disagree and ask to see the results of their actions.</b></li>
-                    <li>Massage numbers to looks good, hide mistakes, make exceptions for yourself</li>
+                    <li>Data tracked try to ensure it's not related to team goals</li>
+                    <li>Don't challenge others if you disagree and ask to see the results of their actions.</li>
+                    <li>Massage numbers to look good, hide mistakes, make exceptions for yourself</li>
                 </List>
                 <Text p>
                     Finally don't <b>hold yourself accountable</b>, if you do this then others will too. If you make a mistake, don't own up to it, blame others.
-                    If made a decision, don't take responsibility for it, blame the team.
+                    If you made a decision, don't take responsibility for it, blame the team.
                 </Text>
                 <Seperator />
                 <Text subtitle className="mt-10">

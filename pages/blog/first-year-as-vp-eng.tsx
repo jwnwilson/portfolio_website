@@ -31,16 +31,16 @@ const Article = () => {
                 </Text>
 
                 <Text subtitle>
-                    Stay the course
+                    Flexibility and consistency over correctness
                 </Text>
                 <Text p>
-                    In a world obsessed with speed and AI-powered pivots, it’s tempting to chase the next shiny insight. But we learned that sometimes, sticking with a solid-but-not-perfect plan is smarter than constantly shifting gears.
+                    One of my key responsibilities is to align technology with business needs, even when those needs shift fast. This means resisting the urge to build “perfect” systems—instead, we build adaptable ones.
                 </Text>
                 <Text p>
-                    One failed pivot taught us this the hard way. We moved too fast, ended up with a half-baked solution, and had to roll it all back. Now, we absorb customer learnings, update plans thoughtfully, and protect team momentum while staying agile.
+                    We adopted <LinkTo href="https://en.wikipedia.org/wiki/Domain-driven_design" className="underline">domain-driven design</LinkTo> to map business problems to teams, giving them autonomy and driving productivity. We embraced <LinkTo href="https://martinfowler.com/bliki/HexagonalArchitecture.html" className="underline">hexagonal architecture</LinkTo> to maximise reversable decisions. Every team is using the same core tools, similar project structure and the same design patterns. Making it easy for teams to help each other, re-use another each other's work and share knowledge.
                 </Text>
                 <Text p>
-                    It’s about discipline, not rigidity. We adapt and iterate, but we also need to commit to a plan long enough to see the benefits. This balance has been key to our success.
+                    Perfect is the enemy of good. In our world, it’s better to be pragmatic and aim for good enough and prioritise reducing the number of changes needed to react to new information quickly.
                 </Text>
 
                 <Text subtitle className="mt-10">Prioritise Strategic Work</Text>
@@ -76,17 +76,18 @@ const Article = () => {
                 <Text p>
                     We embraced a <b>“leader-leader” model</b>: everyone gets ownership, everyone is trusted to lead and held accountable. The result? Autonomous teams that move faster and make better decisions. The accountability ripple effect is real — and powerful.
                 </Text>
+
                 <Text subtitle>
-                    Flexibility and consistency over correctness
+                    Stay the course
                 </Text>
                 <Text p>
-                    One of my key responsibilities is to align technology with business needs, even when those needs shift fast. This means resisting the urge to build “perfect” systems—instead, we build adaptable ones.
+                    In a world obsessed with speed and AI-powered pivots, it’s tempting to chase the next shiny insight. But we learned that sometimes, sticking with a solid-but-not-perfect plan is smarter than constantly shifting gears.
                 </Text>
                 <Text p>
-                    We adopted <LinkTo href="https://en.wikipedia.org/wiki/Domain-driven_design" className="underline">domain-driven design</LinkTo> to map business problems to teams, giving them autonomy and driving productivity. We embraced <LinkTo href="https://martinfowler.com/bliki/HexagonalArchitecture.html" className="underline">hexagonal architecture</LinkTo> to maximise reversable decisions. Every team is using the same core tools, similar project structure and the same design patterns. Making it easy for teams to help each other, re-use another each other's work and share knowledge.
+                    One failed pivot taught us this the hard way. We moved too fast, ended up with a half-baked solution, and had to roll it all back. Now, we absorb customer learnings, update plans thoughtfully, and protect team momentum while staying agile.
                 </Text>
                 <Text p>
-                    Perfect is the enemy of good. In our world, it’s better to be pragmatic and aim for good enough and prioritise reducing the number of changes needed to react to new information quickly.
+                    It’s about discipline, not rigidity. We adapt and iterate, but we also need to commit to a plan long enough to see the benefits. This balance has been key to our success.
                 </Text>
                 
                 <Text subtitle>
