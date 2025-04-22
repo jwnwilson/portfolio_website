@@ -15,7 +15,7 @@ const Article = () => {
                 </Text>
                 <Image className="my-5" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading in the terbulent environment of an AI startup" size={ImageSize.SMALL} />
                 <Text p>
-                    I spent the last 12 months navigating the chaos of AI startup life, scaling technical teams. It’s been a year marked by breakthroughs, resilience, and some tough but rewarding lessons.
+                    I spent the last 12 months scaling technical teams, navigating the chaos of AI startup life. It’s been a year marked by breakthroughs, resilience, and some tough but rewarding lessons.
                 </Text>
                 <Text p>
                     We tackled massive technical challenges and hit ambitious goals that moved the company forward in a big way:
