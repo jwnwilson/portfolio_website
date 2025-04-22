@@ -13,14 +13,14 @@ const Article = () => {
                     Building a Dysfunctional Team
                 </Text>
                 <Text subtitle>
-                    Make yourself look better by making everything else worse
+                    Don't work on yourself, just make everything else worse
                 </Text>
                 <Image className="my-5" src="/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp" alt="This is fine meme" size={ImageSize.SMALL} />
                 <Text p>
-                    You could work hard, be a team player, build good products... <b>or</b> what if it's easier to make everyone around you worse instead? 
+                    Want to be the top dog without actually being good at your job? 
                 </Text>
                 <Text p>
-                    What if we apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> to sabotage the competition?
+                    Then I'll show you how to apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> to sabotage the competition.
                     With this post I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals, so you look great in comparison.
                 </Text>
                 <div className="md:flex items-center">
@@ -55,7 +55,7 @@ const Article = () => {
                 <Image
                     src="/public/imp_assets/posts/dysfunctional_team/lion_king.webp"
                     alt="Scar and Mufasa from the Lion King"
-                    caption="Scar from the Lion King managed to become king by building a dysfunctional team"
+                    caption="Scar from the Lion King had the right idea"
                     size={ImageSize.SMALL}
                 />
                 <Text p>
@@ -214,7 +214,7 @@ const Article = () => {
                     and <LinkTo href="https://www.radicalcandor.com/" external className="underline">Radical Candor</LinkTo> by Kim Scott.
                 </Text>
                 <Text p>    
-                    I'd like to hear your thoughts, questions and feedback on this post, please leave a comment below.
+                    Know someone who could benefit from these shortcuts? Share this with them 😉.
                 </Text>
                 <Text p><b> - Noel</b></Text>
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={

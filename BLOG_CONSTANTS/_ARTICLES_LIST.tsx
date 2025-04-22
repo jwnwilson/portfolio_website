@@ -201,7 +201,7 @@ const ARTICLES_LIST: iArticle[] = [
       date: "June 16 2024",
       articleTitle: "Building a Dysfunctional Team",
       shortIntro:
-        "A guide to making yourself look better by making everyone else worse.",
+        "How to Build a Dysfunctional Team – Satirical Take on Team Leadership",
       tags: "team building, dysfunctional, satire",
       thumbnail: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
       category: "Team Building",
@@ -227,7 +227,7 @@ const ARTICLES_LIST: iArticle[] = [
     },
     seo: {
       keywords:
-        "team building, leadership, noel wilson, noel, software, development, engineer, software engineering, team",
+        "team dysfunctions, how to ruin a team, toxic team behaviors, team building, leadership, noel wilson, noel, software, development, engineer, software engineering, team",
       ogImage: "/public/imp_assets/posts/first_year/ship_stormy_sea.jpg",
     },
   },
