@@ -194,7 +194,7 @@ const Article = () => {
                 />
                 <Text p>
                     If you've followed this guide, you should have your own project (a.k.a. a sweet kubernetes cluster) up by now to wow your next employer and your team mates should 
-                    be busy chasing their trails.
+                    be busy chasing their tails.
                 </Text>
                 <Text p>
                     This isn't specific to this guide but keep a brag list with all your personal acomplishments, feel free to exaggerate your personal contributions to 
