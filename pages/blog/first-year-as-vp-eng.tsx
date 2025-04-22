@@ -77,6 +77,8 @@ const Article = () => {
                     We embraced a <b>“leader-leader” model</b>: everyone gets ownership, everyone is trusted to lead and held accountable. The result? Autonomous teams that move faster and make better decisions. The accountability ripple effect is real — and powerful.
                 </Text>
 
+                <Image className="my-5" src="/public/imp_assets/posts/first_year/stay_the_course.png" alt="Stay the course description" size={ImageSize.MEDIUM} />
+
                 <Text subtitle>
                     Stay the course
                 </Text>
@@ -100,8 +102,9 @@ const Article = () => {
                 <Seperator/>
                 <Text p>
                     I feel incredibly fortunate to be at Ocula, working with such a talented, driven team. I’ve grown more this year than any before—technically, strategically, and personally.
-
-                    2025 is already shaping up to be a wild ride, and I’m excited to keep building, keep learning, and keep leading.
+                </Text>
+                <Text p>
+                    Do you work in a startup or with AI, what was your biggest learning?
                 </Text>
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
                     {
