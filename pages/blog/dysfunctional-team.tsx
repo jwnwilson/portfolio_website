@@ -7,11 +7,8 @@ import { useTheme } from "next-themes";
 const Article = () => {
     const { theme }  = useTheme();
     return (
-        <PageLayout home>
-            <div className='container px-3 pb-[20px] pt-20 md:pt-10'>
-                <Text title className="text-3xl">
-                    Building a Dysfunctional Team
-                </Text>
+        <PageLayout standard>
+            <div className='container px-3 pb-[20px]'>
                 <Text subtitle>
                     Don't work on yourself, just make everything else worse
                 </Text>

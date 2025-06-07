@@ -4,11 +4,13 @@ import ArticleHeaderDefault from "./ArticleHeaderDefault"
 
 interface IArticleHeader {
     centered?: boolean,
-    ARTICLE_DETAILS: iArticle
+    ARTICLE_DETAILS: iArticle,
+    showAuthor?: boolean,
+    showTags?: boolean
 }
-const ArticleHeader = ({ centered = false, ARTICLE_DETAILS }: IArticleHeader) => {
+const ArticleHeader = ({ centered = false, ARTICLE_DETAILS, showAuthor = true, showTags = true }: IArticleHeader) => {
     return (
-        centered ? <ArticleHeaderCenter headerData={ARTICLE_DETAILS.preview} /> :
+        centered ? <ArticleHeaderCenter headerData={ARTICLE_DETAILS.preview} showAuthor={showAuthor} showTags={showTags} /> :
             <ArticleHeaderDefault headerData={ARTICLE_DETAILS.preview} />
     )
 }

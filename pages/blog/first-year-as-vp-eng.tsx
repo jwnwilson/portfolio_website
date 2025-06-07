@@ -8,11 +8,8 @@ import Head from "next/head";
 const Article = () => {
     const { theme }  = useTheme();
     return (
-        <PageLayout home>
-            <div className='container px-3 pb-[20px] pt-20 md:pt-10'>
-                <Text title className="text-3xl">
-                    Reflections from a year as VP of Engineering
-                </Text>
+        <PageLayout standard>
+            <div className='container px-3 pb-[20px]'>
                 <div className="flex flex-col md:flex-row items-center">
                     <Image className="my-5 md:w-1/2 md:mr-5" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading in the turbulent environment of an AI startup" size={ImageSize.SMALL} />
                     <div className="md:w-1/2">
