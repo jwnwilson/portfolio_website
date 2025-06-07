@@ -8,13 +8,20 @@ interface IArticleImage {
     caption?: string,
     size?: ImageSize,
     alt?: string,
-    className?: string
+    className?: string,
+    maxHeight?: string
 }
-const Image = ({ src, caption, size = ImageSize.DEFAULT, alt, className }: IArticleImage) => {
+const Image = ({ src, caption, size = ImageSize.DEFAULT, alt, className, maxHeight }: IArticleImage) => {
     return (
         <div className={combineClasses(classes.article_image, classes.article_image__wrapper, className, classes['size_' + size], 'display-block mx-auto my-5')}>
             <Zoom>
-                <img src={transformImagePaths(src)} alt={alt} width="100%" className={combineClasses('block')} />
+                <img 
+                    src={transformImagePaths(src)} 
+                    alt={alt} 
+                    width="100%" 
+                    style={maxHeight ? { maxHeight, objectFit: 'contain' } : undefined}
+                    className={combineClasses('block')} 
+                />
             </Zoom>
             {
                 caption &&

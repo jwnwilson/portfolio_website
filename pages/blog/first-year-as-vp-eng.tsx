@@ -13,19 +13,23 @@ const Article = () => {
                 <Text title className="text-3xl">
                     Reflections from a year as VP of Engineering
                 </Text>
-                <Image className="my-5" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading in the terbulent environment of an AI startup" size={ImageSize.SMALL} />
-                <Text p>
-                    I spent the last 12 months scaling technical teams, navigating the chaos of AI startup life. It’s been a year marked by breakthroughs, resilience, and some tough but rewarding lessons.
-                </Text>
-                <Text p>
-                    We tackled massive technical challenges and hit ambitious goals that moved the company forward in a big way:
-                </Text>
-                <List type={ListType.number} className="mt-5">
-                    <li><b>Reduced data generation time by 95</b>%</li>
-                    <li><b>Scaled to support 10x more customers</b></li>
-                    <li><b>Launched cutting-edge AI products that stand out in a competitive market</b></li>
-                    <li><b>Built a high-performing, deeply collaborative engineering culture</b></li>
-                </List>
+                <div className="flex flex-col md:flex-row items-center">
+                    <Image className="my-5 md:w-1/2 md:mr-5" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading in the turbulent environment of an AI startup" size={ImageSize.SMALL} />
+                    <div className="md:w-1/2">
+                        <Text p>
+                            I spent the last 12 months scaling technical teams, navigating the chaos of AI startup life. It's been a year marked by breakthroughs, resilience, and some tough but rewarding lessons.
+                        </Text>
+                        <Text p>
+                            We tackled massive technical challenges and hit ambitious goals that moved the company forward in a big way:
+                        </Text>
+                        <List type={ListType.number} className="mt-5">
+                            <li><b>Reduced data generation time by 95</b>%</li>
+                            <li><b>Scaled to support 10x more customers</b></li>
+                            <li><b>Launched cutting-edge AI products that stand out in a competitive market</b></li>
+                            <li><b>Built a high-performing, deeply collaborative engineering culture</b></li>
+                        </List>
+                    </div>
+                </div>
                 <Text p>
                     Looking back, here are a few principles and lessons that defined our year—and our growth.
                 </Text>

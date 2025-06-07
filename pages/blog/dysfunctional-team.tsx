@@ -52,21 +52,26 @@ const Article = () => {
                 <Text subtitle className="mt-10">
                     1. Destroy Trust
                 </Text>
-                <Image
-                    src="/public/imp_assets/posts/dysfunctional_team/lion_king.webp"
-                    alt="Scar and Mufasa from the Lion King"
-                    caption="Scar from the Lion King had the right idea"
-                    size={ImageSize.SMALL}
-                />
-                <Text p>
-                    The foundations of a good team is trust, if teams trust their leaders and one another they can easily fix problems that could over time,
-                    compound and become bigger issues. 
-                </Text>
-                <Text p>  
-                    <b>Vulnerability is a building block for Trust</b>, if people can share their failures then others can learn from them,
-                    this can encourage a culture of shared learning and growth. Stamp out weakness by making people who show vulnerability uncomfortable, 
-                    berating mistakes is an excellent way to do this.
-                </Text>
+                <div className="flex flex-col md:flex-row items-center">
+                    <Image
+                        src="/public/imp_assets/posts/dysfunctional_team/lion_king.webp"
+                        alt="Scar and Mufasa from the Lion King"
+                        caption="Scar from the Lion King had the right idea"
+                        size={ImageSize.SMALL}
+                        className="md:w-1/2 md:mr-5"
+                    />
+                    <div className="md:w-1/2">
+                        <Text p>
+                            The foundations of a good team is trust, if teams trust their leaders and one another they can easily fix problems that could over time,
+                            compound and become bigger issues. 
+                        </Text>
+                        <Text p>  
+                            <b>Vulnerability is a building block for Trust</b>, if people can share their failures then others can learn from them,
+                            this can encourage a culture of shared learning and growth. Stamp out weakness by making people who show vulnerability uncomfortable, 
+                            berating mistakes is an excellent way to do this.
+                        </Text>
+                    </div>
+                </div>
                 <Text p>
                     <b>Transparency can build trust</b>, don't show data behind decisions, if decisions are made without data that's ideal. 
                     If it's bad news, hide it until the situation gets worse. People need to know what's going on and what's expected of them, keep them guessing. 
@@ -83,24 +88,28 @@ const Article = () => {
                 <Text subtitle className="mt-10">
                     2. Crush Ideological Debate
                 </Text>
-                <Image
-                    src="/public/imp_assets/posts/dysfunctional_team/liz_truss.png"
-                    alt="Liz Truss"
-                    caption="Liz Truss became one of the UKs most successful Prime Ministers by not engaging in ideological debate."
-                    size={ImageSize.SMALL}
-                />
-                <Text p>
-                    If trust is still growing despite your best efforts, discourage people from engaging directly in debate over different opinions. This usually results in a better outcome for the team and builds conflict resolution skills, here are some tips to avoid this.
-                </Text>
-                <List type={ListType.disc} className="mt-5">
-                    <li>Build "us vs them" mentality to stunt discussion</li>
-                    <li>Back channels over discussing directly can help make a situation worse</li>
-                    <li>Don't try to understand the other person's perspective and objectives</li>
-                    <li>Don't empathise with other people's challenges</li>
-                    
-                    <li>Shut down uncomfortable constructive discussion before resolution</li>
-                    <li>Allow unproductive negative discussion to continue</li>
-                </List>
+                <div className="flex flex-col md:flex-row items-center">
+                    <Image
+                        src="/public/imp_assets/posts/dysfunctional_team/liz_truss.png"
+                        alt="Liz Truss"
+                        caption="Liz Truss became one of the UKs most successful Prime Ministers by not engaging in ideological debate."
+                        size={ImageSize.SMALL}
+                        className="md:w-1/2 md:mr-5"
+                    />
+                    <div className="md:w-1/2">
+                        <Text p>
+                            If trust is still growing despite your best efforts, discourage people from engaging directly in debate over different opinions. This usually results in a better outcome for the team and builds conflict resolution skills, here are some tips to avoid this.
+                        </Text>
+                        <List type={ListType.disc} className="mt-5">
+                            <li>Build "us vs them" mentality to stunt discussion</li>
+                            <li>Back channels over discussing directly can help make a situation worse</li>
+                            <li>Don't try to understand the other person's perspective and objectives</li>
+                            <li>Don't empathise with other people's challenges</li>
+                            <li>Shut down uncomfortable constructive discussion before resolution</li>
+                            <li>Allow unproductive negative discussion to continue</li>
+                        </List>
+                    </div>
+                </div>
                 <Text p>
                     <b>The biggest risk for constructive debate is empathy as it can tempt you to compromise. Being empathetic to others also increases chances of them being receptive to your points.</b>
                 </Text>
@@ -112,15 +121,16 @@ const Article = () => {
                     3. Stunt Conflict Resolution Skills
                 </Text>
                 <div className="md:flex items-center">
-                    <div className="sm:w-100 md:w-1/2">
+                    <div className="sm:w-100 md:w-1/3">
                         <Image
                             src="/public/imp_assets/posts/dysfunctional_team/radical_candor.jpg"
                             alt="Radical Candor"
                             caption="Do not let people on your team read this book"
-                            size={ImageSize.XS}
+                            size={ImageSize.SMALL}
+                            maxHeight="300px"
                         />
                     </div>
-                    <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
+                    <div className="sm:w-100 md:w-2/3 m-5 flex-5 text-left">
                         <Text p>
                             Debate comes with conflict, <b>conflict resolution is the biggest risk for us now, if a team develops this skill it can be hard to stop them.</b> Teams
                             can then find ideal approaches to challenging situations. Recommendations for simmering conflict:
@@ -142,21 +152,26 @@ const Article = () => {
                 <Text subtitle className="mt-10">
                     4. Avoid Commitment
                 </Text>
-                <Image
-                    src="/public/imp_assets/posts/dysfunctional_team/runaway_groom.jpg"
-                    alt="Run away groom"
-                    caption="With creativity it's always possible to avoid commitment"
-                    size={ImageSize.SMALL}
-                />
-                <Text p>    
-                    <b>A single, clear unifying goal risks uniting the team,</b> having everyone working to help the business or product achieve a specific outcome and committing to it
-                    risks the entire team being successful.
-                </Text>
-                <Text p>
-                    So instead, now is time to decide and focus on your personal goals, prioritise what's best for you! A good model is CDD (CV driven development). 
-                    Prioritise technologies you're interested in that will help you on your next role, if you're not sure what to pick then it's always a good time to implement kubernetes!
-                </Text>
-                
+                <div className="md:flex items-center">
+                    <div className="sm:w-100 md:w-1/2">
+                        <Image
+                            src="/public/imp_assets/posts/dysfunctional_team/runaway_groom.jpg"
+                            alt="Run away groom"
+                            caption="With creativity it's always possible to avoid commitment"
+                            size={ImageSize.SMALL}
+                        />
+                    </div>
+                    <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
+                        <Text p>    
+                            <b>A single, clear unifying goal risks uniting the team,</b> having everyone working to help the business or product achieve a specific outcome and committing to it
+                            risks the entire team being successful.
+                        </Text>
+                        <Text p>
+                            So instead, now is time to decide and focus on your personal goals, prioritise what's best for you! A good model is CDD (CV driven development). 
+                            Prioritise technologies you're interested in that will help you on your next role, if you're not sure what to pick then it's always a good time to implement kubernetes!
+                        </Text>
+                    </div>
+                </div>
                 <Text p>
                     A common way successful teams unite is for some people to <b>disagree and commit to a solution. Alignment doesn't mean agreement</b> but this
                     means sacrificing progress towards a personal goal for collective success, so how we do avoid this?

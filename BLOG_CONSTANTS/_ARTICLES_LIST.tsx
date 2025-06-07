@@ -231,6 +231,20 @@ const ARTICLES_LIST: iArticle[] = [
       ogImage: "/public/imp_assets/posts/first_year/ship_stormy_sea.jpg",
     },
   },
+  {
+    path: "/pages/blog/pydantic-celery.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "June 07 2025",
+      articleTitle: "Seamless Pydantic-Celery Integration",
+      shortIntro:
+        "I've been looking for existing pydantic - celery integrations and found some that aren't seamless so I built on top of them and turned them into a 1 line integration.",
+      tags: "pydantic, celery, integration, python",
+      thumbnail: "/public/imp_assets/posts/pydantic_celery/python_celery.jpeg",
+      category: "Open Source",
+    },
+  },
   // {
   //   path: "/pages/blog/hiring-the-worst-candidate.tsx",
   //   featureArticle: true,
