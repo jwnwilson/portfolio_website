@@ -19,6 +19,10 @@ const Article = () => {
                             Here's the code if you want to skip the explanation:
                         </Text>
                         <LinkTo href="https://github.com/jwnwilson/celery_pydantic/" external className="underline">https://github.com/jwnwilson/celery_pydantic/</LinkTo>
+                        <Text p className="mt-4">
+                            You can also steal this file directly if you prefer: 
+                        </Text>
+                        <LinkTo href="https://github.com/jwnwilson/celery_pydantic/blob/main/celery_pydantic/serializer.py" external className="underline">https://github.com/jwnwilson/celery_pydantic/blob/main/celery_pydantic/serializer.py</LinkTo>
                     </div>
                 </div>
                 <Text p>
@@ -49,7 +53,7 @@ pydantic_celery(app)`}
                     </pre>
                 </div>
                 <Text p>    
-                    Now you can use pydantic models as celery task arguments and return them from tasks.
+                    Now you can use pydantic models as celery task arguments.
                 </Text>
                 <div className="bg-slate-800 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto">
                     <pre>
@@ -62,7 +66,10 @@ class User(BaseModel):
 
 @app.task
 def process_user(user: User):
-    return user.name`}
+    return user.name
+
+process_user.delay(user=User(name="John", age=30))
+`}
                         </code>
                     </pre>
                 </div>
@@ -76,7 +83,7 @@ def process_user(user: User):
 def process_user(user: User):
     return user
 
-user: User = process_user.delay(User(name="John", age=30)).get()
+user: User = process_user.delay(user=User(name="John", age=30)).get()
 `}
                         </code>
                     </pre>
@@ -102,17 +109,27 @@ user: User = process_user.delay(User(name="John", age=30)).get()
                     <LinkTo href="https://benninger.ca/posts/celery-serializer-pydantic/" external className="underline">This blog post</LinkTo> is the majority of the code above, but it requires registering each model manually, which I didn't want to do.
                 </Text>
                 <Text p>
-                    <LinkTo href="https://github.com/celery/celery/blob/main/examples/pydantic/tasks.py" external className="underline">Celery's official Pydantic integration </LinkTo> only accepts plain dicts in arguments, not pydantic models. It also only returns dicts.
+                    <LinkTo href="https://github.com/celery/celery/blob/main/examples/pydantic/tasks.py" external className="underline">Celery's official Pydantic integration </LinkTo> requires pydantic models have to converted to dicts using model_dump(). This
+                    will also error if you have types that don't work with the default json serializer such as `UUID`, `datetime`, etc. In the end it looks something like this:
                 </Text>
-                <Text p>
-                    You can also steal this file directly if you prefer:
-                    <LinkTo href="https://github.com/jwnwilson/celery_pydantic/blob/main/celery_pydantic/serializer.py" external className="underline">https://github.com/jwnwilson/celery_pydantic/blob/main/celery_pydantic/serializer.py</LinkTo>
-                </Text>
+                <div className="bg-slate-800 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto">
+                    <pre>
+                        <code>
+                            {`@app.task(pydantic=True)
+def process_user(user: User):
+    return user.name
+
+process_user.delay(user=json.loads(User(name="John", age=30).model_dump_json()))
+`}
+                        </code>
+                    </pre>
+                </div>
+                <Text p>This works too if you prefer to keep things simple.</Text>
                 <Text subtitle className="mt-10">
                     Let me know what you think
                 </Text>
                 <Text p>
-                    Would love feedback and hope it's helpful.
+                Do you know a better way to solve this? I'd love to hear your thoughts and learn more!
                 </Text>
 
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
