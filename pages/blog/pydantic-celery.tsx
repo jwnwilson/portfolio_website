@@ -28,7 +28,7 @@ const Article = () => {
                 <Text p>
                     First install the package:
                 </Text>
-                <div className="bg-slate-800 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto">
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <pre>
                         <code>
                             {`pip install celery_pydantic`}
@@ -38,7 +38,7 @@ const Article = () => {
                 <Text p>
                     Then set it up like this:
                 </Text>
-                <div className="bg-slate-800 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto">
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <pre>
                         <code>
                             {`from celery import Celery
@@ -55,7 +55,7 @@ pydantic_celery(app)`}
                 <Text p>    
                     Now you can use pydantic models as celery task arguments.
                 </Text>
-                <div className="bg-slate-800 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto">
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <pre>
                         <code>
                             {`from pydantic import BaseModel
@@ -76,7 +76,7 @@ process_user.delay(user=User(name="John", age=30))
                 <Text p>
                     You can also return pydantic models from tasks.
                 </Text>    
-                <div className="bg-slate-800 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto">
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <pre>
                         <code>
                             {`@app.task
@@ -112,7 +112,7 @@ user: User = process_user.delay(user=User(name="John", age=30)).get()
                     <LinkTo href="https://github.com/celery/celery/blob/main/examples/pydantic/tasks.py" external className="underline">Celery's official Pydantic integration </LinkTo> requires pydantic models to be converted to dicts using model_dump(). This
                     will also error if you have types that don't work with the default json serializer such as `UUID`, `datetime`, etc. In the end it looks something like this:
                 </Text>
-                <div className="bg-slate-800 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto">
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <pre>
                         <code>
                             {`@app.task(pydantic=True)
