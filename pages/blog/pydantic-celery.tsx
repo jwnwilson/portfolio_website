@@ -109,7 +109,7 @@ user: User = process_user.delay(user=User(name="John", age=30)).get()
                     <LinkTo href="https://benninger.ca/posts/celery-serializer-pydantic/" external className="underline">This blog post</LinkTo> is the majority of the code above, but it requires registering each model manually, which I didn't want to do.
                 </Text>
                 <Text p>
-                    <LinkTo href="https://github.com/celery/celery/blob/main/examples/pydantic/tasks.py" external className="underline">Celery's official Pydantic integration </LinkTo> requires pydantic models have to converted to dicts using model_dump(). This
+                    <LinkTo href="https://github.com/celery/celery/blob/main/examples/pydantic/tasks.py" external className="underline">Celery's official Pydantic integration </LinkTo> requires pydantic models to be converted to dicts using model_dump(). This
                     will also error if you have types that don't work with the default json serializer such as `UUID`, `datetime`, etc. In the end it looks something like this:
                 </Text>
                 <div className="bg-slate-800 text-gray-100 p-4 rounded-lg my-4 overflow-x-auto">
