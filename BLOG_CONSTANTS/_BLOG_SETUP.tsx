@@ -153,7 +153,7 @@ export const PRIMARY_NAV: iNavSetup = {
 export const DEFAULT_SEO: iSEO = {
     title: "Noel's Nonsense",
     description: "Noel's Ramblings on Software Engineering, Leadership and Life.",
-    keywords: "leadership, management, team, software, development, python, typescript, react, ",
+    keywords: "leadership, management, team, software, development, python, typescript, react, fastapi",
     url: WEBSITE_URL,
     author: `${NOEL.name}`,
     twitterHandle: '',

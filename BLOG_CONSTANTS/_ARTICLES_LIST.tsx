@@ -204,7 +204,7 @@ const ARTICLES_LIST: iArticle[] = [
         "How to Build a Dysfunctional Team – Satirical Take on Team Leadership",
       tags: "team building, dysfunctional, satire",
       thumbnail: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp",
-      category: "Team Building",
+      category: "Stories",
     },
     seo: {
       keywords:
@@ -223,7 +223,7 @@ const ARTICLES_LIST: iArticle[] = [
         "What I learned in my first year leading engineering at a startup",
       tags: "team building, engineering, management, leadership",
       thumbnail: "/public/imp_assets/posts/first_year/ship_stormy_sea.jpg",
-      category: "Team Building",
+      category: "Stories",
     },
     seo: {
       keywords:
@@ -242,9 +242,23 @@ const ARTICLES_LIST: iArticle[] = [
         "I've been looking for existing pydantic - celery integrations and found some that aren't seamless so I built on top of them and turned them into a 1 line integration.",
       tags: "pydantic, celery, integration, python",
       thumbnail: "/public/imp_assets/posts/pydantic_celery/python_celery.jpeg",
-      category: "Open Source",
+      category: "Experiments",
     },
   },
+  {
+    path: "/pages/experiments/rive.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "July 19 2025",
+      articleTitle: "Rive Demo",
+      shortIntro:
+        "An experiment with adding advanced animations to a website.",
+      tags: "rive, animations, typescript, react",
+      thumbnail: "/public/imp_assets/posts/rive/rive.png",
+      category: "Experiments",
+    },
+  }
   // {
   //   path: "/pages/blog/hiring-the-worst-candidate.tsx",
   //   featureArticle: true,

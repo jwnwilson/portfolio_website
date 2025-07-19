@@ -11,6 +11,7 @@
     "out": "next build && next export"
   },
   "dependencies": {
+    "@rive-app/react-webgl2": "^4.22.1",
     "@uiw/react-textarea-code-editor": "^1.4.4",
     "css-loader": "^6.7.1",
     "disqus-react": "^1.1.5",
