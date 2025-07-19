@@ -27,14 +27,14 @@ const Article = () => {
     return (
         <PageLayout standard>
             <div className='container px-3 pb-[20px]'>
-                <div className="flex flex-col items-center justify-center h-[400px]">
+                <div className="flex flex-col items-center justify-center h-[200px] md:h-[400px]">
                     <RiveDemo />
                 </div>
                 <Text subtitle className="mt-10">
                     Rive Animations
                 </Text>
                 <div className="flex flex-col md:flex-row items-start my-6">
-                    <div className="md:w-1/4 w-full md:mr-6 mb-4 md:mb-0 flex-shrink-0">
+                    <div className="md:w-1/4 w-full md:mr-6 mb-4 md:mb-0 flex-shrink-0 flex justify-center">
                         <LinkTo href="https://rive.app/" external className="underline">
                             <img
                                 src="/imp_assets/posts/rive/rive.png"
@@ -43,7 +43,6 @@ const Article = () => {
                                 style={{ maxWidth: 200 }}
                             />
                         </LinkTo>
-
                     </div>
                     <div className="md:w-2/3 w-full">
                         <Text p>
