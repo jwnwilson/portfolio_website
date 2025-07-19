@@ -251,7 +251,7 @@ const ARTICLES_LIST: iArticle[] = [
     preview: {
       author: NOEL,
       date: "July 19 2025",
-      articleTitle: "Rive Demo",
+      articleTitle: "Rive Experiment",
       shortIntro:
         "An experiment with adding advanced animations to a website.",
       tags: "rive, animations, typescript, react",

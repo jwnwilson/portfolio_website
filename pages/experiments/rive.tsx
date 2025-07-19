@@ -26,8 +26,30 @@ const Article = () => {
     const { theme } = useTheme();
     return (
         <PageLayout standard>
-            <div className='container px-3 pb-[20px] h-screen'>
-                <RiveDemo />
+            <div className='container px-3 pb-[20px]'>
+                <div className="flex flex-col items-center justify-center h-[400px]">
+                    <RiveDemo />
+                </div>
+                <Text subtitle className="mt-10">
+                    Rive Animations
+                </Text>
+                <Text p>
+                    I've been looking at ways to make websites with fancy animations as bit of a break from backend work and found <LinkTo href="https://rive.app/" external className="underline">Rive</LinkTo> which is great for this. So far am really impressed, it took me a couple of hours to download go through the tutorials, build this animation and deploy it to my website.
+                </Text>
+                <Text p>
+                It also has a state machine to allow user actions to control animations which I'd like to play with when I find time around the baby :).
+                </Text>
+                <Text p>
+                    Stay tuned for more experiments with Rive!
+                </Text>
+
+                <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
+                    {
+                        url: "https://noel-wilson.co.uk/experiments/rive",
+                        identifier: "rive",
+                        title: "Rive Experiment",
+                    }
+                }></DiscussionEmbed>
             </div>
         </PageLayout>
     )
