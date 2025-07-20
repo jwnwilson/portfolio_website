@@ -27,9 +27,9 @@ const Article = () => {
     return (
         <PageLayout standard>
             <div className='container px-3 pb-[20px]'>
-                <div className="flex flex-col items-center justify-center h-[200px] md:h-[400px]">
+                <div className="flex flex-col items-center justify-center h-[300px] md:h-[600px]">
                     <RiveDemo />
-                    <Text p>Hover over the image to interact with it!</Text>
+                    <Text className="text-sm" p>Hover mouse  over / touch the image to interact with it!</Text>
 
                 </div>
                 <Text subtitle className="mt-10">
