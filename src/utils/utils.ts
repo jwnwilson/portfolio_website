@@ -221,8 +221,8 @@ export const CREATE_SEO_CONFIG = (PAGE_SEO: iSEO) => {
       images: [
         {
           url: ogImage,
-          width: 1200,
-          height: 630,
+          width: 500,
+          height: 500,
           alt: title,
         },
       ],
