@@ -26,7 +26,7 @@ const Article = () => {
                         <List type={ListType.number} className="mt-5">
                             <li>Reduced data calculation time by 95%</li>
                             <li>Scaled our platform to support 10x more customers</li>
-                            <li>Launched a high quality copywriting tool that is outperforming the competition</li>
+                            <li>Launched a high quality copywriting product that is outperforming the competition</li>
                             <li>Built a high-performing, deeply collaborative engineering culture</li>
                         </List>
                         <Text p>
