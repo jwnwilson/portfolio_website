@@ -51,7 +51,7 @@ const Article = () => {
                             I've been looking at ways to make fancy animations on websites as a bit of a break from backend work and found <LinkTo href="https://rive.app/" external className="underline">Rive</LinkTo> which is great for this, so far I'm really impressed. It took me a couple of hours to: download the app, go through the tutorials, build this animation and deploy it to my website.
                         </Text>
                         <Text p>
-                            Rive tires to mirror other animation tools like after effects. So if you've done that in the past then you'll feel right at home. It also has a state machine to allow user actions to control animations, which I used to add some interactions. I'll be playing with this more when I find time around the baby.
+                            Rive tries to mirror other animation tools like after effects. So if you've done that in the past then you'll feel right at home. It also has a state machine to allow user actions to control animations, which I used to add some interactions. I'll be playing with this more when I find time around the baby.
                         </Text>
                         <Text p>
                             Stay tuned for more experiments with Rive!

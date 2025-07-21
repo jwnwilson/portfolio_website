@@ -13,7 +13,7 @@ const Home = () => {
         <div className="container px-3">
           <div className="flex items-center">
             <div className="w-2/6">
-              <img src="/images/headshot_500.png" alt="Hero Image" className='w-[200px] rounded-full ml-auto' />
+              <img src="/images/anime_headshot.jpg" alt="Hero Image" className='w-[200px] rounded-full ml-auto' />
             </div>  
             <div className="w-4/6 ml-5 flex-5 text-left">
               <Text title className='text-3xl'>

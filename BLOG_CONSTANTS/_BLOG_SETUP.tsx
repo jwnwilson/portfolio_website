@@ -27,7 +27,7 @@ export const NOEL: IAuthor = {
     name: "Noel",
     designation: "Software Engineer",
     bio: "I'm an experienced full stack engineer, cloud architect and engineering manager",
-    profilePic: "/images/headshot_500.png",
+    profilePic: "/images/anime_headshot.jpg",
     social: [
         {
             link: 'https://www.linkedin.com/in/noel-wilson-0a194225/',
@@ -157,5 +157,5 @@ export const DEFAULT_SEO: iSEO = {
     url: WEBSITE_URL,
     author: `${NOEL.name}`,
     twitterHandle: '',
-    ogImage: '/public/images/headshot_500.png'
+    ogImage: '/public/images/anime_headshot.jpg'
 }
