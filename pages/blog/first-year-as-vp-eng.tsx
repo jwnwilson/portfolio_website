@@ -78,7 +78,10 @@ const Article = () => {
                     We enacted the "kaizen initative", inspired by the Toyota term for "continuous improvement". This involved proactively identifying our largest bottlenecks and making plans to address them, then looking for the next bottleneck.
                 </Text>
                 <Text p>
-                    After fixing our technical bottlenecks we saw 50% of our product was not generating the revenue we needed, <b> So we deleted it.</b> By trimming back non-essential projects, clarifying priorities, we can focus on the most profitable part of our product. <b>Startups don’t starve—they drown.</b>
+                    <b>Challenges</b>
+                </Text>
+                <Text p>
+                    After reviewing usage of our product we saw 50% of it was not used and was not contributing to revenue we needed, <b> So we deleted it.</b> By trimming back non-essential projects, clarifying priorities, we can focus on the most profitable parts of our product. <b>Startups don’t starve—they drown.</b>
                 </Text>
                 <Text subtitle className="mt-10">Invest in the team</Text>
                 <Text p>
@@ -91,7 +94,10 @@ const Article = () => {
                     We embraced a <b>“leader-leader” model</b>: everyone gets ownership, everyone is trusted to lead and held accountable. The result? Autonomous teams that move faster and make better decisions. The accountability ripple effect is real — and powerful.
                 </Text>
                 <Text p>
-                    The biggest learning was we hired too fast as we initially expecting our product to grow but after reviewing with customers it we actually strunk it. With a smaller product team effeciency dropped significantly and we had to make tough decisions, we lost some great engineers.
+                    <b>Challenges</b>
+                </Text>
+                <Text p>
+                    The biggest learning was we hired too fast as we initially expecting our product to grow but after reviewing with customers it we actually shrunk it. With a smaller product team effeciency dropped significantly and we had to make tough decisions, we lost some great engineers.
                 </Text>
 
                 <Image className="my-5" src="/public/imp_assets/posts/first_year/stay_the_course.png" alt="Stay the course description" size={ImageSize.MEDIUM} />
