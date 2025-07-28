@@ -14,7 +14,7 @@ const Article = () => {
                     Wins and Challenges
                 </Text>
                 <Text p>
-                    I spent the last 12 months scaling technical teams, navigating the chaos of AI startup life, here's what we achieved and learned at Ocula over the last 12 months.
+                    I spent the last 12 months scaling technical teams, navigating the chaotic life as VP of Engineering at an AI startup, here's what we achieved and learned at Ocula over the last 12 months.
                 </Text>
                 <div className="flex flex-col md:flex-row items-center">
                     <Image className="my-5 md:w-1/3 md:mr-5 mt-0 h-auto" src="/public/imp_assets/posts/first_year/ship_stormy_sea.jpg" alt="Ship in a stormy sea" caption="Leading in the turbulent environment of an AI startup" size={ImageSize.SMALL} />
