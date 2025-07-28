@@ -8,7 +8,7 @@ const Article = () => {
     const { theme }  = useTheme();
     return (
         <PageLayout standard>
-            <div className='container px-3 pb-[20px]'>
+            <div className='container max-w-4xl px-3 pb-[20px]'>
                 <Text subtitle>
                     Don't work on yourself, just make everything else worse
                 </Text>

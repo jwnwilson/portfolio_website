@@ -218,9 +218,9 @@ const ARTICLES_LIST: iArticle[] = [
     preview: {
       author: NOEL,
       date: "April 2025",
-      articleTitle: "Reflections from a year as VP of Engineering",
+      articleTitle: "Leading Engineering in AI",
       shortIntro:
-        "What I learned in my first year leading engineering at a startup",
+        "What I learned in my first year as VP of Engineering at a startup",
       tags: "team building, engineering, management, leadership",
       thumbnail: "/public/imp_assets/posts/first_year/ship_stormy_sea.jpg",
       category: "Stories",
@@ -232,7 +232,7 @@ const ARTICLES_LIST: iArticle[] = [
     },
   },
   {
-    path: "/pages/blog/pydantic-celery.tsx",
+    path: "/pages/experiments/pydantic-celery.tsx",
     featureArticle: false,
     preview: {
       author: NOEL,

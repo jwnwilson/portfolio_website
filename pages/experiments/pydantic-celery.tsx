@@ -8,7 +8,7 @@ const Article = () => {
     const { theme } = useTheme();
     return (
         <PageLayout standard>
-            <div className='container px-3 pb-[20px]'>
+            <div className='container max-w-4xl px-3 pb-[20px]'>
                 <div className="flex flex-col md:flex-row items-center">
                     <Image src="/public/imp_assets/posts/pydantic_celery/python_celery.jpeg" alt="Python Celery" size={ImageSize.XS} />
                     <div className="md:w-2/3 md:self-start mt-5">
@@ -22,7 +22,7 @@ const Article = () => {
                         <Text p className="mt-4">
                             You can also steal this file directly if you prefer: 
                         </Text>
-                        <LinkTo href="https://github.com/jwnwilson/celery_pydantic/blob/main/celery_pydantic/serializer.py" external className="underline">https://github.com/jwnwilson/celery_pydantic/blob/main/celery_pydantic/serializer.py</LinkTo>
+                        <LinkTo href="https://github.com/jwnwilson/celery_pydantic/blob/main/celery_pydantic/serializer.py" external className="underline">serializer.py</LinkTo>
                     </div>
                 </div>
                 <Text p>
@@ -134,7 +134,7 @@ process_user.delay(user=json.loads(User(name="John", age=30).model_dump_json()))
 
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
                     {
-                        url: "https://noel-wilson.co.uk/blog/pydantic-celery",
+                        url: "https://noel-wilson.co.uk/experiments/pydantic-celery",
                         identifier: "pydantic-celery",
                         title: "Seamless Pydantic-Celery Integration",
                     }
