@@ -218,9 +218,9 @@ const ARTICLES_LIST: iArticle[] = [
     preview: {
       author: NOEL,
       date: "April 2025",
-      articleTitle: "Leading Engineering in AI",
+      articleTitle: "Leading Engineering at an AI Startup",
       shortIntro:
-        "What I learned in my first year as VP of Engineering at a startup",
+        "What I learned in my first year as VP of Engineering at an AI startup",
       tags: "team building, engineering, management, leadership",
       thumbnail: "/public/imp_assets/posts/first_year/ship_stormy_sea.jpg",
       category: "Stories",
