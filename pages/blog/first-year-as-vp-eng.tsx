@@ -98,13 +98,13 @@ const Article = () => {
                     In our 1:1s, we put mentorship before status updates. We grew leaders from within, encouraged radical candor, and practiced healthy conflict resolution, <i>even around minor topics</i> so we’d be ready when the stakes were high.
                 </Text>
                 <Text p>
-                    We embraced a <b>“leader-leader” model</b>: everyone gets ownership, everyone is trusted to lead and held accountable. The result? Autonomous teams that move faster and make better decisions.
+                    We embraced a <b>“Leader/Leader” model</b>: everyone gets ownership, everyone is trusted to lead and held accountable. The result? Autonomous teams that move faster and make better decisions.
                 </Text>
                 <Text p>
                     <b>Challenges</b>
                 </Text>
                 <Text p>
-                    The biggest learning was we hired too fast as we initially expecting our product to grow but after reviewing with customers it we actually shrunk it. With a smaller product team effeciency dropped significantly and we had to make tough decisions, we lost some great engineers.
+                    The biggest learning was we hired too fast as we initially expecting our product to grow but after reviewing with customers it we actually shrunk it. With a larger team effeciency dropped significantly and we had to make tough decisions, we lost some great engineers, I now try to keep teams small and senior.
                 </Text>
 
                 <Image className="my-5" src="/public/imp_assets/posts/first_year/stay_the_course.png" alt="Stay the course description" size={ImageSize.MEDIUM} />
@@ -113,13 +113,13 @@ const Article = () => {
                     Stay the course
                 </Text>
                 <Text p>
-                    In a world obsessed with speed and AI-powered pivots, it’s tempting to chase the next shiny insight. But we learned that sometimes, sticking with a solid-but-not-perfect plan is smarter than constantly shifting gears.
+                    In a world obsessed with speed and AI-powered tools, it’s tempting to chuck features at a product and see what sticks. But we learned that sometimes, focusing on your core value add and making that as good as possible as helped us be more competitive.
                 </Text>
                 <Text p>
-                    One failed pivot taught us this the hard way. We moved too fast, ended up with a half-baked solution, and had to roll it all back. Now, we absorb customer learnings, update plans thoughtfully, and protect team momentum while staying agile.
+                    One failed pivot taught us this the hard way. We moved too fast, ended up with a half-baked solution, and had to roll it all back. Now, we absorb customer learnings, update plans thoughtfully, and stay conistent with our product strategy.
                 </Text>
                 <Text p>
-                    It’s about discipline, not rigidity. We adapt and iterate, but we also need to commit to a plan long enough to see the benefits. This balance has been key to our success.
+                    It’s about discipline, not rigidity. We adapt and iterate, but we also need to commit to a plan long enough to see the benefits.
                 </Text>
                 
                 <Text subtitle>
@@ -128,7 +128,7 @@ const Article = () => {
                 
                 <Text p>   
                     I’ve always been outcome-focused—but this year reminded me to lead with empathy, especially in moments of tension.
-                    The strongest teams challenge each other with respect and with care. I have to remind myself this often and book monthly self reflection sessions with my CTO for us to both check in our weaknesses to ensure we are growing and not falling back into bad habits.
+                    The strongest teams challenge each other with respect and with care. I have to remind myself this often and book monthly self reflection sessions called <b>Mentor/Mentor sessions</b> with my CTO for us to both check in our weaknesses to ensure we are growing and not falling back into bad habits.
                 </Text>
                 <Text p>
                     One of my mentors told me that becoming a dad would help change me for the better and I agree, being a dad gives plenty of times to practice patience and empathy.
