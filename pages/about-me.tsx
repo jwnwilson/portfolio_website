@@ -13,7 +13,7 @@ const AboutUs = () => {
     }
     return (
         <PageLayout PAGE_SEO={PAGE_SEO} home>
-            <section className='container px-3 md:pb-20 md:pt-10 pt-20'>
+            <section className='container max-w-4xl px-3 md:pb-20 md:pt-10 pt-20'>
                 <a href="https://noel-wilson.co.uk/" target="_blank" rel="noopener noreferrer" className="block md:w-[15%] w-[50%] ">
                     <img src="/images/headshot.jpg" alt="noel wilson" className="rounded-lg overflow-hidden float-left mr-5" />
                 </a>
@@ -39,7 +39,7 @@ const AboutUs = () => {
                             <li>Team building and Mentoring</li>
                             <li>Proficent with AWS, GCP and Azure</li>
                             <li>Cloud Architecture Specialist</li>
-                            <li>APIs and event driven Architecture Specialist</li>
+                            <li>APIs and event driven Architecture</li>
                             <li>Responsive UI Experience</li>
                         </List>
                     </div>
