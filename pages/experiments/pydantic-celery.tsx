@@ -11,14 +11,14 @@ const Article = () => {
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <div className="flex flex-col md:flex-row items-center">
                     <Image src="/public/imp_assets/posts/pydantic_celery/python_celery.jpeg" alt="Python Celery" size={ImageSize.XS} />
-                    <div className="md:w-2/3 md:self-start mt-5">
+                    <div className="w-full md:w-2/3 md:self-start mt-5">
                         <Text p>
                             I've been using both celery and pydantic for years and was looking for existing pydantic - celery integrations. I found some but was surpised to see that they weren't seamless. So I built on top of them and turned them into a 1 line integration.
                         </Text>
                         <Text p>
                             Here's the code if you want to skip the explanation:
                         </Text>
-                        <LinkTo href="https://github.com/jwnwilson/celery_pydantic/" external className="underline">https://github.com/jwnwilson/celery_pydantic/</LinkTo>
+                        <LinkTo href="https://github.com/jwnwilson/celery_pydantic/" external className="underline">github link</LinkTo>
                         <Text p className="mt-4">
                             You can also steal this file directly if you prefer: 
                         </Text>
