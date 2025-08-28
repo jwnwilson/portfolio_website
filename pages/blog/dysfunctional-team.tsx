@@ -20,19 +20,19 @@ const Article = () => {
                     Then I'll show you how to apply <LinkTo href="https://www.amazon.co.uk/Five-Dysfunctions-Team-Leadership-Lencioni-ebook/dp/B006960LQW" external className="underline">The 5 dysfunctions of a team</LinkTo> to sabotage the competition.
                     With this post I'll attempt to bring out your inner monster and provide a step by step approach to systematically destroy your team while working towards your own goals, so you look great in comparison.
                 </Text>
+                <Text p>
+                    This is the 5 dysfunctions pyramid, we will start from the bottom and work our way up, erroding the foundations of an effective team.
+                </Text>
                 <div className="md:flex items-center">
                     <div className="sm:w-100 md:w-1/2 ">
                         <Image
                             src="/public/imp_assets/posts/dysfunctional_team/5_dysfunctions_pyramid.jpg"
                             alt="The five dysfunctions pyramid"
                             caption="How to use this system against your team"
-                            size={ImageSize.MEDIUM}
+                            size={ImageSize.FUll}
                         />
                     </div>
-                    <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
-                        <Text p>
-                            This is the 5 dysfunctions pyramid, we will start from the bottom and work our way up, erroding the foundations of an effective team.
-                        </Text>
+                    <div className="sm:w-100 md:w-1/2 m-10 flex-5 text-left">
                         <List type={ListType.number} className="mt-5">
                             <li><b>Trust</b></li>
                             <li><b>Conflict Resolution</b></li>
@@ -85,6 +85,9 @@ const Article = () => {
                 <Text subtitle className="mt-10">
                     2. Crush Ideological Debate
                 </Text>
+                <Text p>
+                    If trust is still growing despite your best efforts, discourage people from engaging directly in debate over different opinions. This usually results in a better outcome for the team and builds conflict resolution skills, here are some tips to avoid this.
+                </Text>
                 <div className="flex flex-col md:flex-row items-center">
                     <Image
                         src="/public/imp_assets/posts/dysfunctional_team/liz_truss.png"
@@ -94,9 +97,6 @@ const Article = () => {
                         className="md:w-1/2 md:mr-5"
                     />
                     <div className="md:w-1/2">
-                        <Text p>
-                            If trust is still growing despite your best efforts, discourage people from engaging directly in debate over different opinions. This usually results in a better outcome for the team and builds conflict resolution skills, here are some tips to avoid this.
-                        </Text>
                         <List type={ListType.disc} className="mt-5">
                             <li>Build "us vs them" mentality to stunt discussion</li>
                             <li>Back channels over discussing directly can help make a situation worse</li>
@@ -117,6 +117,10 @@ const Article = () => {
                 <Text subtitle className="mt-10">
                     3. Stunt Conflict Resolution Skills
                 </Text>
+                <Text p>
+                    Debate comes with conflict, <b>conflict resolution is the biggest risk for us now, if a team develops this skill it can be hard to stop them.</b> Teams
+                    can then find ideal approaches to challenging situations. Recommendations for simmering conflict:
+                </Text>
                 <div className="md:flex items-center">
                     <div className="sm:w-100 md:w-1/3">
                         <Image
@@ -128,10 +132,6 @@ const Article = () => {
                         />
                     </div>
                     <div className="sm:w-100 md:w-2/3 m-5 flex-5 text-left">
-                        <Text p>
-                            Debate comes with conflict, <b>conflict resolution is the biggest risk for us now, if a team develops this skill it can be hard to stop them.</b> Teams
-                            can then find ideal approaches to challenging situations. Recommendations for simmering conflict:
-                        </Text>
                         <List type={ListType.disc} className="mt-5">
                             <li>Don't invite challenges from others, they might get into the habit of constructive conversation</li>
                             <li>Get defensive when challenged to discourage others challenging you again</li>
@@ -149,20 +149,20 @@ const Article = () => {
                 <Text subtitle className="mt-10">
                     4. Avoid Commitment
                 </Text>
+                <Text p>    
+                    <b>A single, clear unifying goal risks uniting the team,</b> having everyone working to help the business or product achieve a specific outcome and committing to it
+                    risks the entire team being successful.
+                </Text>
                 <div className="md:flex items-center">
                     <div className="sm:w-100 md:w-1/2">
                         <Image
                             src="/public/imp_assets/posts/dysfunctional_team/runaway_groom.jpg"
                             alt="Run away groom"
                             caption="With creativity it's always possible to avoid commitment"
-                            size={ImageSize.SMALL}
+                            size={ImageSize.MEDIUM}
                         />
                     </div>
                     <div className="sm:w-100 md:w-1/2 m-5 flex-5 text-left">
-                        <Text p>    
-                            <b>A single, clear unifying goal risks uniting the team,</b> having everyone working to help the business or product achieve a specific outcome and committing to it
-                            risks the entire team being successful.
-                        </Text>
                         <Text p>
                             So instead, now is time to decide and focus on your personal goals, prioritise what's best for you! A good model is CDD (CV driven development). 
                             Prioritise technologies you're interested in that will help you on your next role, if you're not sure what to pick then it's always a good time to implement kubernetes!
