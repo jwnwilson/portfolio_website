@@ -21,34 +21,76 @@ const Article = () => {
                         </Text>
                     </div>
                 </div>
+                <Text p>
+                    Check it out here! <LinkTo href="https://aipet.jwnwilson.co.uk/" external className="underline">aipet link</LinkTo>
+                </Text>
                 <Text p subtitle>
                     What is an Agent?
                 </Text>
                 <Text p>
-                    Agentic AI is a bit of a buzzword at the moment so this very basic agent is:
+                    Agentic AI is a bit of a buzzword at the moment, so this very basic agent is:
                 </Text>
                 <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <Text p>
-                        This "agent" is a system prompt to make an LLM specific to a certain task (Being a bunny). Then maintaining and passing context to the LLM when giving a task so it can return better answers."
+                        This "agent" is a system prompt to make an LLM take on a specific role (Being a bunny). Then the agent logic maintains and passes context to the LLM requesting it to take action. The Agent has the ability to control the bunny pet's movement and actions. "
                     </Text>
                 </div>
                 <Text p>
-                    We can also give the agent access to more tools which I intend to add as the pet becomes more sophisticated using a technique called MCP. I am also going to look at multi-agent approach where the bunnies 
+                    We can also give the agent access to more tools which I intend to add as the pet becomes more sophisticated. I want to use a technique called MCP which will give the access to the scene directly. I am also going to look at multi-agent approach where the bunnies 
                     mind will have longer term goals and then shorter term goals powered by different LLMS and glued together.
                 </Text>
                 <Text p subtitle>
                     What technology am I using?
                 </Text>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <List type={ListType.disc}>
+                        <li>Python</li>
+                        <li>Pydantic AI</li>
+                        <li>Pydantic Logfire</li>
+                        <li>Django Ninja</li>
+                    </List>
+                    <List type={ListType.disc}>
+                        <li>Typescript</li>
+                        <li>React</li>
+                        <li>Babylon.js</li>
+                        <li>Google Gemini</li>
+                    </List>
+                </div>
+                <Text p>
+                    The AI pet is running on django ninja which feels like the best of fastapi and django. It provides auth, permissions and allows me to create async endpoints which is ideal for llm logic and also sync logic if needed.
+                </Text>
                 <Text p subtitle>
                     How does it work?
                 </Text>
+                <Image src="/public/imp_assets/posts/aipet/aipet_sequence.png" alt="AI Pet" size={ImageSize.MEDIUM} />
                 <Text p>
-                    The game will send scene data to the LLM and let the LLM return movement and actions for the pet. This is a very simple example of an Agentic AI.
+                    I had to enable auth as llms cost money and I wanted to keep track of usage. 
+                    Once a user is authenticated the game will send scene data to the Django Ninja API and the Gemini LLM will return movement and actions for the pet. 
+                    This happens periodically which is what makes the pet move around the scene and take actions.
+                </Text>
+                <Text p >
+                    Here's the system prompt that gives the pet it's role and tells it how to provide return data
+                </Text>
+                <Image src="/public/imp_assets/posts/aipet/pydantic_01.png" alt="AI Pet" size={ImageSize.MEDIUM} />
+                <Text p>
+                    Here's the prompt from the game which provides the scene data to the Gemini LLM
+                </Text>
+                <Image src="/public/imp_assets/posts/aipet/pydantic_02.png" alt="AI Pet" size={ImageSize.MEDIUM} />
+                <Text p>
+                    Here's the response from the Gemini LLM
+                </Text>
+                <Image src="/public/imp_assets/posts/aipet/pydantic_03.png" alt="AI Pet" size={ImageSize.MEDIUM} />
+                <Text p>
+                    This process happens on a loop to give the pet some basic agency, there are many more steps to take to make the pet more intelligent and interactive.
+                </Text>
+                <Text p subtitle>
+                    Finally
                 </Text>
                 <Text p>
-                    I've deployed it to the link below, reach out to me for login details if you'd like to try it out!
+                    This is just the first step to get something working please check back for more updates in the future.
+                    I didn't want to make a generic chat bot and who knows, if this develops enough it might turn into a fun game
+                    I can develop into something more than a fun experiment. :)
                 </Text>
-                <LinkTo href="https://aipet.jwnwilson.co.uk/" external className="underline">aipet link</LinkTo>
 
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
                     {
