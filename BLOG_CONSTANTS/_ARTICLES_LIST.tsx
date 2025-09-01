@@ -255,10 +255,24 @@ const ARTICLES_LIST: iArticle[] = [
       shortIntro:
         "An experiment with adding advanced animations to a website.",
       tags: "rive, animations, typescript, react",
-      thumbnail: "/public/imp_assets/posts/rive/rive.png",
+      thumbnail: "/public/imp_assets/posts/rive/rive_thumbnail.png",
       category: "Experiments",
     },
-  }
+  },
+  {
+    path: "/pages/experiments/aipet-part-1.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "September 01 2025",
+      articleTitle: "AI Pet - Part 1",
+      shortIntro:
+        "An experiment with creating an AI pet.",
+      tags: "ai, pet, part 1",
+      thumbnail: "/public/imp_assets/posts/aipet/aipet.png",
+      category: "Experiments",
+    },
+  },
   // {
   //   path: "/pages/blog/hiring-the-worst-candidate.tsx",
   //   featureArticle: true,
