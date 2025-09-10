@@ -265,7 +265,7 @@ const ARTICLES_LIST: iArticle[] = [
     preview: {
       author: NOEL,
       date: "September 01 2025",
-      articleTitle: "AI Pet - Part 1",
+      articleTitle: "AI Pet - Dev Blog 1",
       shortIntro:
         "An experiment with creating an AI pet.",
       tags: "ai, pet, part 1",
