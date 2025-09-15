@@ -157,5 +157,5 @@ export const DEFAULT_SEO: iSEO = {
     url: WEBSITE_URL,
     author: `${NOEL.name}`,
     twitterHandle: '',
-    ogImage: '/public/images/anime_headshot.jpg'
+    ogImage: '/public/images/anime_headshot_seo.jpg'
 }
