@@ -273,6 +273,19 @@ const ARTICLES_LIST: iArticle[] = [
       category: "Experiments",
     },
   },
+  {
+    path: "/pages/experiments/kubernetes-cluster.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "September 25 2025",
+      articleTitle: "Building a raspberry pi kubernetes cluster",
+      shortIntro: "An experiment with creating a Kubernetes cluster.",
+      tags: "kubernetes, cluster",
+      thumbnail: "/public/imp_assets/posts/kubernetes/kubernetes_cluster.png",
+      category: "Experiments",
+    },
+  }
   // {
   //   path: "/pages/blog/hiring-the-worst-candidate.tsx",
   //   featureArticle: true,
