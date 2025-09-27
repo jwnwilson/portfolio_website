@@ -71,8 +71,8 @@ const Article = () => {
                     <List type={ListType.number} className="mt-5">
                         <li>Flash a new SD card using thelatest raspberry pi OS (64 bit). Set wifi and username / password.</li>
                         <li>Find the pi on the local network and ssh into it.</li>
-                        <li>On the pi, append "cgroup_memory=1 cgroup_enable=memory" to /boot/firmware/cmdline.txt (This is needed for kubernetes to work)</li>
-                        <li>On the pi, run "sudo apt update && sudo apt install iptables"</li>
+                        <li>On the pi, run: <CodeBlock code ={"sudo echo 'cgroup_memory=1 cgroup_enable=memory' >> /boot/firmware/cmdline.txt" }></CodeBlock>(This is needed for kubernetes to work)</li>
+                        <li>On the pi, run: <CodeBlock code ={"sudo apt update && sudo apt install iptables"}></CodeBlock></li>
                         <li>Restart the raspberry pi</li>
                     </List>
                 </List>
@@ -113,7 +113,11 @@ const Article = () => {
                                 SSH into each worker node and run the following command:
                             </li>
                             <li>
-                                <CodeBlock code={"curl -sfL https://get.k3s.io | K3S_URL=https://&lt;master-ip&gt;:6443 K3S_TOKEN=&lt;master-node-token&gt; K3S_NODE_NAME=rasp-worker-01 sh -"}></CodeBlock>
+                                <CodeBlock code={`
+export MASTER_IP=<master-ip>
+export MASTER_NODE_TOKEN=<master-node-token>
+curl -sfL https://get.k3s.io | K3S_URL=https://$MASTER_IP:6443 K3S_TOKEN=<master-node-token> K3S_NODE_NAME=rasp-worker-01 sh -
+                                `}></CodeBlock>
                             </li>
                         </ul>
                     </li>
@@ -163,7 +167,7 @@ const Article = () => {
                 <Text p>
                     <List type={ListType.disc}>
                         <li>
-                            After trawling reddit <LinkTo href="https://www.reddit.com/r/selfhosted/" external className="underline">selfhosted solutions</LinkTo>, I found <LinkTo href="https://inlets.dev/" external className="underline">Inlets</LinkTo>, a much cheaper alternative to ngrok.
+                            After trawling reddit <LinkTo href="https://www.reddit.com/r/selfhosted/" external className="underline">self hosted solutions</LinkTo>, I found <LinkTo href="https://inlets.dev/" external className="underline">Inlets</LinkTo>, a much cheaper alternative to ngrok.
                         </li>
                         <li>
                             Inlets costs $25 per month for the software.
@@ -209,7 +213,7 @@ const Article = () => {
                         <li>Create a VM on digital ocean</li>
                         <li>Install the inlets operator on your kubernetes cluster</li>
                     </List>
-                    You should now have a public IP address to ping your cluser, but if you have any issues here's a link to the docs: <LinkTo href="https://docs.inlets.dev/tutorial/kubernetes-ingress/#install-the-inlets-operator" external className="underline">https://docs.inlets.dev/tutorial/kubernetes-ingress/#install-the-inlets-operator</LinkTo>
+                    You should now have a public IP address to ping your cluser, here's a link to the docs: <LinkTo href="https://docs.inlets.dev/tutorial/kubernetes-ingress/#install-the-inlets-operator" external className="underline">https://docs.inlets.dev/tutorial/kubernetes-ingress/#install-the-inlets-operator</LinkTo>
                 </Text>
                 <Text p subtitle>Kubernetes Ingress + HTTPS Setup</Text>
                 <Text p>
@@ -230,8 +234,9 @@ const Article = () => {
                     <li>grafana - to visualize the data</li>
                     <li>prometheus - to monitor the cluster</li>
                 </List>
-                <Text p>I hope you enjoyed this post, if you have any questions or feedback please let me know. Here's grafana accessible from: https://rancher.jwnwilson.co.uk/ monitoring my cluster in action:</Text>
+                <Text p>Here's grafana in action accessible from my domain: https://rancher.jwnwilson.co.uk/ monitoring my cluster:</Text>
                 <Image src="/public/imp_assets/posts/kubernetes_cluster/grafana.png" alt="Grafana" size={ImageSize.MEDIUM} />
+                <Text p>I hope you enjoyed this post, if you have any questions or feedback please let me know.</Text>
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
                     {
                         url: "https://noel-wilson.co.uk/experiments/kubernetes-cluster",

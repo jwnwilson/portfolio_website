@@ -22,11 +22,11 @@ const AboutUs = () => {
                         Hello, I'm Noel!
                     </Text>
                     <Text subtitle className='text-xl mb-5'>
-                        I'm an experienced full stack engineer, cloud architect and engineering manager.
+                        I'm an experienced full stack engineer and cloud architect.
                     </Text>
 
                     <Text p className='text-lg'>
-                        I have been working as an engineer / manager in London for over 15 years, worked end to end on various projects. I've built teams, web applications, APIs, event driven systems and data pipelines. I am an expert with technologies like Python, TypeScript, Terraform, Cloud Services and CI/CD platforms.
+                        I have been working as an engineer / manager in London for over 15 years, worked end to end on various projects. I've architected projects, built teams, web applications, APIs, event driven systems and data pipelines. I am an expert with technologies like Python, TypeScript, Terraform, Cloud Services and CI/CD platforms.
                     </Text>
                 </div>
 
@@ -36,10 +36,10 @@ const AboutUs = () => {
                             Skills
                         </Text>
                         <List type={ListType.disc}>
-                            <li>Team building and Mentoring</li>
                             <li>Proficent with AWS, GCP and Azure</li>
                             <li>Cloud Architecture Specialist</li>
                             <li>APIs and event driven Architecture</li>
+                            <li>Team building and Mentoring</li>
                             <li>Responsive UI Experience</li>
                         </List>
                     </div>
