@@ -48,6 +48,12 @@ const Article = () => {
                 <Text p subtitle>
                     Build a raspberry pi cluster
                 </Text>
+                <Image src="/public/imp_assets/posts/kubernetes_cluster/rasp_build_01.jpeg" alt="Raspberry Pi Cluster" size={ImageSize.SMALL} />
+
+                <Text p>
+                    I followed this youtube video to get it working: <LinkTo href="https://www.youtube.com/watch?v=X9fSMGkjtug" external className="underline">Youtube video</LinkTo>. 
+                    I found some parts were out of date so below are the updated instructions.
+                </Text>
                 <Text p>
                     Here's a list of the hardware I used:
                 </Text>
@@ -57,32 +63,25 @@ const Article = () => {
                     <li>4x USB to USB C cables</li>
                     <li>1x fast charging hub (needs to be able to supply 5V 5A)</li>
                 </List>
+                <Text p subtitle>Raspberry Pi Initial Setup</Text>
                 <Image src="/public/imp_assets/posts/kubernetes_cluster/rpi-imager.webp" alt="Raspberry Pi SD setup" size={ImageSize.SMALL} />
                 <Text p>
-                    First step was to get a single node working and it was surprisingly easy.
-                    I used the official <LinkTo href="https://www.raspberrypi.com/software/" external className="underline">raspberry pi imager</LinkTo> to
-                    install the default raspberry pi OS (64 bit). During installation it's possible to setup both the wifi and username / password, removing the need for a lan cable.
-                    This meant that once the pi is booted up I can find it on my local network and ssh into it.
-                </Text>
-                <Image src="/public/imp_assets/posts/kubernetes_cluster/local_network.png" alt="Raspberry Pi Booted up" size={ImageSize.SMALL} />
-                <Text p>
-                    Once the pi is booted up I can find it on my local network and ssh into it.
-                </Text>
-                <Image src="/public/imp_assets/posts/kubernetes_cluster/ssh_cluster.png" alt="SSH into Raspberry Pi" size={ImageSize.MEDIUM} />
-                <Text p>
-                    I followed this youtube video to get it working: <LinkTo href="https://www.youtube.com/watch?v=X9fSMGkjtug" external className="underline">Youtube video</LinkTo>. 
-                    I found some parts were out of date so below is the updated version, for each raspberry pi:
+                    Before we install kubernetes we need to prepare each raspberry pi to be compatible with K3s (simplified kubernetes) 
+                    and perform the following steps on each raspberry pi:
                 </Text>
                 <List type={ListType.disc} className="mt-5">
                     <List type={ListType.number} className="mt-5">
-                        <li>Flash a new SD card using thelatest raspberry pi OS (64 bit). Set wifi and username / password.</li>
-                        <li>Find the pi on the local network and ssh into it.</li>
-                        <li>On the pi, run: <CodeBlock code ={"sudo echo 'cgroup_memory=1 cgroup_enable=memory' >> /boot/firmware/cmdline.txt" }></CodeBlock>(This is needed for kubernetes to work)</li>
+                        <li>Install raspberry pi imager from <LinkTo href="https://www.raspberrypi.com/software/" external className="underline">https://www.raspberrypi.com/software/</LinkTo></li>
+                        <li>Using the imager flash a new SD card on your computer using the latest raspberry pi OS (64 bit). Set wifi, wifi password and ssh username / password.</li>
+                        <li>Turn on the raspberry pi and wait for it to boot up.</li>
+                        <Image src="/public/imp_assets/posts/kubernetes_cluster/local_network.png" alt="Raspberry Pi Booted up" size={ImageSize.SMALL} caption="I can now see the raspberry pi on my home router dashboard" />
+                        <li>Find the pi on the local network and ssh into it, E.G.: <CodeBlock code ={"ssh 192.168.1.49" }></CodeBlock></li>
+                        <Image src="/public/imp_assets/posts/kubernetes_cluster/ssh_cluster.png" alt="SSH into Raspberry Pi" size={ImageSize.MEDIUM} />
+                        <li>On the pi, run: <CodeBlock code ={"sudo echo ' cgroup_memory=1 cgroup_enable=memory' >> /boot/firmware/cmdline.txt" }></CodeBlock>(This is needed for kubernetes to work)</li>
                         <li>On the pi, run: <CodeBlock code ={"sudo apt update && sudo apt install iptables"}></CodeBlock></li>
                         <li>Restart the raspberry pi</li>
                     </List>
                 </List>
-                <Image src="/public/imp_assets/posts/kubernetes_cluster/rasp_build_01.jpeg" alt="Raspberry Pi Cluster" size={ImageSize.SMALL} />
                 <Text p>
                     Now it's time to install kubernetes, first we need to setup the main / master node which will control the cluster.
                 </Text>
