@@ -15,15 +15,14 @@ const Article = () => {
                 <Image src="/public/imp_assets/posts/kubernetes_cluster/raspberry_cluster.jpeg" alt="Raspberry PI Kubernetes Cluster" size={ImageSize.SMALL} />
                 <Text p>
                     I've been watching hosting costs for my hobbies creep up over time and this has motivated me look into self hosting solutions.
-                    I decided to look into building my own kubernetes cluster as a way to do that and here's the requirements
-                    I set for this project:
+                    Here's the requirements I set for this project:
                 </Text>
                 <List type={ListType.disc} className="mt-5">
                     <li>It must have the ability to host multiple services</li>
-                    <li>Cost less than what I'm paying now on AWS and not increase costs with new services</li>
+                    <li>Cost less than what I'm paying now on AWS</li>
+                    <li>Not increase costs linearly with new services</li>
                     <li>Be able to link them to domains I own in a secure way</li>
                     <li>Work with a dynamic IP as my ISP doesn't offer static IPs</li>
-                    <li>Have a consistent way to deploy services</li>
                 </List>
                 <Text p subtitle>
                     Current AWS Costs
@@ -33,10 +32,10 @@ const Article = () => {
                     I'm paying around $75 per month for my hobby services, and <LinkTo href="https://www.reddit.com/r/ProgrammerHumor/comments/1eayj9a/geniedislikescloud/" external className="underline">
                        it's easy to rack up costs.
                     </LinkTo> I turn projects off when I'm not developing them and only run a couple of small VMs / containers, one SQL DB at a time and there's network costs and taxes.
-                     If I want to do more this will easily go into the hundreds of dollars per month.
+                     For the projects I'm planning if I want to continue to host on any cloud provider this will easily go into the hundreds of dollars per month.
                 </Text>
                 <Text p>
-                    So here's what I did to setup a raspberry pi cluster to replace my AWS hosting.
+                    So I've decided to go with a local raspberry pi cluster, I was able to achieve all my goals to replace my AWS hosting and here's what I did to setup it up.
                 </Text>
                 <Seperator />
                 <Text p subtitle>
