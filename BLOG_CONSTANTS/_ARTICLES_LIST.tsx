@@ -239,7 +239,7 @@ const ARTICLES_LIST: iArticle[] = [
       date: "June 07 2025",
       articleTitle: "Seamless Pydantic-Celery Integration",
       shortIntro:
-        "I've been looking for existing pydantic - celery integrations and found some that aren't seamless so I built on top of them and turned them into a 1 line integration.",
+        "Writing and deploying a Pydantic-Celery python package.",
       tags: "pydantic, celery, integration, python",
       thumbnail: "/public/imp_assets/posts/pydantic_celery/python_celery.jpeg",
       category: "Experiments",
@@ -273,6 +273,19 @@ const ARTICLES_LIST: iArticle[] = [
       category: "Experiments",
     },
   },
+  {
+    path: "/pages/experiments/kubernetes-cluster.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "September 25 2025",
+      articleTitle: "Self Hosting Kubernetes",
+      shortIntro: "Saving money with a raspberry pi kubernetes cluster",
+      tags: "kubernetes, cluster",
+      thumbnail: "/public/imp_assets/posts/kubernetes_cluster/raspberry_cluster.jpeg",
+      category: "Experiments",
+    },
+  }
   // {
   //   path: "/pages/blog/hiring-the-worst-candidate.tsx",
   //   featureArticle: true,
