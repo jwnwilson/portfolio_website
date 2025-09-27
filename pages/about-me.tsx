@@ -26,7 +26,7 @@ const AboutUs = () => {
                     </Text>
 
                     <Text p className='text-lg'>
-                        I have been working as an engineer / manager in London for over 15 years, worked end to end on various projects. I've architected projects, built teams, web applications, APIs, event driven systems and data pipelines. I am an expert with technologies like Python, TypeScript, Terraform, Cloud Services and CI/CD platforms.
+                        I have been working as an engineer / manager in London for over 15 years, worked end to end on various projects. I've architected systems, built teams, web applications, APIs, event driven systems and data pipelines. I am an expert with technologies like Python, TypeScript, Terraform, Cloud Services and CI/CD platforms.
                     </Text>
                 </div>
 
