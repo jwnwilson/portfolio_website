@@ -25,7 +25,15 @@ export const RiveDemo = () => {
 const Article = () => {
     const { theme } = useTheme();
     return (
-        <PageLayout standard>
+        <PageLayout standard PAGE_SEO={
+            {
+                title: "Rive Animations",
+                description: "Fancy animations on websites",
+                keywords: "rive, animations",
+                author: "Noel Wilson",
+                ogImage: "/public/imp_assets/posts/rive/rive.png"
+            }
+        }>
             <div className='container px-3 pb-[20px]'>
                 <div className="flex flex-col items-center justify-center h-[300px] md:h-[600px]">
                     <RiveDemo />

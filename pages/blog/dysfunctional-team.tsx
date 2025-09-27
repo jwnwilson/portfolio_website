@@ -7,7 +7,15 @@ import { useTheme } from "next-themes";
 const Article = () => {
     const { theme }  = useTheme();
     return (
-        <PageLayout standard>
+        <PageLayout standard PAGE_SEO={
+            {
+                title: "Building a Dysfunctional Team",
+                description: "How to make your team dysfunctional",
+                keywords: "dysfunctional team, team, leadership",
+                author: "Noel Wilson",
+                ogImage: "/public/imp_assets/posts/dysfunctional_team/this_is_fine.webp"
+            }
+        }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <Text subtitle>
                     Don't work on yourself, just make everything else worse

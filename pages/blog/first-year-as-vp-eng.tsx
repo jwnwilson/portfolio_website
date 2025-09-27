@@ -8,7 +8,15 @@ import Head from "next/head";
 const Article = () => {
     const { theme }  = useTheme();
     return (
-        <PageLayout standard>
+        <PageLayout standard PAGE_SEO={
+            {
+                title: "First Year as VP of Engineering",
+                description: "Scaling technical teams, navigating the chaotic life as VP of Engineering at an AI startup",
+                keywords: "ai, startup, engineering, leadership",
+                author: "Noel Wilson",
+                ogImage: "/public/imp_assets/posts/first_year/ship_stormy_sea.jpg"
+            }
+        }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <Text subtitle>
                     Wins and Challenges

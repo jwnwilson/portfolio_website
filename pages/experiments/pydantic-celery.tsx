@@ -7,7 +7,15 @@ import { useTheme } from "next-themes";
 const Article = () => {
     const { theme } = useTheme();
     return (
-        <PageLayout standard>
+        <PageLayout standard PAGE_SEO={
+            {
+                title: "Seamless Pydantic-Celery Integration",
+                description: "A seamless integration of pydantic and celery",
+                keywords: "pydantic, celery",
+                author: "Noel Wilson",
+                ogImage: "/public/imp_assets/posts/pydantic_celery/python_celery.jpeg"
+            }
+        }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <div className="flex flex-col md:flex-row items-center">
                     <Image src="/public/imp_assets/posts/pydantic_celery/python_celery.jpeg" alt="Python Celery" size={ImageSize.XS} />

@@ -7,7 +7,15 @@ import { useTheme } from "next-themes";
 const Article = () => {
     const { theme } = useTheme();
     return (
-        <PageLayout standard>
+        <PageLayout standard PAGE_SEO={
+            {
+                title: "AI Pet - Part 1",
+                description: "An AI pet that is fully controlled by AIs / LLMs",
+                keywords: "ai pet, ai, llm",
+                author: "Noel Wilson",
+                ogImage: "/public/imp_assets/posts/aipet/aipet.png"
+            }
+        }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <div className="flex flex-col md:flex-row items-center">
                     <Image src="/public/imp_assets/posts/aipet/aipet.png" alt="AI Pet" size={ImageSize.MEDIUM} />

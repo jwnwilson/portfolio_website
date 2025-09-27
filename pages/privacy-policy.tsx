@@ -8,7 +8,7 @@ const TermsAndConditions = () => {
         title: 'Privacy Policy',
         description: `This Privacy Policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in website`,
         keywords: 'noels nonsense, contact me',
-        author: 'Mayur Nalwala, Rupali Yadav'
+        author: 'Noel Wilson'
     }
     return (
         <PageLayout PAGE_SEO={PAGE_SEO} home>

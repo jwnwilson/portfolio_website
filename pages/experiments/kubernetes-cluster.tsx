@@ -4,13 +4,20 @@ import { PageLayout, Text, List, Image, LinkTo, Seperator, Slider } from "../../
 import { DiscussionEmbed } from 'disqus-react';
 import { useTheme } from "next-themes";
 import { CodeBlock } from "../../src/components";
-import Link from "next/link";
 
 
 const Article = () => {
     const { theme } = useTheme();
     return (
-        <PageLayout standard>
+        <PageLayout standard PAGE_SEO={
+            {
+                title: "Self Hosting Kubernetes",
+                description: "Saving money with a raspberry pi kubernetes cluster",
+                keywords: "kubernetes, cluster",
+                author: "Noel Wilson",
+                ogImage: "/public/imp_assets/posts/kubernetes_cluster/raspberry_cluster.jpeg"
+            }
+        }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <Image src="/public/imp_assets/posts/kubernetes_cluster/raspberry_cluster.jpeg" alt="Raspberry PI Kubernetes Cluster" size={ImageSize.SMALL} />
                 <Text p>
