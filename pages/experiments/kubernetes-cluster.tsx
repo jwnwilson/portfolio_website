@@ -39,7 +39,7 @@ const Article = () => {
                     I'm paying around $75 per month for my hobby services, and <LinkTo href="https://www.reddit.com/r/ProgrammerHumor/comments/1eayj9a/geniedislikescloud/" external className="underline">
                        it's easy to rack up costs.
                     </LinkTo> I turn projects off when I'm not developing them and only run a couple of small VMs / containers, one SQL DB at a time and there's network costs and taxes.
-                     For the projects I'm planning if I want to continue to host on any cloud provider this will easily go into the hundreds of dollars per month.
+                     For the projects I'm planning, if I continue to host them on any cloud provider they will easily go into the hundreds of dollars per month.
                 </Text>
                 <Text p>
                     So I decided to build a local raspberry pi cluster, I was able to achieve all my goals and here's what I did to setup it up.
