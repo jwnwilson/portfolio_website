@@ -224,7 +224,7 @@ curl -sfL https://get.k3s.io | K3S_URL=https://$MASTER_IP:6443 K3S_TOKEN=$MASTER
                 <Text p>
                     I think this post is getting a bit long so I'll wrap it up, now we have a public IP address to safely access the cluster, the rest of the process 
                     is standard kubernetes ingress + https setup. I used <LinkTo href="https://docs.inlets.dev/tutorial/kubernetes-ingress/#install-nginx-ingress" external className="underline">the Inlets guide</LinkTo> to 
-                    install nginx ingress + cert manager and it worked great for me to access multiple services.
+                    install nginx ingress + cert manager and it worked great for me to access to multiple services.
                 </Text>
                 <Text p>
                     Lastly I used AWS route 53 to point my domains to the public digital ocean IP address, and I quickly setup some great Kubernetes tools:
