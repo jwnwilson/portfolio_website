@@ -121,7 +121,7 @@ const Article = () => {
                                 <CodeBlock code={`
 export MASTER_IP=<master-ip>
 export MASTER_NODE_TOKEN=<master-node-token>
-curl -sfL https://get.k3s.io | K3S_URL=https://$MASTER_IP:6443 K3S_TOKEN=<master-node-token> K3S_NODE_NAME=rasp-worker-01 sh -
+curl -sfL https://get.k3s.io | K3S_URL=https://$MASTER_IP:6443 K3S_TOKEN=$MASTER_NODE_TOKEN K3S_NODE_NAME=rasp-worker-01 sh -
                                 `}></CodeBlock>
                             </li>
                         </ul>
