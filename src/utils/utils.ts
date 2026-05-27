@@ -202,7 +202,7 @@ export const CREATE_SEO_CONFIG = (PAGE_SEO: iSEO) => {
   let seo_config = {
     title: title,
     description: meta_description,
-    canonical: "https://noel-wilson.co.uk/",
+    canonical: ogUrl,
     additionalMetaTags: [
       {
         property: "keywords",
@@ -215,21 +215,20 @@ export const CREATE_SEO_CONFIG = (PAGE_SEO: iSEO) => {
     ],
     openGraph: {
       type: "website",
-      locale: "en_IN",
+      locale: "en_GB",
       url: ogUrl,
       site_name: WEBSITE_NAME,
       images: [
         {
           url: ogImage,
-          width: 500,
-          height: 500,
+          width: 1200,
+          height: 630,
           alt: title,
         },
       ],
     },
     twitter: {
       handle: twitterHandle,
-      site: ogUrl,
       cardType: "summary_large_image",
     },
   };

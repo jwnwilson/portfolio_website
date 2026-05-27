@@ -151,9 +151,9 @@ export const PRIMARY_NAV: iNavSetup = {
 }
 
 export const DEFAULT_SEO: iSEO = {
-    title: "Noel's Nonsense",
-    description: "Noel's Ramblings on Software Engineering, Leadership and Life.",
-    keywords: "leadership, management, team, software, development, python, typescript, react, fastapi",
+    title: "Noel Wilson | Software Engineering & Leadership Blog",
+    description: "Noel Wilson's blog on software engineering, cloud architecture, engineering leadership and team building — written from 15+ years of hands-on experience.",
+    keywords: "noel wilson, leadership, management, team, software engineering, cloud architecture, python, typescript, react, fastapi",
     url: WEBSITE_URL,
     author: `${NOEL.name}`,
     twitterHandle: '',
