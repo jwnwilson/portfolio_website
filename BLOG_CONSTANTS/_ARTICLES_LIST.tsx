@@ -274,6 +274,34 @@ const ARTICLES_LIST: iArticle[] = [
     },
   },
   {
+    path: "/pages/experiments/llm-training-pipeline.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "June 09 2026",
+      articleTitle: "Building a LLM Training Pipeline",
+      shortIntro:
+        "Remote training across Kaggle, RunPod, VastAI, and Kubernetes — orchestrated with Temporal for the AI pet project.",
+      tags: "llm, training, pipeline, temporal, kaggle, runpod, kubernetes",
+      thumbnail: "/public/imp_assets/posts/aipet/aipet_part2_training.png",
+      category: "Experiments",
+    },
+  },
+  {
+    path: "/pages/blog/ai-solo-dev.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "June 09 2026",
+      articleTitle: "Building a Complete Project Using AI as a Solo Dev",
+      shortIntro:
+        "How to ship ambitious solo projects fast without sacrificing code quality.",
+      tags: "ai, solo dev, productivity, code quality",
+      thumbnail: "/public/imp_assets/posts/aipet/aipet_part2.png",
+      category: "Stories",
+    },
+  },
+  {
     path: "/pages/experiments/aipet-part-2.tsx",
     featureArticle: false,
     preview: {
