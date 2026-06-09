@@ -2,6 +2,7 @@
 module.exports = {
   siteUrl: 'https://noel-wilson.co.uk',
   generateRobotsTxt: true,
+  outDir: './out',
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],
     additionalSitemaps: [],
