@@ -274,6 +274,20 @@ const ARTICLES_LIST: iArticle[] = [
     },
   },
   {
+    path: "/pages/experiments/aipet-part-2.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "June 09 2026",
+      articleTitle: "AI Pet - Dev Blog 2",
+      shortIntro:
+        "Self-hosted LLMs, multiplayer, and a Raspberry Pi cluster powering the AI pet game.",
+      tags: "ai, pet, part 2, raspberry pi, self-hosted",
+      thumbnail: "/public/imp_assets/posts/aipet/aipet_part2.png",
+      category: "Experiments",
+    },
+  },
+  {
     path: "/pages/experiments/kubernetes-cluster.tsx",
     featureArticle: false,
     preview: {
