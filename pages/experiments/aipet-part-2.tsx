@@ -18,24 +18,25 @@ const Article = () => {
         }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <div className="flex flex-col">
-                    <Image src="/public/imp_assets/posts/aipet/aipet_part2.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} />
+                    <Image src="/public/imp_assets/posts/aipet/screenshot_01.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} caption={<>Click <LinkTo href="https://pet-simulator.co.uk/" external className="underline">here</LinkTo> to check out the latest version.</>} />
                     <div className="w-full mt-5">
                         <Text p subtitle>
                             AI Pet - Part 2
                         </Text>
                         <Text p>
-                            In <LinkTo href="/experiments/aipet-part-1" className="underline">part 1</LinkTo> I built an AI pet bunny controlled by a 3rd party LLM in a 3D scene.
-                            In my <LinkTo href="/experiments/kubernetes-cluster" className="underline">Kubernetes cluster post</LinkTo> I built a self-hosted Raspberry Pi cluster capable of running real workloads.
-                            Here is where those two projects including the following:
+                            In <LinkTo href="/experiments/aipet-part-1" className="underline">part 1</LinkTo> I built a simple AI pet bunny controlled by a 3rd party LLM in a 3D scene,
+                            in my <LinkTo href="/experiments/kubernetes-cluster" className="underline">Kubernetes post</LinkTo> I built a self-hosted Raspberry Pi cluster.
+                            I want to reduce hosting costs and use this new hardware so now I've deployed the latest version to my new hardware with the following improvements:
                             <ul className="list-disc pl-6 mt-2 space-y-1">
-                                <li>Upgrading the aipet to use a game engine with multiplayer</li>
+                                <li>Upgrading the game to use a game engine with multiplayer</li>
+                                <li>Improving the visuals with better sprites and animations</li>
                                 <li>Deploying the game server onto my own hardware</li>
                                 <li>Training a custom LLM to power it</li>
                                 <li>Deploying and self hosting the LLM to power my aipet</li>
                             </ul>
                         </Text>
                         <Text p>
-                            This will enable my ultimate goal:
+                            Ultimate goal:
                         </Text>
                         <Text p>
                             A self-hosted AI pet controlled by LLMs, trained remotely then hosted on my own hardware, interacting with multiple players.
@@ -46,12 +47,11 @@ const Article = () => {
                 <Seperator />
 
                 <Text p subtitle>
-                    Next Goals
+                    High Level Design
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/aipet_part2_goals.png" alt="Next goals diagram" size={ImageSize.MEDIUM} />
+                <Image src="/public/imp_assets/posts/aipet/AI Pet Part 2 Design 2.png" alt="High level design diagram" size={ImageSize.MEDIUM} />
                 <Text p>
-                    The two biggest improvements I want to make are running the LLM locally and enabling multiplayer. Right now the bunny is powered by Google Gemini — a hosted API call on every tick.
-                    I want to replace that with a model I train and host myself on my Raspberry Pi cluster, so the behaviour is fully under my control and not subject to rate limits or API costs.
+                    The v1 of aipet is a single server making API requests to Google Gemini. To achieve my goals I needed to add more components that will give me more flexibility.
                 </Text>
                 <Text p>
                     Importantly, I don't want the game to go offline while I'm training and validating the local model. The solution is an inference proxy that routes to <LinkTo href="https://openrouter.ai/" external className="underline">OpenRouter</LinkTo> (cloud LLMs) while the local model is being built.
