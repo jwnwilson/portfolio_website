@@ -28,7 +28,12 @@ export const buildBlogPostingSchema = (
   article: iArticle,
   pageUrl: string
 ): Record<string, unknown> => {
-  const datePublished = new Date(article.preview.date).toISOString()
+  // article.preview.date is free-text and may be a non-date placeholder
+  // (e.g. "TBC" for unpublished posts), so guard against an Invalid Date.
+  const parsedDate = new Date(article.preview.date)
+  const datePublished = Number.isNaN(parsedDate.getTime())
+    ? undefined
+    : parsedDate.toISOString()
   const imageUrl = article.preview.thumbnail
     ? `${WEBSITE_URL}${transformImagePaths(article.preview.thumbnail)}`
     : undefined
@@ -43,13 +48,16 @@ export const buildBlogPostingSchema = (
       name: article.preview.author.name,
       url: WEBSITE_URL,
     },
-    datePublished,
     url: pageUrl,
     publisher: {
       '@type': 'Person',
       name: 'Noel Wilson',
       url: WEBSITE_URL,
     },
+  }
+
+  if (datePublished) {
+    schema.datePublished = datePublished
   }
 
   if (imageUrl) {

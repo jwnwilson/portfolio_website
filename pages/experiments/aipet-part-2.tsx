@@ -128,7 +128,7 @@ const Article = () => {
                 <Text p subtitle>
                     The LLM Proxy and Inference
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/aipet_part2_hosting.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
+                <Image src="/public/imp_assets/posts/aipet/aipet_part2_hosting.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
                 <Text p>
                     The LLM management is split into two components:
                 </Text>
@@ -177,6 +177,7 @@ const Article = () => {
                     Related Posts
                 </Text>
                 <List type={ListType.disc}>
+                    <li><LinkTo href="/experiments/aipet-part-1" className="underline">AI Pet - Part 1</LinkTo> — building an ai pet prototype with Google Gemini</li>
                     <li><LinkTo href="/experiments/llm-training-pipeline" className="underline">Building a LLM Training Pipeline</LinkTo> — remote training across Kaggle, RunPod, VastAI, and Kubernetes with Temporal</li>
                     <li><LinkTo href="/blog/ai-solo-dev" className="underline">Building a Complete Project Using AI as a Solo Dev</LinkTo> — how to ship fast without sacrificing quality</li>
                 </List>
