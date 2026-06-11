@@ -18,15 +18,15 @@ const Article = () => {
         }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <div className="flex flex-col">
-                    <Image src="/public/imp_assets/posts/aipet/screenshot_01.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} caption={<LinkTo href="https://pet-simulator.co.uk/" external className="underline">Click here to check out the latest version.</LinkTo>} />
+                    <Image src="/public/imp_assets/posts/aipet/screenshot_01.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} caption={<LinkTo href="https://pet-simulator.co.uk/" external className="underline">Click here to check out the latest version!</LinkTo>} />
                     <div className="w-full mt-5">
                         <Text p subtitle>
                             AI Pet - Part 2
                         </Text>
                         <Text p>
-                            I've deployed <LinkTo href="https://pet-simulator.co.uk/" external className="underline">pet-simulator</LinkTo> which is a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>,
+                            In my quest to digitise my former pet bunnies (Billy and Millie), I've deployed <LinkTo href="https://pet-simulator.co.uk/" external className="underline">pet-simulator</LinkTo> which is a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>,
                             running on a self-hosted <LinkTo href="/experiments/kubernetes-cluster" className="underline">Raspberry Pi Kubernetes cluster</LinkTo>.
-                            It picks up where <LinkTo href="/experiments/aipet-part-1" className="underline">part 1</LinkTo> left off, a single-player prototype and turns it into a shared experience powered by an AI brain.
+                            It picks up where <LinkTo href="/experiments/aipet-part-1" className="underline">part 1</LinkTo> left off, a single-player prototype, and turns it into a shared experience powered by an AI brain.
                         </Text>
                         <Text p>
                             Features:
@@ -44,15 +44,40 @@ const Article = () => {
                 <Seperator />
 
                 <Text p subtitle>
+                    New Hardware
+                </Text>
+                <Image src="/public/imp_assets/posts/aipet/rasp_cluster_02.jpeg" alt="Hardware setup" size={ImageSize.MEDIUM} />
+                <Text p>
+                    My bunnies now live in the corner of my office which I feel better about than them living in some AWS data center! I've updated the hardware slightly, with plans to add more later. I've wired up the network previously it ran wirelessly, but my router was struggling with the wireless traffic. 
+                    I've also added a 16GB Raspberry Pi node (on the left) giving me 5 total nodes. I tagged the new node to run inference, it gives respectable performance running tiny models on CPU. 
+                    I also had to upgrade the power supply as my cute minimal setup couldn't provide enough amps to keep the cluster stable under load!
+                </Text>
+                <Text p>
+                    I also know when someone is visiting them as I can hear the raspberry pi CPU cooling activate on my LLM box. &#128513; 🪭🪭🪭
+                </Text>
+
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
+                    <Text p>
+                        <strong>Challenge: Hardware voltage issues</strong> — Now we're stressing the hardware, my previous power supply couldn't deliver enough amps across the cluster causing the master node to become unstable. 
+                        Raspbery Pis will throttle the CPU if they are underpowered and combined with the volume of Prometheus metrics data flowing through the master node, it couldn't keep up. The cluster periodically become unresponsive and I had to restart it.
+                        Better power and moving the monitoring stack off the master and onto worker nodes solved the instability, but diagnosing it took a while since the symptoms looked like OOM (out of memory) errors and software bugs.
+                    </Text>
+                </div>
+                 <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
+                    <Text p>
+                        <strong>Challenge:  Resource contention</strong> The game server and LLM inference compete for the same CPU and memory on the cluster if not managed, causing nodes to crash. I added labels to nodes with deployment rules so inference <strong>STRONGLY</strong> prefers the 16GB node and other services avoid using it, also moving monitoring off the master node to avoid overloading it with requests.
+                    </Text>
+                </div>
+
+                <Seperator />
+
+                <Text p subtitle>
                     High Level Design
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/Ai Pet Design 4.png" alt="High level design diagram" size={ImageSize.MEDIUM} />
+                <Image src="/public/imp_assets/posts/aipet/AI Pet Design 5.png" alt="High level design diagram" size={ImageSize.MEDIUM} />
                 <Text p>
                     The v1 of aipet was just a single web server and database making API requests to Google Gemini.
                     Supporting multiplayer and self-hosted inference meant adding several more components.
-                </Text>
-                <Text p>
-                    Requirements:
                 </Text>
                 <List type={ListType.disc}>
                     <li>A multiplayer game server that is low latency</li>
@@ -61,17 +86,22 @@ const Article = () => {
                     <li>The LLM container can load different weight files and be changed dynamically without downtime</li>
                 </List>
                 <Text p>
-                    The backend splits across two languages, each chosen for its strengths: a TypeScript game server for real-time multiplayer, and Python services for the LLM proxy and model inference. The games server can
-                    share code between the client and server greatly simplifying game development. The python llm proxy and inference services can use the llm libraries that I am most familiar with.
+                    The backend splits across two languages, each chosen for its strengths: a TypeScript game server for real-time multiplayer, and Python services for the LLM proxy and model inference. 
+                    I was talked into re-writing the server in typescript so the game server can share interfaces and code between the client and server, greatly simplifying game development. 
+                    The Python LLM proxy and inference services can use the LLM libraries that I am most familiar with.
                 </Text>
                 <Text p>
-                    The game client is a Babylon.js app that runs in the browser and connects to the game server over WebSockets. It renders the scene, sends player input to the server, and receives scene updates to keep everything in sync. 
+                    The data flow looks like this:
                 </Text>
+                <List type={ListType.number}>
+                    <li>Player connects to web browser client and it establishes a websocket connection with the gameserver</li>
+                    <li>The game server will start a new game session if one doesn't exist or will add the player to an existing one with other people</li>
+                    <li>The game loop runs for each game session, recieving player input and sending updates to all connected clients</li>
+                    <li>The game loop periodically sends a request to the LLM service with scene info including player locations</li>
+                    <li>The LLM service returns the bunny's next move / dialogue, which the game server incorporates into the scene updates sent to clients</li>
+                </List>
                 <Text p>
-                    The game server is a TypeScript Express app that owns the game state, player connections, and the game loop. When the bunny needs to act, it calls the Python LLM service over internal DNS that never leaves the private network.
-                </Text>
-                <Text p>
-                    The LLM service is a Python proxy running in its own container. Using a ports &amp; adapters pattern, it either calls OpenRouter for third-party models or a locally hosted inference instance reachable only inside the private network.
+                    This architecture allows for a responsive multiplayer experience while keeping the AI logic modular and scalable.
                 </Text>
 
                 <Seperator />
@@ -83,64 +113,65 @@ const Article = () => {
                 <Text p>
                     To get this up to speed I started from the <LinkTo href="https://github.com/orion3dgames/t5c" external className="underline">T5C template</LinkTo>, which pairs Babylon.js and Colyseus.
                     Babylon.js is a powerful 3D game engine that runs in the browser, and Colyseus is a multiplayer framework that handles real-time communication and state synchronization between clients and the server.
-                    I wanted a solid base with good design patterns for the AI to enhance rather than risk it creating a mess especially as multiplayer is a hard problem with lots of edge cases.
+                    I wanted a solid base with good design patterns for the AI to enhance rather than risk it creating a mess, especially as multiplayer is a hard problem with lots of edge cases.
                 </Text>
                 <Text p>
-                    Colyseus runs the authoritative game state: each WebSocket connection streams player input in, and the server fans the resulting scene updates including the bunny's AI-driven moves back out to every connected client.
-                </Text>
-
-                <Seperator />
-
-                <Text p subtitle>
-                    Hosting
-                </Text>
-                <Image src="/public/imp_assets/posts/aipet/aipet_part2_hosting.png" alt="Hosting architecture" size={ImageSize.MEDIUM} />
-                <Text p>
-                    The hosting setup splits the workload across a few different places to keep costs down:
+                    Colyseus runs the authoritative game state: each WebSocket connection streams player input in, and the server fans the resulting scene updates — including the bunny's AI-driven moves — back out to every connected client.
                 </Text>
                 <List type={ListType.disc}>
                     <li><strong>Game client</strong> — a static React/Babylon.js bundle served from AWS S3 + CloudFront</li>
                     <li><strong>Game server</strong> — a persistent TypeScript WebSocket server running on my Raspberry Pi cluster, managing scene state and player connections</li>
-                    <li><strong>Proxy API</strong> — a lightweight Python FastAPI service handling auth, routing, and the database. No ML dependencies, so it runs cheaply alongside the game server</li>
-                    <li><strong>Inference worker</strong> — a separate, heavier Docker container running async llama-cpp-python (inference is I/O-bound, so async beats threading for throughput). Runs as a Kubernetes pod, spun up on demand and shut down when idle</li>
                 </List>
-                <Text p>
-                    Splitting the proxy and inference into separate containers was a deliberate resource decision. The Pi cluster has limited RAM, and loading a GGUF model alongside the web server in a single process would leave no headroom for anything else.
-                    By keeping inference in its own pod, Kubernetes can schedule it on the node with the most spare memory and kill it independently when it's not needed.
-                </Text>
-                <Text p>
-                    One subtle issue with inference on demand is cold-start latency loading a GGUF model into memory takes several seconds, which would cause the bunny to freeze at the worst moment. To avoid this, inference instances have a <strong>keep-alive</strong> flag that holds the model in memory between requests during active gameplay, and an idle shutdown that unloads it after 2 hours of no traffic to reclaim RAM on the cluster.
-                </Text>
 
                 <Seperator />
 
                 <Text p subtitle>
-                    Interesting Problems
+                    The LLM Proxy and Inference
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/aipet_part2_problems.png" alt="Interesting technical problems" size={ImageSize.MEDIUM} />
+                <Image src="/public/imp_assets/posts/aipet/aipet_part2_hosting.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
                 <Text p>
-                    This project has thrown up some genuinely difficult engineering problems. The training and workflow challenges are covered in the <LinkTo href="/experiments/llm-training-pipeline" className="underline">LLM Training Pipeline</LinkTo> post — the ones below are specific to the game and hosting layer:
+                    The LLM management is split into two components:
                 </Text>
-                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
-                    <Text p>
-                        <strong>Hot-swap model loading in 8 GB RAM</strong> — Only one GGUF can be in memory at a time. Promoting a new model means calling <strong>release()</strong> on the current adapter to free the RAM, then loading the replacement. If the release fails or the new model doesn't load cleanly, the inference service goes down. I spent time making the handover atomic and adding fallback logic so a failed promotion reverts to the previous model rather than leaving the bunny brain-dead.
-                    </Text>
-                </div>
-                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
-                    <Text p>
-                        <strong>Resource contention</strong> — The game server and LLM inference compete for the same CPU and memory on the cluster. The idle shutdown (2-hour timeout based on <strong>last_used_at</strong>) helps significantly — the inference pod is only alive when someone is actually playing. When it is alive, Kubernetes resource limits prevent the inference worker from starving the game server during a heavy inference tick.
-                    </Text>
-                </div>
-                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
-                    <Text p>
-                        <strong>Hardware voltage issues</strong> — At peak load, voltage drops across the cluster caused the master node to become unstable. Combined with the volume of Prometheus metrics flowing through it, the master node couldn't keep up — leading to dropped metrics and unreliable scheduling decisions. Moving the monitoring stack off the master and onto worker nodes solved the instability, but diagnosing it took a while since the symptoms looked like software bugs.
-                    </Text>
-                </div>
+                <List type={ListType.disc}>
+                    <li><strong>Proxy API</strong> — a lightweight Python FastAPI service handling auth, routing, and the database. No ML dependencies, so it runs cheaply alongside the game server</li>
+                    <li><strong>Inference worker</strong> — a separate, heavier Docker container running llama-cpp-python. Runs as a Kubernetes pod, spun up on demand and shut down when idle. It loads weights from a GGUF file stored in S3</li>
+                </List>
                 <Text p>
-                    Each of these deserves its own post — I'll be writing them up as I work through them. If you have experience with any of these areas I'd love to hear from you below.
+                    
+                </Text>
+                <Text p>
+                    Splitting the proxy and inference into separate containers keeps the proxy API performant and makes memory / CPU management in the cluster easier. 
+                    The inference node has 16GB of RAM, so it can fit two LLM pods. This lets me load a new inference model for the game, handle routing seamlessly, and shut down the old inference pod.
+                </Text>
+                <Text p>
+                    The model is currently <strong>HuggingFaceTB/SmolLM2-360M</strong>, which is optimised for speed; I can get full responses from inference in 2-3 seconds. 
+                    I also tried <strong>HuggingFaceTB/SmolLM2-1.7B</strong>, but inference time rose to 10-15 seconds. 
+                    After running simple evals the tiny model was <strong>returning reasonable answers 95% of the time</strong>, which is good enough for now.
+                    I'm looking at adding a GPU node then I can use this pattern to load a better model for more complex behaviour and dialogue while keeping response times low.
+                </Text>
+                <Text p>
+                    Now my training service is up, I can easily try more models, which I'll cover in a follow-up post.
+                </Text>
+
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
+                    <Text p>
+                        <strong>Challenge: Hot-swap model loading</strong> — Only two inference pods can fit on the 16GB node in memory at a time. Promoting a new model means spinning up a new pod and shutting down the old one to free the RAM.
+                        If the release fails or the new model doesn't load cleanly, the game will not be affected and the failing pod will be terminated.
+                        I also added a cleanup job that runs periodically to catch any unused inference pods that didn't shut down correctly and could be taking up resources.
+                    </Text>
+                </div>
+
+                <Seperator />
+
+                <Text p subtitle>
+                    Show me the Code!
+                </Text>
+                <Text p>
+                    Here's the project if you'd like to see the code: <LinkTo href="https://github.com/jwnwilson/aipet" external className="underline">github.com/jwnwilson/aipet</LinkTo>
                 </Text>
 
                 <Seperator />
+
 
                 <Text p subtitle>
                     Related Posts
