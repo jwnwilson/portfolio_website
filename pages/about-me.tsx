@@ -69,6 +69,22 @@ const AboutUs = () => {
                 </div>
                 <Seperator />
                 <Text subtitle className='text-3xl font-medium'>
+                    What else?
+                </Text>
+                <Text p>
+                    I'm a husband and dad, my son is also called Noel. I used to have 2 pet bunnies so I like rabbits and you'll see them frequently on this site.
+                </Text>
+                <Text p>
+                    I used to do gymnastics, I still do but now I tend to meet up with my old gym friends and complain about my joints mostly.
+                </Text>
+                <Text p>
+                    Massive board game and DND nerd, happy to host a game night or be a dungeon master for willing victims.
+                </Text>
+                <Text p>
+                    I also love making technical projects and talking tech them over a drink so feel free to reach out!
+                </Text>
+                <Seperator />
+                <Text subtitle className='text-3xl font-medium'>
                     Location
                 </Text>
                 <Text p className='text-lg'>

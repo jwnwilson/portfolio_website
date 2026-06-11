@@ -18,7 +18,7 @@ const Article = () => {
         }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <div className="flex flex-col">
-                    <Image src="/public/imp_assets/posts/aipet/screenshot_01.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} caption={<LinkTo href="https://pet-simulator.co.uk/" external className="underline">Click here to check out the latest version!</LinkTo>} />
+                    <Image src="/public/imp_assets/posts/aipet/screenshot_02.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} caption={<LinkTo href="https://pet-simulator.co.uk/" external className="underline">Click here to check out the latest version!</LinkTo>} />
                     <div className="w-full mt-5">
                         <Text p subtitle>
                             AI Pet - Part 2
