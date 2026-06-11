@@ -48,7 +48,7 @@ const Article = () => {
                 </Text>
                 <Image src="/public/imp_assets/posts/aipet/rasp_cluster_02.jpeg" alt="Hardware setup" size={ImageSize.MEDIUM} />
                 <Text p>
-                    My bunnies now live in the corner of my office which I feel better about than them living in some AWS data center! I've updated the hardware slightly, with plans to add more later. I've wired up the network previously it ran wirelessly, but my router was struggling with the wireless traffic. 
+                    My bunnies now live in the corner of my office which I feel better about than them living in some AWS data center! I've updated the hardware slightly, with plans to add more later. I've wired up the network as previously it ran wirelessly, but my router was struggling with the wireless traffic. 
                     I've also added a 16GB Raspberry Pi node (on the left) giving me 5 total nodes. I tagged the new node to run inference, it gives respectable performance running tiny models on CPU. 
                     I also had to upgrade the power supply as my cute minimal setup couldn't provide enough amps to keep the cluster stable under load!
                 </Text>
