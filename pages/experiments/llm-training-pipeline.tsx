@@ -13,26 +13,37 @@ const Article = () => {
                 description: "Remote training and evaluation across Kaggle, RunPod, VastAI, and Kubernetes — building a durable, platform-agnostic LLM training pipeline with Temporal",
                 keywords: "llm, training, pipeline, temporal, kaggle, runpod, vastai, kubernetes, raspberry pi, gguf, fine-tuning",
                 author: "Noel Wilson",
-                ogImage: "/public/imp_assets/posts/aipet/aipet_part2_training.png"
+                ogImage: "/public/imp_assets/posts/llm_training_pipeline/llm_screen_shot_01.png"
             }
         }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 {/* COMING-SOON header — visible while the post is unfinished.
                     TO RELEASE: delete this <Image> and unwrap the COMING-SOON-BLUR div below. */}
                 <Image src="/public/imp_assets/posts/coming-soon.svg" alt="Coming soon" size={ImageSize.MEDIUM} />
-                <Text p>I know you can unblur it, just don't as it's pure AI slop / notes right now.</Text>
+                <Text p>I know you can unblur it, just don't as it's still rough / ai slop and you'll be sad / disappointed.</Text>
                 {/* COMING-SOON-BLUR START */}
                 <div className="blur-sm select-none pointer-events-none" aria-hidden="true">
                 <div className="flex flex-col">
-                    <Image src="/public/imp_assets/posts/aipet/aipet_part2_training.png" alt="Training pipeline" size={ImageSize.MEDIUM} />
+                    <Image src="/public/imp_assets/posts/llm_training_pipeline/llm_screen_shot_01.png" alt="Training pipeline" size={ImageSize.MEDIUM} />
                     <div className="w-full mt-5">
                         <Text p subtitle>
                             Building a LLM Training Pipeline
                         </Text>
                         <Text p>
-                            This is part of the <LinkTo href="/experiments/aipet-part-2" className="underline">AI Pet Part 2</LinkTo> series.
-                            The goal: train a custom LLM to power my AI pet bunny, host it on my own hardware, and swap it into production without downtime.
-                            To do that I needed a training pipeline flexible enough to run across multiple remote compute platforms — and reliable enough to survive any one of them failing.
+                            As part of digitising my bunnies <LinkTo href="/experiments/aipet-part-2" className="underline">AI Pet Part 2</LinkTo> series.
+                            During testing I quickly realised that raspberry pi's are not the best hardware for training LLMs when they took forever then started smoking. (Add cmon do something meme)
+                            So instead I used them to orchestrate remote training on multiple platforms, that way I could learn how to train LLMs on bare metal and
+                            on remote machines where I can select the right hardware for the job.
+                        </Text>
+                        <Text p>
+                            I also wanted to load these trained llm weights dynamically so I could use this for my toy project and have a viable pattern for real world
+                            usage.
+                        </Text>
+                        <Text subtitle className="text-lg md:text-xl">
+                            The goal
+                        </Text>
+                        <Text p>
+                            Train multiple custom LLMs (cheaply), eval them, save them and load them dynamically to power my AI pet bunny, host it on my own hardware, and swap it into production without downtime.
                         </Text>
                     </div>
                 </div>
@@ -40,19 +51,117 @@ const Article = () => {
                 <Seperator />
 
                 <Text p subtitle>
-                    Remote Training and Evaluation
+                    Training Temporal Orchestration
+                </Text>
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/temporal_screenshot_01.png" alt="Temporal workflow orchestrating the training pipeline" size={ImageSize.MEDIUM} caption="A training workflow running in Temporal" />
+
+                <Text p>
+                    I built a training pipeline service using <LinkTo href="https://temporal.io/" external className="underline">Temporal</LinkTo> to orchestrate the full workflow.
+                    My training workflow does the following: 
+                </Text>
+                <List type={ListType.number}>
+                    <li>Data generation / loading of existing data</li>
+                    <li>Training / fine-tuning, saving checkpoints to S3</li>
+                    <li>Evaluation of the trained weights</li>
+                    <li>GGUF export and S3 upload</li>
+                </List>
+                <Text p>                    
+                    The cool part of this workflow is I can dynamically select which platform to use for each stage of the training process. If any stage fails, Temporal failure doesn't lose progress; the workflow just re-tries and re-connects to remote compute automatically.
+                </Text>
+
+                <Text p subtitle>
+                    Orchestration Management
                 </Text>
                 <Text p>
-                    One of my explicit goals for this project is to understand what the remote compute landscape actually looks like in practice — not just pick one platform and stick with it. I wanted to build a system flexible enough to train, evaluate, and export models on Kaggle, RunPod, VastAI, and my own Kubernetes cluster, and learn the real trade-offs of each from experience rather than documentation.
+                    To manage this process I build the LLM API and UI, with this I can:
                 </Text>
-                <Text p>
-                    To make that possible without gluing together a fragile collection of scripts, I built a training pipeline service using <LinkTo href="https://temporal.io/" external className="underline">Temporal</LinkTo> to orchestrate the full workflow — data preparation, fine-tuning, evaluation, GGUF export, and S3 upload — as a durable, retryable process. Temporal means a failure on one platform doesn't lose progress; the workflow just picks up on the next available backend.
-                </Text>
-                <Text p>
-                    Each platform has a distinct character. Kaggle offers free GPU/TPU hours but has a monthly cap and an API that regularly returns 500 errors mid-job. RunPod and VastAI rent GPU capacity on demand — more reliable but not free. The K8s cluster uses my own hardware, which is ideal when it has spare capacity but can't be relied on during peak inference load. Having all four as interchangeable backends means I can route around whoever is misbehaving that day.
-                </Text>
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/llm_model_selection.png" alt="Model selection in the LLM management UI" size={ImageSize.MEDIUM} caption="Selecting a base model in the LLM management UI" />
+                <List type={ListType.disc}>
+                    <li>Select which base model to use</li>
+                    <li>Select uploaded datasets and set training parameters</li>
+                    <li>Select remote compute to train on</li>
+                    <li>Trigger new training runs</li>
+                    <li>Monitor the progress</li>
+                    <li>Promote successful model training to load as inference models.</li>
+                </List>
                 <Text p>
                     One non-obvious challenge with remote training is <strong>getting logs back</strong>. Kaggle and RunPod don't give you a stdout pipe — the training process runs inside their environment and you have no direct connection to it. My solution is a background thread in the remote worker that periodically flushes log chunks to S3 with an incremental cursor, and a server-sent events (SSE) endpoint on the API that tails those S3 writes and streams them to the UI in real time.
+                </Text>
+
+                <Seperator />
+
+                <Text p subtitle>
+                    Remote Training Platforms
+                </Text>
+                <Text p>
+                    The cheapest platforms for training LLMs I found where:
+                </Text>
+                <List type={ListType.disc}>
+                    <li>Kaggle</li>
+                    <li>RunPod</li>
+                    <li>VastAI</li>
+                    <li>My own Kubernetes cluster</li>
+                </List>
+                <Text p>
+                    I skipped the main cloud providers as they're the most reliable but also the most expensive. If I were to do this for a "real" project I'd probably look at keeping data within the cloud provider I'm using like AWS Sagemaker. LLMs and training require a lot of network bandwidth, one of the largest costs for me was data egress.
+                </Text>
+
+                <Text subtitle className="text-lg md:text-xl clear-both">
+                    Kaggle
+                </Text>
+                <div className="float-left mr-5 mb-3 bg-white rounded-lg p-3 shadow-sm w-28 md:w-32 flex items-center justify-center">
+                    <img src="/imp_assets/posts/llm_training_pipeline/kaggle_logo.svg" alt="Kaggle logo" className="w-full h-auto" />
+                </div>
+                <Text p>
+                    Kaggle provides 30 hours of free training for non commercial use with decent hardware, I started with this as it's very cost effective! The challenge is the API is ok and I had to use it creatively as it's designed to trigger python notebooks and not run containers. I found is the best way to automate training / eval was package my logic in a library and creating a notebook with the library then triggering it.
+                </Text>
+
+                <Text subtitle className="text-lg md:text-xl clear-both">
+                    Runpod
+                </Text>
+                <div className="float-right ml-5 mb-3 bg-white rounded-lg p-3 shadow-sm w-32 md:w-40 flex items-center justify-center">
+                    <img src="/imp_assets/posts/llm_training_pipeline/runpod_logo.svg" alt="RunPod logo" className="w-full h-auto" />
+                </div>
+                <Text p>
+                    Runpod had a good balance of cost, consistency and automation potential, this ended up being the fastest / most reliable platform for me. I select a GPU an image and command with params I want it to run and it will spin that up and run it quickly. Only downside is that sometimes it runs out of GPUs and my workflows fail.
+                </Text>
+
+                <Text subtitle className="text-lg md:text-xl clear-both">
+                    VastAI
+                </Text>
+                <div className="float-left mr-5 mb-3 bg-white rounded-lg p-3 shadow-sm w-32 md:w-40 flex items-center justify-center">
+                    <img src="/imp_assets/posts/llm_training_pipeline/vastai_logo.svg" alt="VastAI logo" className="w-full h-auto" />
+                </div>
+                <Text p>
+                    VastAI is interesting as it democratises GPUs allowing anyone to rent out their GPU, so it's the cheapest GPU provider and also the most
+                    unreliable. I almost gave up on using this platform due to the slowness and reliability but got it working well in the end so my opinion on this has definitely improved!
+                </Text>
+
+                <Text subtitle className="text-lg md:text-xl clear-both">
+                    K3 pod
+                </Text>
+                <div className="float-right ml-5 mb-3 bg-white rounded-lg p-3 shadow-sm w-28 md:w-32 flex items-center justify-center">
+                    <img src="/imp_assets/posts/llm_training_pipeline/k3s_logo.svg" alt="K3s logo" className="w-full h-auto" />
+                </div>
+                <Text p>
+                    I want the ability to run all my logic on my own hardware for when I upgrade my local setup, this is currently slow as there's no GPU and limited but wanted to ensure it works!
+                </Text>
+
+                <div className="clear-both" />
+
+                <Text p subtitle>
+                    Deliberate design &amp;&amp; Automated testing
+                </Text>
+                <Text p>
+                    I used AI to build this project, the scope was ambitious and in order to make progress on multiple platforms I needed to do 2 things:
+                </Text>
+                <List type={ListType.number}>
+                    <li>Design the project using SOLID principals and hexagonal architecture</li>
+                    <li>Create robust Automated tests and E2E tests to validate changes</li>
+                </List>
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/github_screenshot_01.png" alt="GitHub Actions CI running the automated test suite" size={ImageSize.MEDIUM} caption="Automated tests and E2E checks running in CI" />
+                <Text p>
+                    I'll cover this more in a follow up post but this was essential for quickly verifying new logic and avoiding constant regressions.
                 </Text>
 
                 <Seperator />
