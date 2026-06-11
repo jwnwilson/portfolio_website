@@ -13,7 +13,7 @@ const Article = () => {
                 description: "Building a self-hosted LLM multiplayer AI pet game with a Raspberry Pi cluster",
                 keywords: "ai pet, ai, llm, self-hosted, raspberry pi, babylon.js, multiplayer, temporal, kubernetes",
                 author: "Noel Wilson",
-                ogImage: "/public/imp_assets/posts/aipet/aipet_part2.png"
+                ogImage: "/public/imp_assets/posts/aipet/screenshot_02.png"
             }
         }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
