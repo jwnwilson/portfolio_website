@@ -36,11 +36,12 @@ const AboutUs = () => {
                             Skills
                         </Text>
                         <List type={ListType.disc}>
+                            <li>Agentic Workflows</li>
                             <li>Proficent with AWS, GCP and Azure</li>
                             <li>Cloud Architecture Specialist</li>
                             <li>APIs and event driven Architecture</li>
                             <li>Team building and Mentoring</li>
-                            <li>Responsive UI Experience</li>
+                            <li>Responsive Applications</li>
                         </List>
                     </div>
 
