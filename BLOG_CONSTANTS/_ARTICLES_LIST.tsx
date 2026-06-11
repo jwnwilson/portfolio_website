@@ -311,7 +311,7 @@ const ARTICLES_LIST: iArticle[] = [
       shortIntro:
         "Self-hosted LLMs, multiplayer, and a Raspberry Pi cluster powering the AI pet game.",
       tags: "ai, pet, part 2, raspberry pi, self-hosted",
-      thumbnail: "/public/imp_assets/posts/aipet/screenshot_01.png",
+      thumbnail: "/public/imp_assets/posts/aipet/screenshot_02.png",
       category: "Experiments",
     },
   },

@@ -6,7 +6,7 @@ Image paths are kept as-is so they map 1:1 to the page.
 
 # AI Pet - Part 2
 
-![AI Pet Part 2](/public/imp_assets/posts/aipet/screenshot_01.png)
+![AI Pet Part 2](/public/imp_assets/posts/aipet/screenshot_02.png)
 _[Click here to check out the latest version.](https://pet-simulator.co.uk/)_
 
 I've deployed [pet-simulator](https://pet-simulator.co.uk/) which is a multiplayer 3D browser game built on [Babylon.js](https://www.babylonjs.com/) and [Colyseus](https://colyseus.io/), running on a self-hosted [Raspberry Pi Kubernetes cluster](/experiments/kubernetes-cluster). It picks up where [part 1](/experiments/aipet-part-1) left off, a single-player prototype, and turns it into a shared experience powered by an AI brain.
