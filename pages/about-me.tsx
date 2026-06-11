@@ -73,7 +73,10 @@ const AboutUs = () => {
                     What else?
                 </Text>
                 <Text p>
-                    I'm a husband and dad, my son is also called Noel. I used to have 2 pet bunnies so I like rabbits and you'll see them frequently on this site.
+                    I'm a husband and dad, my son is also called Noel or "Wee Noel" (Suppose that makes me "Big Noel").
+                </Text>
+                <Text p>
+                    I used to have 2 pet bunnies so I like rabbits and you'll see them frequently in my personal projects.
                 </Text>
                 <Text p>
                     I used to do gymnastics, I still do but now I tend to meet up with my old gym friends and complain about my joints mostly.
@@ -82,7 +85,7 @@ const AboutUs = () => {
                     Massive board game and DND nerd, happy to host a game night or be a dungeon master for willing victims.
                 </Text>
                 <Text p>
-                    I also love making technical projects and talking tech them over a drink so feel free to reach out!
+                    I also love working on technical projects and talking about tech them over a drink so feel free to reach out!
                 </Text>
                 <Seperator />
                 <Text subtitle className='text-3xl font-medium'>
