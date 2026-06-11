@@ -27,7 +27,7 @@ const Article = () => {
                             <strong>Announcing <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo></strong> - a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>.
                         </Text>
                         <Text p>
-                            By running this on my <LinkTo href="/experiments/kubernetes-cluster" className="underline">kubernetes cluster</LinkTo> I've been able to justify my spending habits to my wife as it's now saving me hosting costs.
+                            By running this on my <LinkTo href="/experiments/kubernetes-cluster" className="underline">kubernetes cluster</LinkTo> I can justify my spending habits to my wife as it's now saving me hosting costs.
                             It picks up where <LinkTo href="/experiments/aipet-part-1" className="underline">part 1</LinkTo> left off, taking a single-player prototype, and turns it into a shared experience powered by an AI brain.
                         </Text>
                         <Text p>
