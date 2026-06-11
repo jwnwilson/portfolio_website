@@ -20,13 +20,15 @@ const Article = () => {
                 <div className="flex flex-col">
                     <Image src="/public/imp_assets/posts/aipet/screenshot_02.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} caption={<LinkTo href="https://pet-simulator.co.uk/" external className="underline">Click here to check out the latest version!</LinkTo>} />
                     <div className="w-full mt-5">
-                        <Text p subtitle>
-                            AI Pet - Part 2
+                        <Text p>
+                            While all my friends are using AI to solve real problems, I've decided to use AI to digitise my pet bunnies (Billy and Millie), I think history will be on my side. 
                         </Text>
                         <Text p>
-                            In my quest to digitise my former pet bunnies (Billy and Millie), I've deployed <LinkTo href="https://pet-simulator.co.uk/" external className="underline">pet-simulator</LinkTo> which is a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>,
-                            running on a self-hosted <LinkTo href="/experiments/kubernetes-cluster" className="underline">Raspberry Pi Kubernetes cluster</LinkTo>.
-                            It picks up where <LinkTo href="/experiments/aipet-part-1" className="underline">part 1</LinkTo> left off, a single-player prototype, and turns it into a shared experience powered by an AI brain.
+                            <strong>Announcing <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo></strong> - a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>.
+                        </Text>
+                        <Text p>
+                            By running this on my <LinkTo href="/experiments/kubernetes-cluster" className="underline">kubernetes cluster</LinkTo> I've been able to justify my spending habits to my wife as it's now saving me hosting costs.
+                            It picks up where <LinkTo href="/experiments/aipet-part-1" className="underline">part 1</LinkTo> left off, taking a single-player prototype, and turns it into a shared experience powered by an AI brain.
                         </Text>
                         <Text p>
                             Features:
@@ -48,12 +50,16 @@ const Article = () => {
                 </Text>
                 <Image src="/public/imp_assets/posts/aipet/rasp_cluster_02.jpeg" alt="Hardware setup" size={ImageSize.MEDIUM} />
                 <Text p>
-                    My bunnies now live in the corner of my office which I feel better about than them living in some AWS data center! I've updated the hardware slightly, with plans to add more later. I've wired up the network as previously it ran wirelessly, but my router was struggling with the wireless traffic. 
-                    I've also added a 16GB Raspberry Pi node (on the left) giving me 5 total nodes. I tagged the new node to run inference, it gives respectable performance running tiny models on CPU. 
+                    My bunnies now live in the corner of my office which I feel better about than them living in some AWS data center!
+                    I've updated the hardware slightly, with plans to add more later. 
+                    I've wired up the network as previously it ran wirelessly, that was putting a lot of pressure on our router. So now I don't get yelled at when we can't connect to our wifi. 
+                </Text>
+                <Text p>
+                    I've also added a 16GB Raspberry Pi node (on the left) giving me 5 total nodes. the new node is just to run inference, it gives respectable performance running tiny models on CPU. 
                     I also had to upgrade the power supply as my cute minimal setup couldn't provide enough amps to keep the cluster stable under load!
                 </Text>
                 <Text p>
-                    I also know when someone is visiting them as I can hear the raspberry pi CPU cooling activate on my LLM box. &#128513; 🪭🪭🪭
+                    I also know when someone is visiting by bunnies I can hear the raspberry pi CPU cooling activate on my LLM box. &#128513; 🪭🪭🪭
                 </Text>
 
                 <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
@@ -86,9 +92,12 @@ const Article = () => {
                     <li>The LLM container can load different weight files and be changed dynamically without downtime</li>
                 </List>
                 <Text p>
-                    The backend splits across two languages, each chosen for its strengths: a TypeScript game server for real-time multiplayer, and Python services for the LLM proxy and model inference. 
-                    I was talked into re-writing the server in typescript so the game server can share interfaces and code between the client and server, greatly simplifying game development. 
-                    The Python LLM proxy and inference services can use the LLM libraries that I am most familiar with.
+                    The backend splits across two languages, each chosen for its strengths: I have to use TypeScript on the brower so it also makes sense for the game server.
+                    A friend(?) made me sad by talking me into re-writing the server in typescript. He was right though as the game server can share interfaces and code between the client and server, 
+                    greatly simplifying game development. 
+                </Text>
+                <Text p>
+                    As the LLM proxy and inference services are decoupled, I can use Python and all the LLM libraries / API frameworks I like to use for those.
                 </Text>
                 <Text p>
                     The data flow looks like this:

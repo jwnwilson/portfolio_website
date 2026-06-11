@@ -29,6 +29,8 @@ const Article = () => {
                             Building a Complete Project Using AI as a Solo Dev
                         </Text>
                         <Text p>
+                            Right now using AI is a mixure of harnessing lightning and trying to handle a greasy eel.
+                            I read a good analogy of it's rocket fuel, it can supercharge your team but if you pour it on a dumpster fire it's just going to explode and make it worse.
                             For my <LinkTo href="/experiments/aipet-part-2" className="underline">AI Pet Part 2</LinkTo> project I built more than I've ever shipped solo:
                             a Babylon.js game engine, a WebSocket multiplayer server, an async inference proxy, Temporal training workflows, remote compute integrations across four platforms, and a Kubernetes deployment on a Raspberry Pi cluster.
                             I built it quickly — and AI coding tools were a central reason why.
