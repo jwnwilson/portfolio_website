@@ -274,6 +274,48 @@ const ARTICLES_LIST: iArticle[] = [
     },
   },
   {
+    path: "/pages/experiments/llm-training-pipeline.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "TBC",
+      articleTitle: "Building a LLM Training Pipeline",
+      shortIntro:
+        "Remote training across Kaggle, RunPod, VastAI, and Kubernetes — orchestrated with Temporal for the AI pet project.",
+      tags: "llm, training, pipeline, temporal, kaggle, runpod, kubernetes",
+      thumbnail: "/public/imp_assets/posts/coming-soon.svg",
+      category: "Experiments",
+    },
+  },
+  {
+    path: "/pages/blog/ai-solo-dev.tsx",
+    featureArticle: false,
+    preview: {
+      author: NOEL,
+      date: "TBC",
+      articleTitle: "Building a Complete Project Using AI as a Solo Dev",
+      shortIntro:
+        "How to ship ambitious solo projects fast without sacrificing code quality.",
+      tags: "ai, solo dev, productivity, code quality",
+      thumbnail: "/public/imp_assets/posts/coming-soon.svg",
+      category: "Stories",
+    },
+  },
+  {
+    path: "/pages/experiments/aipet-part-2.tsx",
+    featureArticle: true,
+    preview: {
+      author: NOEL,
+      date: "June 11 2026",
+      articleTitle: "AI Pet - Dev Blog 2",
+      shortIntro:
+        "Self-hosted LLMs, multiplayer, and a Raspberry Pi cluster powering the AI pet game.",
+      tags: "ai, pet, part 2, raspberry pi, self-hosted",
+      thumbnail: "/public/imp_assets/posts/aipet/screenshot_01.png",
+      category: "Experiments",
+    },
+  },
+  {
     path: "/pages/experiments/kubernetes-cluster.tsx",
     featureArticle: false,
     preview: {

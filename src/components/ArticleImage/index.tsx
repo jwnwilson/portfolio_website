@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from './Images.module.scss';
 import { ImageSize } from "../../shared/enums"
 import { combineClasses, transformImagePaths } from '../../utils/utils';
@@ -5,7 +6,7 @@ import Zoom from 'react-medium-image-zoom'
 
 interface IArticleImage {
     src: string,
-    caption?: string,
+    caption?: React.ReactNode,
     size?: ImageSize,
     alt?: string,
     className?: string,
