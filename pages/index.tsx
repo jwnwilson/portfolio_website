@@ -23,6 +23,9 @@ const Home = () => {
               <Text p className="mt-3 text-xl">
                 Who cares too much about people and technology
               </Text>
+              <Text p className="mt-1 text-xl">
+                (I also like bunnies)
+              </Text>
             </div>
           </div>
 
