@@ -21,7 +21,7 @@ const Article = () => {
                     <Image src="/public/imp_assets/posts/aipet/screenshot_02.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} caption={<LinkTo href="https://pet-simulator.co.uk/" external className="underline">Click here to check out the latest version!</LinkTo>} />
                     <div className="w-full mt-5">
                         <Text p>
-                            While all my friends are using AI to solve real problems, I've decided to use AI to digitise my pet bunnies (Billy and Millie), I think history will be on my side. 
+                            While all my friends are using AI to build products to solve real problems, I've decided to the best use of AI is to digitise my pet bunnies (Billy and Millie). 
                         </Text>
                         <Text p>
                             <strong>Announcing <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo></strong> - a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>.
