@@ -94,8 +94,14 @@ const Article = () => {
                     <li>Monitor the progress</li>
                     <li>Promote successful model training to load as inference models.</li>
                 </List>
+                ( Add image of how remote compute communicates via files here)
                 <Text p>
-                    One non-obvious challenge with remote training is <strong>getting logs back</strong>. Kaggle and RunPod don't give you a stdout pipe — the training process runs inside their environment and you have no direct connection to it. My solution is a background thread in the remote worker that periodically flushes log chunks to S3 with an incremental cursor, and a server-sent events (SSE) endpoint on the API that tails those S3 writes and streams them to the UI in real time.
+                    Currently communication between the remote compute and temporal workflow happens via files in S3, temporal passes a run_id to remote worker. The remote worker then knows where it's input and output files should live in S3.
+                    It reads config, input data and it writes logs, progress reports and checkpoints back to S3 for the workflow to pick up. 
+                    The UI can show these updates and receives server-sent events (SSE) from the API that tails those S3 writes and streams them to the UI in real time.
+                </Text>
+                <Text p>
+                    This is simple and works well for now, but it's not atomic and accidental overwrites are possible, the project will be need to manage this via API calls if I continue to develop this project.
                 </Text>
 
                 <Seperator />
@@ -103,10 +109,10 @@ const Article = () => {
                 <Text p subtitle>
                     Remote Training Platforms
                 </Text>
-                <Image src="/public/imp_assets/posts/llm_training_pipeline/remote_training.png" alt="Remote training platforms" size={ImageSize.MEDIUM} caption="Remote training platforms used in this project" />
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/computer-fire.jpg" alt="Remote training platforms" size={ImageSize.MEDIUM} caption="Remote training platforms used in this project" />
                 <Text p>
-                    I quickly realised that raspberry pi's are not the best hardware for training LLMs when they took forever then started smoking. (Add cmon do something meme)
-                    So instead I used them to orchestrate remote training on multiple platforms, that way I could learn how to train LLMs on bare metal and
+                    I quickly realised that raspberry pi's are not the best hardware for training LLMs, they took forever then started smoking.
+                    So instead I used them to orchestrate remote training on dedicated GPU platforms, that way I could learn how to train LLMs on bare metal and
                     on remote machines where I can select the right hardware for the job.
                 </Text>
                 <Text p>
@@ -119,7 +125,8 @@ const Article = () => {
                     <li>My own Kubernetes cluster</li>
                 </List>
                 <Text p>
-                    I skipped the main cloud providers as they're the most reliable but also the most expensive. If I were to do this for a "real" project I'd probably look at keeping data within the cloud provider I'm using like AWS Sagemaker. LLMs and training require a lot of network bandwidth, one of the largest costs for me was data egress.
+                    I skipped the main cloud providers as they're the most reliable but also the most expensive. If I were to do this for a "real" project I'd probably look at keeping data within the cloud provider I'm using like AWS Sagemaker. 
+                    LLMs and training require a lot of network bandwidth, one of the largest costs for me was data egress.
                 </Text>
 
                 <Text subtitle className="text-lg md:text-xl clear-both">
