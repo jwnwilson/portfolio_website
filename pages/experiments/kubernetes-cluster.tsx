@@ -42,7 +42,7 @@ const Article = () => {
                      For the projects I'm planning, if I continue to host them on any cloud provider they will easily go into the hundreds of dollars per month.
                 </Text>
                 <Text p>
-                    So I decided to build a local raspberry pi cluster, I was able to achieve all my goals and here's what I did to setup it up.
+                    So I decided to build a local raspberry pi cluster!
                 </Text>
                 <Seperator />
                 <Text p subtitle>
@@ -156,13 +156,13 @@ curl -sfL https://get.k3s.io | K3S_URL=https://$MASTER_IP:6443 K3S_TOKEN=$MASTER
                 <Text p subtitle>Secure HTTPS Access</Text>
                 <Text p>
                     This was the main problem that stopped me in past, I have a dynamic IP and my ISP doesn't offer static IPs. I didn't want to expose my 
-                    public IP or have to periodically change my DNS settings as my IP address changed. So I looked into exposing a local network service to the internet.
+                    public IP or have to periodically change my DNS settings as my IP address changes. So I looked into securely exposing a local service to the internet.
                 </Text>
                 <Text p subtitle>The fall of ngrok</Text>
                 <Text p>
                     I originally tried using <LinkTo href="https://ngrok.com/" external className="underline">ngrok</LinkTo>, this 
                     is the gold standard for explosing services in a local network securely, I've used this previously for free. It has since fallen victim to the need to 
-                    charge as much out of customers as possible. The free tier allows 2,000 requests a month (WTF?) or it cost me $68 per month for 1 endpoint!
+                    charge as much out of customers as possible. At time of writing the free tier allows 2,000 requests a month (WTF?) or it cost me $68 per month for 1 endpoint!
                 </Text>
                 <Text p>
                     So I looked into other options.
