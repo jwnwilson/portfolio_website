@@ -120,9 +120,9 @@ const Article = () => {
                 </Text>
                 <Image src="/public/imp_assets/posts/aipet/aipet_part2_engine.png" alt="Game engine architecture" size={ImageSize.MEDIUM} />
                 <Text p>
-                    To get this up to speed I started from the <LinkTo href="https://github.com/orion3dgames/t5c" external className="underline">T5C template</LinkTo>, which pairs Babylon.js and Colyseus.
-                    Babylon.js is a powerful 3D game engine that runs in the browser, and Colyseus is a multiplayer framework that handles real-time communication and state synchronization between clients and the server.
                     I wanted a solid base with good design patterns for the AI to enhance rather than risk it creating a mess, especially as multiplayer is a hard problem with lots of edge cases.
+                    I started from the <LinkTo href="https://github.com/orion3dgames/t5c" external className="underline">T5C template</LinkTo>, which pairs Babylon.js and Colyseus.
+                    Babylon.js is a powerful 3D game engine that runs in the browser, and Colyseus is a multiplayer framework that handles real-time communication and state synchronization between clients and the server.
                 </Text>
                 <Text p>
                     Colyseus runs the authoritative game state: each WebSocket connection streams player input in, and the server fans the resulting scene updates — including the bunny's AI-driven moves — back out to every connected client.
