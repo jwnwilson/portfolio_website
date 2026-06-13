@@ -9,7 +9,7 @@ const Article = () => {
     return (
         <PageLayout standard PAGE_SEO={
             {
-                title: "AI Pet - Part 2",
+                title: "AI Pet Part 2",
                 description: "Building a self-hosted LLM multiplayer AI pet game with a Raspberry Pi cluster",
                 keywords: "ai pet, ai, llm, self-hosted, raspberry pi, babylon.js, multiplayer, temporal, kubernetes",
                 author: "Noel Wilson",
@@ -24,7 +24,7 @@ const Article = () => {
                             While all my friends are using AI to build products to solve real problems, I've decided to the best use of AI is to digitise my pet bunnies (Billy and Millie). 
                         </Text>
                         <Text p>
-                            <strong>Announcing <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo></strong> - a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>.
+                            <strong>Announcing <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo></strong> a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>.
                         </Text>
                         <Text p>
                             By running this on my <LinkTo href="/experiments/kubernetes-cluster" className="underline">kubernetes cluster</LinkTo> I can justify my spending habits to my wife as it's now saving me hosting costs.
@@ -65,7 +65,7 @@ const Article = () => {
                 <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <Text p>
                         <strong>Challenge: Hardware voltage issues</strong> — Now we're stressing the hardware, my previous power supply couldn't deliver enough amps across the cluster causing the master node to become unstable. 
-                        Raspbery Pis will throttle the CPU if they are underpowered and combined with the volume of Prometheus metrics data flowing through the master node, it couldn't keep up. The cluster periodically become unresponsive and I had to restart it.
+                        Raspbery Pis will throttle the CPU if they are underpowered and combined with the volume of Prometheus metrics data flowing through the master node, it couldn't keep up. The cluster periodically became unresponsive and I had to restart it.
                         Better power and moving the monitoring stack off the master and onto worker nodes solved the instability, but diagnosing it took a while since the symptoms looked like OOM (out of memory) errors and software bugs.
                     </Text>
                 </div>
@@ -80,7 +80,7 @@ const Article = () => {
                 <Text p subtitle>
                     High Level Design
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/AI Pet Design 5.png" alt="High level design diagram" size={ImageSize.MEDIUM} />
+                <Image src="/public/imp_assets/posts/aipet/AI Pet Design 7.png" alt="High level design diagram" size={ImageSize.MEDIUM} />
                 <Text p>
                     The v1 of aipet was just a single web server and database making API requests to Google Gemini.
                     Supporting multiplayer and self-hosted inference meant adding several more components.
@@ -186,7 +186,7 @@ const Article = () => {
                     Related Posts
                 </Text>
                 <List type={ListType.disc}>
-                    <li><LinkTo href="/experiments/aipet-part-1" className="underline">AI Pet - Part 1</LinkTo> — building an ai pet prototype with Google Gemini</li>
+                    <li><LinkTo href="/experiments/aipet-part-1" className="underline">AI Pet Part 1</LinkTo> — building an ai pet prototype with Google Gemini</li>
                     <li><LinkTo href="/experiments/llm-training-pipeline" className="underline">Building a LLM Training Pipeline</LinkTo> — remote training across Kaggle, RunPod, VastAI, and Kubernetes with Temporal</li>
                     <li><LinkTo href="/blog/ai-solo-dev" className="underline">Building a Complete Project Using AI as a Solo Dev</LinkTo> — how to ship fast without sacrificing quality</li>
                 </List>
@@ -195,7 +195,7 @@ const Article = () => {
                     {
                         url: "https://noel-wilson.co.uk/experiments/aipet-part-2",
                         identifier: "aipet-part-2",
-                        title: "AI Pet - Part 2",
+                        title: "AI Pet Part 2",
                     }
                 }></DiscussionEmbed>
             </div>
