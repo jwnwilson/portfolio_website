@@ -137,7 +137,7 @@ const Article = () => {
                 <Text p subtitle>
                     The LLM Proxy and Inference
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/llm_design_02.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
+                <Image src="/public/imp_assets/posts/aipet/llm_design_03.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
                 <Text p>
                     The LLM management is split into two components:
                 </Text>
