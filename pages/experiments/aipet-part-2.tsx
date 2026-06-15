@@ -31,7 +31,7 @@ const Article = () => {
                             It picks up where <LinkTo href="/experiments/aipet-part-1" className="underline">part 1</LinkTo> left off, taking a single-player prototype, and turns it into a shared experience powered by an AI brain.
                         </Text>
                         <Text p>
-                            Features:
+                            <strong>Features:</strong>
                             <ul className="list-disc pl-6 mt-2 space-y-1">
                                 <li>A live 3D scene where multiple players can join and interact with the same bunny simultaneously</li>
                                 <li>An AI bunny whose behaviour is driven by an LLM hosted on my own hardware</li>
@@ -179,10 +179,10 @@ const Article = () => {
                 <Image src="/public/imp_assets/posts/aipet/bunny_02.gif" alt="The AI pet bunny in action" size={ImageSize.XS} />
 
                 <Text p>
-                    I'm happy with my AI pet project it has lots of room to grow and I now have a solid framework in place to allow that.
+                    I'm happy with my AI pet project, it has lots of room to grow and I now have a solid framework in place to allow that!
                     Here's the link to <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo> if you'd like to try it out. :)
-                    My next steps are to start adding more bunnies and re-create my old pets with their personalities. Let me know what you think
-                    would be good features to add!
+                    My next steps are; adding more bunnies, re-creating my old pets, adding personalities, adding more actions and seeing where that goes! 
+                    Let me know what you think would be good features to add.
                 </Text>
 
                 <Text p>
