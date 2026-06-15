@@ -1,6 +1,6 @@
 /**These are necessary imports / components for the page */
 import { ImageSize, ListType } from "../../src/shared/enums";
-import { PageLayout, Text, List, Image, LinkTo, Seperator } from "../../src/components";
+import { PageLayout, Text, List, Image, LinkTo, Seperator, VideoPlayer } from "../../src/components";
 import { DiscussionEmbed } from 'disqus-react';
 import { useTheme } from "next-themes";
 
@@ -18,7 +18,7 @@ const Article = () => {
         }>
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 <div className="flex flex-col">
-                    <Image src="/public/imp_assets/posts/aipet/screenshot_02.png" alt="AI Pet Part 2" size={ImageSize.MEDIUM} caption={<LinkTo href="https://pet-simulator.co.uk/" external className="underline">Click here to check out the latest version!</LinkTo>} />
+                    <VideoPlayer url="/public/videos/pbs_demo_03.mp4" poster="/public/imp_assets/posts/aipet/screenshot_02.png" light aspectRatio="1280 / 712" size={ImageSize.MEDIUM} playing caption="Pet Simulator demo (click to play, with commentary)" />
                     <div className="w-full mt-5">
                         <Text p>
                             While all my friends are using AI to build products to solve real problems, I've decided to the best use of AI is to digitise my pet bunnies (Billy and Millie). 

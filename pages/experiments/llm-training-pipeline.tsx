@@ -1,6 +1,6 @@
 /**These are necessary imports / components for the page */
 import { ImageSize, ListType } from "../../src/shared/enums";
-import { PageLayout, Text, List, Image, LinkTo, Seperator } from "../../src/components";
+import { PageLayout, Text, List, Image, LinkTo, Seperator, VideoPlayer } from "../../src/components";
 import { DiscussionEmbed } from 'disqus-react';
 import { useTheme } from "next-themes";
 
@@ -24,14 +24,16 @@ const Article = () => {
                 {/* COMING-SOON-BLUR START */}
                 <div className="blur-sm select-none pointer-events-none" aria-hidden="true">
                 <div className="flex flex-col">
-                    <Image src="/public/imp_assets/posts/llm_training_pipeline/llm_screen_shot_01.png" alt="Training pipeline" size={ImageSize.MEDIUM} />
+                    <VideoPlayer url="/public/videos/llm_trainer_demo.mp4" poster="/public/imp_assets/posts/llm_training_pipeline/llm_screen_shot_01.png" light aspectRatio="1280 / 712" size={ImageSize.MEDIUM} playing caption="Training pipeline demo (click to play, with commentary)" />
                     <div className="w-full mt-5">
                         <Text p>
                             As part of digitising my bunnies <LinkTo href="/experiments/aipet-part-2" className="underline">AI Pet Part 2</LinkTo> series,
                             I was manually training models which requires a lot of waiting. So I accidentally automated the process and after some AI sessions here we are.
                         </Text>
                         <Text p>
-                            This is a web app to train multiple LLMs, load them and test them dynamically using different base models on multiple platforms cheaply. 
+                            This is a web app to take different base LLM models, train and evalutate them on multiple remote platforms. It can then dynamically load them for use in my projects on my own hardware.
+                        </Text>
+                        <Text p>
                             It's a react app, with a Python API backend and Temporal workflow orchestration, running on my <LinkTo href="/experiments/kubernetes-cluster" className="underline">kubernetes cluster</LinkTo>.
                         </Text>
                         <Text p>
@@ -118,7 +120,7 @@ const Article = () => {
                 </Text>
                 <Image src="/public/imp_assets/posts/llm_training_pipeline/computer-fire.jpg" alt="Remote training platforms" size={ImageSize.MEDIUM} caption="Remote training platforms used in this project" />
                 <Text p>
-                    I quickly realised that raspberry pi's are not the best hardware for training LLMs, they took forever then started smoking.
+                    I quickly realised that raspberry pi's are not the best hardware for training LLMs, they took forever and got <strong>VERY</strong> hot (pictured).
                     So instead I used them to orchestrate remote training on dedicated GPU platforms, that way I could learn how to train LLMs on bare metal and
                     on remote machines where I can select the right hardware for the job.
                 </Text>
@@ -132,8 +134,9 @@ const Article = () => {
                     <li>My own Kubernetes cluster</li>
                 </List>
                 <Text p>
-                    I skipped the main cloud providers as they're the most reliable but also the most expensive. If I were to do this for a "real" project I'd probably look at keeping data within the cloud provider I'm using like AWS Sagemaker. 
-                    LLMs and training require a lot of network bandwidth, one of the largest costs for me was data egress.
+                    I skipped the main cloud providers (AWS, GCP etc) as they're the most reliable but also the most expensive. 
+                    If I were to do this for a "real" project I'd probably look at keeping data within the cloud provider I'm using. 
+                    LLMs and training require a lot of network bandwidth, one of the largest costs for this project was data egress.
                 </Text>
 
                 <Text subtitle className="text-lg md:text-xl clear-both">
@@ -213,7 +216,7 @@ const Article = () => {
                     I used AI to build this project, the scope was ambitious and in order to make progress on multiple platforms I needed a few key things:
                 </Text>
                 <List type={ListType.number}>
-                    <li>A well structured project using <strong>SOLID principals and hexagonal architecture</strong></li>
+                    <li>A well structured project using <strong>SOLID principals and layered architecture</strong></li>
                     <li>Good instructions for the AI in architecture.md files, specs and design .md files</li>
                     <li><strong>TTD first approach</strong> to avoid AI faking tests for false confidence.</li>
                     <li>A <strong>fast</strong> CI/CD deployment pipeline so the AI could validate it's changes quickly</li> 
@@ -240,7 +243,7 @@ const Article = () => {
                     This project covers the entire LLM lifecycle and I've been able to generate models that I'm using in a project. That's a win for me!
                 </Text>
                 <Text p>
-                    There are so many oppurtinities for next steps,
+                    There are so many opportunities for next steps,
                     I'm thinking of creating a data generation functionality to make distillation training easier using 3rd party LLMs.
                     LLM training is all about preparing good training and eval data! 
                 </Text>
