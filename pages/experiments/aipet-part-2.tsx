@@ -137,13 +137,13 @@ const Article = () => {
                 <Text p subtitle>
                     The LLM Proxy and Inference
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/aipet_part2_hosting.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
+                <Image src="/public/imp_assets/posts/aipet/llm_design_02.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
                 <Text p>
                     The LLM management is split into two components:
                 </Text>
                 <List type={ListType.disc}>
-                    <li><strong>Proxy API</strong> — a lightweight Python FastAPI service handling auth, routing, and the database. No ML dependencies, so it runs cheaply alongside the game server</li>
-                    <li><strong>Inference worker</strong> — a separate, heavier Docker container running llama-cpp-python. Runs as a Kubernetes pod, spun up on demand and shut down when idle. It loads weights from a GGUF file stored in S3</li>
+                    <li><strong>Proxy API</strong> — a lightweight Python FastAPI service handling auth, routing, llm settings in a database. No ML dependencies, so it runs cheaply alongside the game server</li>
+                    <li><strong>LLM Container</strong> — Separate, heavier Docker container spun up on demand, running llama-cpp-python. Runs as a Kubernetes pod, shut down when idle, on startup loads weights from a GGUF file stored in S3</li>
                 </List>
                 <Text p>
                     
@@ -173,10 +173,20 @@ const Article = () => {
                 <Seperator />
 
                 <Text p subtitle>
-                    Show me the Code!
+                    End Result & Next Steps
                 </Text>
+
+                <Image src="/public/imp_assets/posts/aipet/bunny_02.gif" alt="The AI pet bunny in action" size={ImageSize.XS} />
+
                 <Text p>
-                    Here's the project if you'd like to see the code: <LinkTo href="https://github.com/jwnwilson/aipet" external className="underline">github.com/jwnwilson/aipet</LinkTo>
+                    I'm happy with my AI pet project it has lots of room to grow and I now have a solid framework in place to allow that.
+                    Here's the link to <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo> if you'd like to try it out. :)
+                    My next steps are to start adding more bunnies and re-create my old pets with their personalities. Let me know what you think
+                    would be good features to add!
+                </Text>
+
+                <Text p>
+                    Here's the github project if you'd like to see the code: <LinkTo href="https://github.com/jwnwilson/aipet" external className="underline">github.com/jwnwilson/aipet</LinkTo>
                 </Text>
 
                 <Seperator />
