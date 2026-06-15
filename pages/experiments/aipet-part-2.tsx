@@ -9,7 +9,7 @@ const Article = () => {
     return (
         <PageLayout standard PAGE_SEO={
             {
-                title: "AI Pet - Part 2",
+                title: "AI Pet Part 2",
                 description: "Building a self-hosted LLM multiplayer AI pet game with a Raspberry Pi cluster",
                 keywords: "ai pet, ai, llm, self-hosted, raspberry pi, babylon.js, multiplayer, temporal, kubernetes",
                 author: "Noel Wilson",
@@ -24,7 +24,7 @@ const Article = () => {
                             While all my friends are using AI to build products to solve real problems, I've decided to the best use of AI is to digitise my pet bunnies (Billy and Millie). 
                         </Text>
                         <Text p>
-                            <strong>Announcing <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo></strong> - a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>.
+                            <strong>Announcing <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo></strong> a multiplayer 3D browser game built on <LinkTo href="https://www.babylonjs.com/" external className="underline">Babylon.js</LinkTo> and <LinkTo href="https://colyseus.io/" external className="underline">Colyseus</LinkTo>.
                         </Text>
                         <Text p>
                             By running this on my <LinkTo href="/experiments/kubernetes-cluster" className="underline">kubernetes cluster</LinkTo> I can justify my spending habits to my wife as it's now saving me hosting costs.
@@ -65,7 +65,7 @@ const Article = () => {
                 <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <Text p>
                         <strong>Challenge: Hardware voltage issues</strong> — Now we're stressing the hardware, my previous power supply couldn't deliver enough amps across the cluster causing the master node to become unstable. 
-                        Raspbery Pis will throttle the CPU if they are underpowered and combined with the volume of Prometheus metrics data flowing through the master node, it couldn't keep up. The cluster periodically become unresponsive and I had to restart it.
+                        Raspbery Pis will throttle the CPU if they are underpowered and combined with the volume of Prometheus metrics data flowing through the master node, it couldn't keep up. The cluster periodically became unresponsive and I had to restart it.
                         Better power and moving the monitoring stack off the master and onto worker nodes solved the instability, but diagnosing it took a while since the symptoms looked like OOM (out of memory) errors and software bugs.
                     </Text>
                 </div>
@@ -80,7 +80,7 @@ const Article = () => {
                 <Text p subtitle>
                     High Level Design
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/AI Pet Design 5.png" alt="High level design diagram" size={ImageSize.MEDIUM} />
+                <Image src="/public/imp_assets/posts/aipet/AI Pet Design 7.png" alt="High level design diagram" size={ImageSize.MEDIUM} />
                 <Text p>
                     The v1 of aipet was just a single web server and database making API requests to Google Gemini.
                     Supporting multiplayer and self-hosted inference meant adding several more components.
@@ -120,9 +120,9 @@ const Article = () => {
                 </Text>
                 <Image src="/public/imp_assets/posts/aipet/aipet_part2_engine.png" alt="Game engine architecture" size={ImageSize.MEDIUM} />
                 <Text p>
-                    To get this up to speed I started from the <LinkTo href="https://github.com/orion3dgames/t5c" external className="underline">T5C template</LinkTo>, which pairs Babylon.js and Colyseus.
-                    Babylon.js is a powerful 3D game engine that runs in the browser, and Colyseus is a multiplayer framework that handles real-time communication and state synchronization between clients and the server.
                     I wanted a solid base with good design patterns for the AI to enhance rather than risk it creating a mess, especially as multiplayer is a hard problem with lots of edge cases.
+                    I started from the <LinkTo href="https://github.com/orion3dgames/t5c" external className="underline">T5C template</LinkTo>, which pairs Babylon.js and Colyseus.
+                    Babylon.js is a powerful 3D game engine that runs in the browser, and Colyseus is a multiplayer framework that handles real-time communication and state synchronization between clients and the server.
                 </Text>
                 <Text p>
                     Colyseus runs the authoritative game state: each WebSocket connection streams player input in, and the server fans the resulting scene updates — including the bunny's AI-driven moves — back out to every connected client.
@@ -137,13 +137,13 @@ const Article = () => {
                 <Text p subtitle>
                     The LLM Proxy and Inference
                 </Text>
-                <Image src="/public/imp_assets/posts/aipet/aipet_part2_hosting.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
+                <Image src="/public/imp_assets/posts/aipet/llm_design_02.png" alt="LLM proxy and inference architecture" size={ImageSize.MEDIUM} caption="Note: the LLM training is handled separately and will be covered in a follow-up post"/>
                 <Text p>
                     The LLM management is split into two components:
                 </Text>
                 <List type={ListType.disc}>
-                    <li><strong>Proxy API</strong> — a lightweight Python FastAPI service handling auth, routing, and the database. No ML dependencies, so it runs cheaply alongside the game server</li>
-                    <li><strong>Inference worker</strong> — a separate, heavier Docker container running llama-cpp-python. Runs as a Kubernetes pod, spun up on demand and shut down when idle. It loads weights from a GGUF file stored in S3</li>
+                    <li><strong>Proxy API</strong> — a lightweight Python FastAPI service handling auth, routing, llm settings in a database. No ML dependencies, so it runs cheaply alongside the game server</li>
+                    <li><strong>LLM Container</strong> — Separate, heavier Docker container spun up on demand, running llama-cpp-python. Runs as a Kubernetes pod, shut down when idle, on startup loads weights from a GGUF file stored in S3</li>
                 </List>
                 <Text p>
                     
@@ -173,10 +173,20 @@ const Article = () => {
                 <Seperator />
 
                 <Text p subtitle>
-                    Show me the Code!
+                    End Result & Next Steps
                 </Text>
+
+                <Image src="/public/imp_assets/posts/aipet/bunny_02.gif" alt="The AI pet bunny in action" size={ImageSize.XS} />
+
                 <Text p>
-                    Here's the project if you'd like to see the code: <LinkTo href="https://github.com/jwnwilson/aipet" external className="underline">github.com/jwnwilson/aipet</LinkTo>
+                    I'm happy with my AI pet project it has lots of room to grow and I now have a solid framework in place to allow that.
+                    Here's the link to <LinkTo href="https://pet-simulator.co.uk/" external className="underline">Pet Simulator</LinkTo> if you'd like to try it out. :)
+                    My next steps are to start adding more bunnies and re-create my old pets with their personalities. Let me know what you think
+                    would be good features to add!
+                </Text>
+
+                <Text p>
+                    Here's the github project if you'd like to see the code: <LinkTo href="https://github.com/jwnwilson/aipet" external className="underline">github.com/jwnwilson/aipet</LinkTo>
                 </Text>
 
                 <Seperator />
@@ -186,7 +196,7 @@ const Article = () => {
                     Related Posts
                 </Text>
                 <List type={ListType.disc}>
-                    <li><LinkTo href="/experiments/aipet-part-1" className="underline">AI Pet - Part 1</LinkTo> — building an ai pet prototype with Google Gemini</li>
+                    <li><LinkTo href="/experiments/aipet-part-1" className="underline">AI Pet Part 1</LinkTo> — building an ai pet prototype with Google Gemini</li>
                     <li><LinkTo href="/experiments/llm-training-pipeline" className="underline">Building a LLM Training Pipeline</LinkTo> — remote training across Kaggle, RunPod, VastAI, and Kubernetes with Temporal</li>
                     <li><LinkTo href="/blog/ai-solo-dev" className="underline">Building a Complete Project Using AI as a Solo Dev</LinkTo> — how to ship fast without sacrificing quality</li>
                 </List>
@@ -195,7 +205,7 @@ const Article = () => {
                     {
                         url: "https://noel-wilson.co.uk/experiments/aipet-part-2",
                         identifier: "aipet-part-2",
-                        title: "AI Pet - Part 2",
+                        title: "AI Pet Part 2",
                     }
                 }></DiscussionEmbed>
             </div>

@@ -19,25 +19,23 @@ const Article = () => {
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 {/* COMING-SOON header — visible while the post is unfinished.
                     TO RELEASE: delete this <Image> and unwrap the COMING-SOON-BLUR div below. */}
-                <Image src="/public/imp_assets/posts/coming-soon.svg" alt="Coming soon" size={ImageSize.MEDIUM} />
-                <Text p>I know you can unblur it, just don't as it's still rough / ai slop and you'll be sad / disappointed.</Text>
+                {/* <Image src="/public/imp_assets/posts/coming-soon.svg" alt="Coming soon" size={ImageSize.MEDIUM} /> */}
+                {/* <Text p>I know you can unblur it, just don't as it's still rough / ai slop and you'll be sad / disappointed.</Text> */}
                 {/* COMING-SOON-BLUR START */}
-                <div className="blur-sm select-none pointer-events-none" aria-hidden="true">
+                {/* <div className="blur-sm select-none pointer-events-none" aria-hidden="true"> */}
                 <div className="flex flex-col">
                     <Image src="/public/imp_assets/posts/llm_training_pipeline/llm_screen_shot_01.png" alt="Training pipeline" size={ImageSize.MEDIUM} />
                     <div className="w-full mt-5">
-                        <Text p subtitle>
-                            Building a LLM Training Pipeline
+                        <Text p>
+                            As part of digitising my bunnies <LinkTo href="/experiments/aipet-part-2" className="underline">AI Pet Part 2</LinkTo> series,
+                            I was manually training a model which requires a lot of waiting. So I accidentally started automating the process and after some AI sessions here we are.
                         </Text>
                         <Text p>
-                            As part of digitising my bunnies <LinkTo href="/experiments/aipet-part-2" className="underline">AI Pet Part 2</LinkTo> series.
-                            During testing I quickly realised that raspberry pi's are not the best hardware for training LLMs when they took forever then started smoking. (Add cmon do something meme)
-                            So instead I used them to orchestrate remote training on multiple platforms, that way I could learn how to train LLMs on bare metal and
-                            on remote machines where I can select the right hardware for the job.
+                            This is a web app to train multiple LLMs, load them and test them dynamically using different base models on multiple platforms cheaply. 
+                            It's a react app, with a Python API backend and Temporal workflow orchestration, running on my <LinkTo href="/experiments/kubernetes-cluster" className="underline">kubernetes cluster</LinkTo>.
                         </Text>
                         <Text p>
-                            I also wanted to load these trained llm weights dynamically so I could use this for my toy project and have a viable pattern for real world
-                            usage.
+                            Why didn't I use unsloth or a managed service for this? Because I was having too much fun <LinkTo href="https://en.wiktionary.org/wiki/yak_shaving" className="underline">shaving the yak</LinkTo> and before I knew it I had an llm training pipeline.
                         </Text>
                         <Text subtitle className="text-lg md:text-xl">
                             The goal
@@ -56,18 +54,30 @@ const Article = () => {
                 <Image src="/public/imp_assets/posts/llm_training_pipeline/temporal_screenshot_01.png" alt="Temporal workflow orchestrating the training pipeline" size={ImageSize.MEDIUM} caption="A training workflow running in Temporal" />
 
                 <Text p>
-                    I built a training pipeline service using <LinkTo href="https://temporal.io/" external className="underline">Temporal</LinkTo> to orchestrate the full workflow.
+                    The core of this project is using <LinkTo href="https://temporal.io/" external className="underline">Temporal</LinkTo> to orchestrate the full workflow.
                     My training workflow does the following: 
                 </Text>
                 <List type={ListType.number}>
                     <li>Data generation / loading of existing data</li>
-                    <li>Training / fine-tuning, saving checkpoints to S3</li>
-                    <li>Evaluation of the trained weights</li>
-                    <li>GGUF export and S3 upload</li>
+                    <li>Training / fine-tuning, saving checkpoints to blob storage (AWS S3)</li>
+                    <li>Evaluation of the trained weights with pass / fail</li>
+                    <li>Model file (GGUF) export and blob storage (AWS S3) upload</li>
                 </List>
                 <Text p>                    
                     The cool part of this workflow is I can dynamically select which platform to use for each stage of the training process. If any stage fails, Temporal failure doesn't lose progress; the workflow just re-tries and re-connects to remote compute automatically.
                 </Text>
+
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
+                    <Text p>
+                        <strong>Challenge: Waiting For Remote Compute</strong> — Long running tasks in temporal require heartbeats to indicate liveness, I had to ensure my remote training activities were sending these heartbeats back to Temporal.
+                        The activities trigger remote training then poll their status and sending heartbeats until completion. 
+                    </Text>
+                </div>
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
+                    <Text p>
+                        <strong>Challenge: Avoiding duplicates on disconnect</strong> — If temporal fails or the heartbeat deadline is exceeded, it will re-try the activity which could trigger duplicate training runs. To solve this I generate a unique ID for each training run and pass that to the remote platform, then if the same ID is seen again it knows to re-attach to the existing run instead of starting a new one. 
+                    </Text>
+                </div>
 
                 <Text p subtitle>
                     Orchestration Management
@@ -84,14 +94,26 @@ const Article = () => {
                     <li>Monitor the progress</li>
                     <li>Promote successful model training to load as inference models.</li>
                 </List>
+                ( Add image of how remote compute communicates via files here)
                 <Text p>
-                    One non-obvious challenge with remote training is <strong>getting logs back</strong>. Kaggle and RunPod don't give you a stdout pipe — the training process runs inside their environment and you have no direct connection to it. My solution is a background thread in the remote worker that periodically flushes log chunks to S3 with an incremental cursor, and a server-sent events (SSE) endpoint on the API that tails those S3 writes and streams them to the UI in real time.
+                    Currently communication between the remote compute and temporal workflow happens via files in S3, temporal passes a run_id to remote worker. The remote worker then knows where it's input and output files should live in S3.
+                    It reads config, input data and it writes logs, progress reports and checkpoints back to S3 for the workflow to pick up. 
+                    The UI can show these updates and receives server-sent events (SSE) from the API that tails those S3 writes and streams them to the UI in real time.
+                </Text>
+                <Text p>
+                    This is simple and works well for now, but it's not atomic and accidental overwrites are possible, the project will be need to manage this via API calls if I continue to develop this project.
                 </Text>
 
                 <Seperator />
 
                 <Text p subtitle>
                     Remote Training Platforms
+                </Text>
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/computer-fire.jpg" alt="Remote training platforms" size={ImageSize.MEDIUM} caption="Remote training platforms used in this project" />
+                <Text p>
+                    I quickly realised that raspberry pi's are not the best hardware for training LLMs, they took forever then started smoking.
+                    So instead I used them to orchestrate remote training on dedicated GPU platforms, that way I could learn how to train LLMs on bare metal and
+                    on remote machines where I can select the right hardware for the job.
                 </Text>
                 <Text p>
                     The cheapest platforms for training LLMs I found where:
@@ -103,7 +125,8 @@ const Article = () => {
                     <li>My own Kubernetes cluster</li>
                 </List>
                 <Text p>
-                    I skipped the main cloud providers as they're the most reliable but also the most expensive. If I were to do this for a "real" project I'd probably look at keeping data within the cloud provider I'm using like AWS Sagemaker. LLMs and training require a lot of network bandwidth, one of the largest costs for me was data egress.
+                    I skipped the main cloud providers as they're the most reliable but also the most expensive. If I were to do this for a "real" project I'd probably look at keeping data within the cloud provider I'm using like AWS Sagemaker. 
+                    LLMs and training require a lot of network bandwidth, one of the largest costs for me was data egress.
                 </Text>
 
                 <Text subtitle className="text-lg md:text-xl clear-both">
@@ -179,11 +202,6 @@ const Article = () => {
                 </div>
                 <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <Text p>
-                        <strong>Deadlock in async Python + Temporal</strong> — Temporal activities run inside an async Python event loop, and some operations that look harmless can block it entirely. I hit a deadlock where a database write inside a Temporal activity was blocking the event loop, preventing the activity from completing and causing Temporal to retry it — which made the problem worse. The fix was ensuring all DB operations inside activities use async-compatible sessions rather than synchronous SQLAlchemy calls.
-                    </Text>
-                </div>
-                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
-                    <Text p>
                         <strong>Training workflow service reliability</strong> — Building a reliable, observable training orchestration service with Temporal meant designing for partial failures, platform timeouts, and cost limits across RunPod, Kaggle, and VastAI. Each platform has different error surfaces: Kaggle returns 500s when the notebook queue is full; RunPod pods can be preempted mid-training; VastAI instances occasionally fail to bootstrap. Temporal's retry semantics absorb most of this, but you still need activity-level error handling to distinguish a retryable network error from a genuine training failure.
                     </Text>
                 </div>
@@ -200,7 +218,7 @@ const Article = () => {
                 }></DiscussionEmbed>
                 </div>
                 {/* COMING-SOON-BLUR END */}
-            </div>
+            {/* </div> */}
         </PageLayout>
     )
 }
