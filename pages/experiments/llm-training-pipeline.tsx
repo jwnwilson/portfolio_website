@@ -20,7 +20,7 @@ const Article = () => {
                 {/* COMING-SOON header — visible while the post is unfinished.
                     TO RELEASE: delete this <Image> and unwrap the COMING-SOON-BLUR div below. */}
                 <Image src="/public/imp_assets/posts/coming-soon.svg" alt="Coming soon" size={ImageSize.MEDIUM} />
-                <Text p>I know you can unblur it, just don't as it's still rough / ai slop and you'll be sad / disappointed.</Text>
+                <Text p>I know you can unblur it, just don't as it's still rough and you'll be sad / disappointed.</Text>
                 {/* COMING-SOON-BLUR START */}
                 <div className="blur-sm select-none pointer-events-none" aria-hidden="true">
                 <div className="flex flex-col">
@@ -28,20 +28,21 @@ const Article = () => {
                     <div className="w-full mt-5">
                         <Text p>
                             As part of digitising my bunnies <LinkTo href="/experiments/aipet-part-2" className="underline">AI Pet Part 2</LinkTo> series,
-                            I was manually training a model which requires a lot of waiting. So I accidentally started automating the process and after some AI sessions here we are.
+                            I was manually training models which requires a lot of waiting. So I accidentally automated the process and after some AI sessions here we are.
                         </Text>
                         <Text p>
                             This is a web app to train multiple LLMs, load them and test them dynamically using different base models on multiple platforms cheaply. 
                             It's a react app, with a Python API backend and Temporal workflow orchestration, running on my <LinkTo href="/experiments/kubernetes-cluster" className="underline">kubernetes cluster</LinkTo>.
                         </Text>
                         <Text p>
-                            Why didn't I use unsloth or a managed service for this? Because I was having too much fun <LinkTo href="https://en.wiktionary.org/wiki/yak_shaving" className="underline">shaving the yak</LinkTo> and before I knew it I had an llm training pipeline.
+                            Why didn't I use unsloth, huggingface or a managed service for this? Because I was having too much fun <LinkTo href="https://en.wiktionary.org/wiki/yak_shaving" className="underline">shaving the yak</LinkTo> and before I knew it I had an llm training pipeline.
+                            I also wanted to learn the full life cycle of LLMs on a deeper level.
                         </Text>
                         <Text subtitle className="text-lg md:text-xl">
                             The goal
                         </Text>
                         <Text p>
-                            Train multiple custom LLMs (cheaply), eval them, save them and load them dynamically to power my AI pet bunny, host it on my own hardware, and swap it into production without downtime.
+                            Train multiple custom LLMs (cheaply), evalulate them, save them and load them dynamically to power my AI pet bunny, host it on my own hardware, and swap it into production without downtime.
                         </Text>
                     </div>
                 </div>
@@ -94,15 +95,21 @@ const Article = () => {
                     <li>Monitor the progress</li>
                     <li>Promote successful model training to load as inference models.</li>
                 </List>
-                ( Add image of how remote compute communicates via files here)
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/temporal_workflow_05.png" alt="How remote compute communicates with the Temporal workflow via files in S3" size={ImageSize.SMALL} />
                 <Text p>
-                    Currently communication between the remote compute and temporal workflow happens via files in S3, temporal passes a run_id to remote worker. The remote worker then knows where it's input and output files should live in S3.
+                    Currently communication between the remote compute and temporal workflow happens via files in AWS S3, temporal passes a run_id to remote worker. The remote worker then knows where it's input and output files should live in S3.
                     It reads config, input data and it writes logs, progress reports and checkpoints back to S3 for the workflow to pick up. 
                     The UI can show these updates and receives server-sent events (SSE) from the API that tails those S3 writes and streams them to the UI in real time.
                 </Text>
                 <Text p>
-                    This is simple and works well for now, but it's not atomic and accidental overwrites are possible, the project will be need to manage this via API calls if I continue to develop this project.
+                    This is simple and has pros like not exhausting DB connections on parallel tasks, but it's not atomic and accidental overwrites are possible, the project will be need to manage this via LLM Service API calls to pool connections and be atomic in future.
                 </Text>
+
+                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
+                    <Text p>
+                        <strong>Model size vs. accuracy</strong> — Getting a model accurate enough for simple bunny tasks while quantizing it down small enough to fit in the Pi's RAM required careful evaluation. I trained multiple variants and ran evals against a fixed benchmark — measuring per-stat accuracy, target-object selection, and action distribution — to find the right trade-off. A model that passes 95% accuracy on the eval suite gets promoted; anything below gets discarded and retrained with adjusted hyperparameters.
+                    </Text>
+                </div>
 
                 <Seperator />
 
@@ -136,7 +143,7 @@ const Article = () => {
                     <img src="/imp_assets/posts/llm_training_pipeline/kaggle_logo.svg" alt="Kaggle logo" className="w-full h-auto" />
                 </div>
                 <Text p>
-                    Kaggle provides 30 hours of free training for non commercial use with decent hardware, I started with this as it's very cost effective! The challenge is the API is ok and I had to use it creatively as it's designed to trigger python notebooks and not run containers. I found is the best way to automate training / eval was package my logic in a library and creating a notebook with the library then triggering it.
+                    Kaggle provides 30 hours of free training for non commercial use with decent hardware, I started here as it's very cost effective! The challenge is kaggle is designed to run notebooks, not containers and I had to use it creatively. I found is the best way to automate was package my logic in a library with a kaggle notebook that imports it, then using the Kaggle API to upload and trigger it.
                 </Text>
 
                 <Text subtitle className="text-lg md:text-xl clear-both">
@@ -146,7 +153,7 @@ const Article = () => {
                     <img src="/imp_assets/posts/llm_training_pipeline/runpod_logo.svg" alt="RunPod logo" className="w-full h-auto" />
                 </div>
                 <Text p>
-                    Runpod had a good balance of cost, consistency and automation potential, this ended up being the fastest / most reliable platform for me. I select a GPU an image and command with params I want it to run and it will spin that up and run it quickly. Only downside is that sometimes it runs out of GPUs and my workflows fail.
+                    Runpod had a good balance of cost, consistency and automation potential, this ended up being the fastest / most reliable platform for me. I select a GPU, docker image with command and params, it will initialise that and start it. Only downside is that sometimes it runs out of available GPUs and my workflows fail.
                 </Text>
 
                 <Text subtitle className="text-lg md:text-xl clear-both">
@@ -157,7 +164,7 @@ const Article = () => {
                 </div>
                 <Text p>
                     VastAI is interesting as it democratises GPUs allowing anyone to rent out their GPU, so it's the cheapest GPU provider and also the most
-                    unreliable. I almost gave up on using this platform due to the slowness and reliability but got it working well in the end so my opinion on this has definitely improved!
+                    unreliable. I almost gave up on using this platform due to the slowness and reliability but got it working well in the end. So now I use this for the slow, cheapest jobs and my opinion on this has definitely improved!
                 </Text>
 
                 <Text subtitle className="text-lg md:text-xl clear-both">
@@ -172,41 +179,77 @@ const Article = () => {
 
                 <div className="clear-both" />
 
-                <Text p subtitle>
-                    Deliberate design &amp;&amp; Automated testing
-                </Text>
-                <Text p>
-                    I used AI to build this project, the scope was ambitious and in order to make progress on multiple platforms I needed to do 2 things:
-                </Text>
-                <List type={ListType.number}>
-                    <li>Design the project using SOLID principals and hexagonal architecture</li>
-                    <li>Create robust Automated tests and E2E tests to validate changes</li>
-                </List>
-                <Image src="/public/imp_assets/posts/llm_training_pipeline/github_screenshot_01.png" alt="GitHub Actions CI running the automated test suite" size={ImageSize.MEDIUM} caption="Automated tests and E2E checks running in CI" />
-                <Text p>
-                    I'll cover this more in a follow up post but this was essential for quickly verifying new logic and avoiding constant regressions.
-                </Text>
-
-                <Seperator />
-
-                <Text p subtitle>
-                    Interesting Problems
-                </Text>
-                <Text p>
-                    Building this pipeline surfaced some genuinely tricky engineering problems:
-                </Text>
-                <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
-                    <Text p>
-                        <strong>Model size vs. accuracy</strong> — Getting a model accurate enough for simple bunny tasks while quantizing it down small enough to fit in the Pi's RAM required careful evaluation. I trained multiple variants and ran evals against a fixed benchmark — measuring per-stat accuracy, target-object selection, and action distribution — to find the right trade-off. A model that passes 95% accuracy on the eval suite gets promoted; anything below gets discarded and retrained with adjusted hyperparameters.
-                    </Text>
-                </div>
                 <div className="bg-slate-800 dark:bg-slate-200 text-gray-100 dark:text-gray-800 p-4 rounded-lg my-4 overflow-x-auto">
                     <Text p>
                         <strong>Training workflow service reliability</strong> — Building a reliable, observable training orchestration service with Temporal meant designing for partial failures, platform timeouts, and cost limits across RunPod, Kaggle, and VastAI. Each platform has different error surfaces: Kaggle returns 500s when the notebook queue is full; RunPod pods can be preempted mid-training; VastAI instances occasionally fail to bootstrap. Temporal's retry semantics absorb most of this, but you still need activity-level error handling to distinguish a retryable network error from a genuine training failure.
                     </Text>
                 </div>
+
+                <Seperator />
+
+                <Text p subtitle>
+                    Running Models
+                </Text>
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/llm_infer_01.png" alt="Remote training platforms" size={ImageSize.MEDIUM} caption="Running Created Models" />
                 <Text p>
-                    Each of these deserves its own post — I'll be writing them up as I work through them. If you have experience with any of these areas I'd love to hear from you below.
+                    Now I have trained models I wanted to make starting and testing them easy. 
+                    I am currently running my models on Kubernetes so I can take advantage of that API to dynamically start pods and give them an internal DNS.
+                    If I start an "Inference" on my llm webapp the llm service will request a new pod loading the trained weights. 
+                    It will monitor this pod and when it is available can proxy requests to it.
+                    So now my LLM Services can access it via my private network!
+                </Text>
+
+                <Text p>
+                    All access is managed via my LLM Service API, it has Oauth2 enabled for all public requests. 
+                    This ensures I can control who and what makes requests to my LLMs. 
+                </Text>
+
+                <Seperator />
+
+                <Text p subtitle>
+                    Deliberate design / Automated testing
+                </Text>
+                <Text p>
+                    I used AI to build this project, the scope was ambitious and in order to make progress on multiple platforms I needed a few key things:
+                </Text>
+                <List type={ListType.number}>
+                    <li>A well structured project using <strong>SOLID principals and hexagonal architecture</strong></li>
+                    <li>Good instructions for the AI in architecture.md files, specs and design .md files</li>
+                    <li><strong>TTD first approach</strong> to avoid AI faking tests for false confidence.</li>
+                    <li>A <strong>fast</strong> CI/CD deployment pipeline so the AI could validate it's changes quickly</li> 
+                    <li>Robust Automated tests and <strong>E2E tests on a deployed system</strong> to validate changes</li>
+                </List>
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/github_screenshot_01.png" alt="GitHub Actions CI running the automated test suite" size={ImageSize.MEDIUM} caption="Automated tests and E2E checks running in CI" />
+                <Text p>
+                    This allowed me to iterate and valiadate changes <strong>rapidly</strong>, I could kick off an experiment / bug fix on claude while I focused on another part of the project. 
+                    AI could then validate it's changes or report they weren't successful, once I was able to elimiate false positives I got a large productivity boost.
+                </Text>
+                <Text p>
+                    I'll cover this more in a follow up post but this was essential for quickly verifying new logic and avoiding constant regressions.
+                </Text>
+
+                <Seperator />
+                
+                <Text p subtitle>
+                    Result And Next Steps
+                </Text>
+
+                <Image src="/public/imp_assets/posts/llm_training_pipeline/obama_medal.webp" alt="Obama giving himself a medal" size={ImageSize.SMALL} caption="I think I did a god job!" />
+                
+                <Text p>
+                    This project covers the entire LLM lifecycle and I've been able to generate models that I'm using in a project. That's a win for me!
+                </Text>
+                <Text p>
+                    There are so many oppurtinities for next steps,
+                    I'm thinking of creating a data generation functionality to make distillation training easier using 3rd party LLMs.
+                    LLM training is all about preparing good training and eval data! 
+                </Text>
+                <Text p>
+                    Other improvements will depend on what hardware I can get, as I've masterfully timed building this with all time highs in GPU and computing costs.
+                    Hopefully this knowledge will help me optimise systems and reduce costs during this time!
+                </Text>
+                <Text p>
+                    What do you think? Would love to hear your thoughts. :)
                 </Text>
 
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
