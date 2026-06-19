@@ -278,7 +278,7 @@ const ARTICLES_LIST: iArticle[] = [
     featureArticle: false,
     preview: {
       author: NOEL,
-      date: "June 24 2026",
+      date: "June 23 2026",
       articleTitle: "Building a LLM Training Pipeline",
       shortIntro:
         "Remote training across Kaggle, RunPod, VastAI, and Kubernetes — orchestrated with Temporal for the AI pet project.",
