@@ -283,7 +283,7 @@ const ARTICLES_LIST: iArticle[] = [
       shortIntro:
         "Remote training across Kaggle, RunPod, VastAI, and Kubernetes — orchestrated with Temporal for the AI pet project.",
       tags: "llm, training, pipeline, temporal, kaggle, runpod, kubernetes",
-      thumbnail: "/public/imp_assets/posts/coming-soon.svg",
+      thumbnail: "/public/imp_assets/posts/llm_training_pipeline/llm_screen_shot_01.png",
       category: "Experiments",
     },
   },
