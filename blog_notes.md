@@ -6,8 +6,9 @@ Maybe create separate posts that I can post over multiple days.
 
 
 2. AI Pet part 2
-    - Game overview
-    - Repo overview
+    - Convert Part 2 to Game overview
+    - High level design
+    - Repo links at bottom
     - 
 
 3. Building a llm training pipeline

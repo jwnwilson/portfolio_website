@@ -19,10 +19,10 @@ const Article = () => {
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 {/* COMING-SOON header — visible while the post is unfinished.
                     TO RELEASE: delete this <Image> and unwrap the COMING-SOON-BLUR div below. */}
-                <Image src="/public/imp_assets/posts/coming-soon.svg" alt="Coming soon" size={ImageSize.MEDIUM} />
-                <Text p>I know you can unblur it, just don't as it's pure AI slop / notes right now.</Text>
+                {/* <Image src="/public/imp_assets/posts/coming-soon.svg" alt="Coming soon" size={ImageSize.MEDIUM} /> */}
+                {/* <Text p>I know you can unblur it, just don't as it's pure AI slop / notes right now.</Text> */}
                 {/* COMING-SOON-BLUR START */}
-                <div className="blur-sm select-none pointer-events-none" aria-hidden="true">
+                {/* <div className="blur-sm select-none pointer-events-none" aria-hidden="true"> */}
                 <div className="flex flex-col">
                     <div className="w-full mt-5">
                         <Text p subtitle>
@@ -69,12 +69,45 @@ const Article = () => {
                         <strong>Small, focused PRs</strong> — keeping changes atomic means the AI can reason about them accurately and I can verify correctness easily. Large PRs are where subtle bugs hide.
                     </li>
                     <li>
-                        <strong>Automated CI gates</strong> — type checking, linting, and test runs on every push mean broken code never accumulates; it's caught immediately. This is cheap to set up and pays off constantly.
+                        <strong>Automated CI gates</strong> — test runs on every push mean broken code never accumulates; it's caught immediately. This is cheap to set up and pays off constantly.
                     </li>
                     <li>
                         <strong>Explicit architecture upfront</strong> — spending 30 minutes planning the shape of a feature with the AI before writing any code avoids the expensive rewrites that come from discovering structural problems late. The AI is a good thinking partner at the design stage, not just the implementation stage.
                     </li>
+                    <li>
+                        <strong>Architecture review passes</strong> — cleanup by getting an AI to review the code and identify code smells, issues, and create better structure periodically. Update your CLAUDE.md to point at architecture and ADR files so future sessions don't forget.
+                    </li>
+                    <li>
+                        <strong>Consolidate learning</strong> — link or create a consolidate-skills step that wraps up current learning and keeps a rolling set of updated notes for future sessions.
+                    </li>
                 </List>
+
+                <Seperator />
+
+                <Text p subtitle>
+                    Two Steps Forward, One Step Back
+                </Text>
+                <Text p>
+                    A pattern I noticed was that I would build quickly then have to validate, fix, then rework. This was still quicker than building manually or semi-manually.
+                </Text>
+
+                <Seperator />
+
+                <Text p subtitle>
+                    Async Workflow
+                </Text>
+                <Text p>
+                    To avoid waiting for the AI I would plan to work on two or three things async, so while the AI was working on Feature A I would be debugging or designing Feature B. Then I'd bounce between them. This let me move faster, and I like this way of working as I've always been good at context switching. I'm not sure it's for everyone though, especially people who like deep focus time.
+                </Text>
+
+                <Seperator />
+
+                <Text p subtitle>
+                    Remote Control
+                </Text>
+                <Text p>
+                    My favourite Claude skill is /remote-control. When I've done the pre-planning and have work ready, I can set up one or more remote sessions. Then I can go for a walk or go to the gym and answer any questions it has for me on my laptop while I'm away. This has enabled me to work on my projects while staying healthy!
+                </Text>
 
                 <Seperator />
 
@@ -100,7 +133,7 @@ const Article = () => {
                 }></DiscussionEmbed>
                 </div>
                 {/* COMING-SOON-BLUR END */}
-            </div>
+            {/* </div> */}
         </PageLayout>
     )
 }
