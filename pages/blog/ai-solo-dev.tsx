@@ -19,10 +19,10 @@ const Article = () => {
             <div className='container max-w-4xl px-3 pb-[20px]'>
                 {/* COMING-SOON header — visible while the post is unfinished.
                     TO RELEASE: delete this <Image> and unwrap the COMING-SOON-BLUR div below. */}
-                {/* <Image src="/public/imp_assets/posts/coming-soon.svg" alt="Coming soon" size={ImageSize.MEDIUM} /> */}
-                {/* <Text p>I know you can unblur it, just don't as it's pure AI slop / notes right now.</Text> */}
+                <Image src="/public/imp_assets/posts/coming-soon.svg" alt="Coming soon" size={ImageSize.MEDIUM} />
+                <Text p>I know you can unblur it, just don't as it's pure AI slop / notes right now.</Text>
                 {/* COMING-SOON-BLUR START */}
-                {/* <div className="blur-sm select-none pointer-events-none" aria-hidden="true"> */}
+                <div className="blur-sm select-none pointer-events-none" aria-hidden="true">
                 <div className="flex flex-col">
                     <div className="w-full mt-5">
                         <Text p subtitle>
@@ -133,7 +133,7 @@ const Article = () => {
                 }></DiscussionEmbed>
                 </div>
                 {/* COMING-SOON-BLUR END */}
-            {/* </div> */}
+            </div>
         </PageLayout>
     )
 }
