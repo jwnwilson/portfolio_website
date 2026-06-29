@@ -255,6 +255,16 @@ const Article = () => {
                     What do you think? Would love to hear your thoughts. :)
                 </Text>
 
+                <Seperator />
+
+                <Text p subtitle>
+                    Project Code
+                </Text>
+
+                <Text p>
+                    The full source for the training pipeline service is available on GitHub: <LinkTo href="https://github.com/jwnwilson/llm_training_service" external className="underline">jwnwilson/llm_training_service</LinkTo>.
+                </Text>
+
                 <DiscussionEmbed key={theme} shortname="noel-wilson-co-uk-1" config={
                     {
                         url: "https://noel-wilson.co.uk/experiments/llm-training-pipeline",

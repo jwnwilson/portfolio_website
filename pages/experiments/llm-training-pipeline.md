@@ -85,3 +85,9 @@ Building this pipeline surfaced some genuinely tricky engineering problems:
 > **Training workflow service reliability** — Building a reliable, observable training orchestration service with Temporal meant designing for partial failures, platform timeouts, and cost limits across RunPod, Kaggle, and VastAI. Each platform has different error surfaces: Kaggle returns 500s when the notebook queue is full; RunPod pods can be preempted mid-training; VastAI instances occasionally fail to bootstrap. Temporal's retry semantics absorb most of this, but you still need activity-level error handling to distinguish a retryable network error from a genuine training failure.
 
 Each of these deserves its own post — I'll be writing them up as I work through them. If you have experience with any of these areas I'd love to hear from you below.
+
+---
+
+## Project Code
+
+The full source for the training pipeline service is available on GitHub: [jwnwilson/llm_training_service](https://github.com/jwnwilson/llm_training_service).
